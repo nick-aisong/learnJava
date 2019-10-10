@@ -4,37 +4,32 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Emperor {
+    private static int maxNumOfEmperor = 2;
+    private static ArrayList emperorInfoList = new ArrayList(maxNumOfEmperor);
+    private static ArrayList emperorList = new ArrayList(maxNumOfEmperor);
+    private static int countNumOfEmperor = 0;
 
-	private static int maxNumOfEmperor = 2;
+    static {
+        for (int i = 0; i < maxNumOfEmperor; i++) {
+            emperorList.add(new Emperor("黄" + (i + 1) + "帝"));
+        }
+    }
 
-	private static ArrayList<String> nameList = new ArrayList<>();
+    private Emperor() {
 
-	private static ArrayList<Emperor> emperorList = new ArrayList<>();
+    }
 
-	private static int countNumOfEmperor = 0;
+    private Emperor(String info) {
+        emperorInfoList.add(info);
+    }
 
-	static {
-		for (int i = 0; i < maxNumOfEmperor; i++) {
-			emperorList.add(new Emperor("皇" + (i + 1) + "帝"));
-		}
-	}
+    public static Emperor getInstance() {
+        Random random = new Random();
+        countNumOfEmperor = random.nextInt(maxNumOfEmperor);
+        return (Emperor) emperorList.get(countNumOfEmperor);
+    }
 
-	private Emperor() {
-
-	}
-
-	private Emperor(String name) {
-		nameList.add(name);
-	}
-
-	public static Emperor getInstance() {
-		Random random = new Random();
-		countNumOfEmperor = random.nextInt(maxNumOfEmperor);
-		return emperorList.get(countNumOfEmperor);
-	}
-
-	public static void say() {
-		System.out.println(nameList.get(countNumOfEmperor));
-	}
-
+    public static void emperorInfo() {
+        System.out.println(emperorInfoList.get(countNumOfEmperor));
+    }
 }

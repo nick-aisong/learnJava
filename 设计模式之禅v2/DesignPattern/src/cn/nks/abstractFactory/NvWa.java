@@ -1,25 +1,25 @@
 package cn.nks.abstractFactory;
 
+/**
+ * Created by NKS on 2017/9/14.
+ */
 public class NvWa {
 
-	public static void main(String[] args) {
-		
-		HumanFactory maleHumanFactory = new MaleFactory();
+    public static void main(String[] args){
+        HumanFactory maleHumanFactory = new MaleHumanFactory();
+        HumanFactory femaleHumanFactory = new FemaleHumanFactory();
 
-		HumanFactory femaleHumanFactory = new FemaleFacotry();
+        Human maleYellowHuman = maleHumanFactory.createYellowHuman();
+        Human femaleYellowHuman = femaleHumanFactory.createYellowHuman();
 
-		Human maleYellowHuman = maleHumanFactory.createYellowHuman();
+        maleYellowHuman.cry();
+        maleYellowHuman.laugh();
+        maleYellowHuman.talk();
+        maleYellowHuman.sex();
 
-		Human femaleYellowHuman = femaleHumanFactory.createYellowHuman();
-
-		femaleYellowHuman.getColor();
-		femaleYellowHuman.talk();
-		femaleYellowHuman.getSex();
-
-		maleYellowHuman.getColor();
-		maleYellowHuman.talk();
-		maleYellowHuman.getSex();
-
-	}
-
+        femaleYellowHuman.cry();
+        femaleYellowHuman.laugh();
+        femaleYellowHuman.talk();
+        femaleYellowHuman.sex();
+    }
 }

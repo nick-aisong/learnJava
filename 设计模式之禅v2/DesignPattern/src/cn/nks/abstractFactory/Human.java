@@ -1,11 +1,13 @@
 package cn.nks.abstractFactory;
 
+
 public interface Human {
 
-	public void getColor();
+    public void laugh();
 
-	public void talk();
+    public void cry();
 
-	public void getSex();
+    public void talk();
 
+    public void sex();
 }
