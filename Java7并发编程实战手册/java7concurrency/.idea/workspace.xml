@@ -39,7 +39,7 @@
             <state relative-caret-position="-1196">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1570721089859" expanded="true" signature="40989:41004" ph="..." />
+                <marker date="1570721236783" expanded="true" signature="41356:41371" ph="..." />
               </folding>
             </state>
           </provider>
@@ -89,8 +89,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1909" />
-    <option name="y" value="-11" />
+    <option name="x" value="1595" />
+    <option name="y" value="7" />
     <option name="width" value="1942" />
     <option name="height" value="1102" />
   </component>
@@ -644,15 +644,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570720997358</updated>
-      <workItem from="1570721007191" duration="120000" />
+      <workItem from="1570721007191" duration="365000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120000" />
+    <option name="totallyTimeSpent" value="365000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1909" y="-11" width="1942" height="1102" extended-state="0" />
+    <frame x="1595" y="7" width="1942" height="1102" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -744,7 +744,7 @@
         <state relative-caret-position="-1196">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1570721089859" expanded="true" signature="40989:41004" ph="..." />
+            <marker date="1570721236783" expanded="true" signature="41356:41371" ph="..." />
           </folding>
         </state>
       </provider>
