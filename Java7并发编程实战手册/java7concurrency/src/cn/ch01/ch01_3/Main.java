@@ -22,7 +22,7 @@ public class Main {
 // 线程的interrupt()方法被调用时，这个属性就会被设置为true
 // isInterrupted()方法只是返回这个属性的值
 
-// 还有一个方法可以检查线程是否已被中断，即Thread类的静态方法interrupted(), 用来检查当前执行的线程是否被中断
+// 还有一个方法可以检查线程是否已被中断，即Thread类的静态方法interrupted()，用来检查当前执行的线程是否被中断
 // isInterrupted()和interrupted()方法有一个很大的区别。isInterrupted()不能改变interrupted属性的值，但是后者能设置interrupted属性为false
 // 因为interrupted()是一个静态方法，更推荐使用isInterrupted()方法
 

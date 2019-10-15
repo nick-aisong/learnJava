@@ -10,7 +10,7 @@ public class FileClock implements Runnable {
 	@Override
 	public void run() {
 		// 3.编写一个执行10次的循环。在每个循环中，创建一个 Date对象，并把它打印到控制台
-		// 然后调用TimeUnit类的SECONDS属性的sleep()方法来挂起线程一秒钟,这个值将让线程休眠大概1秒钟
+		// 然后调用TimeUnit类的SECONDS属性的sleep()方法来挂起线程一秒钟，这个值将让线程休眠大概1秒钟
 		// sleep()方法会抛出InterruptedException异常，我们必须捕获并处理这个异常
 		// 最佳实践是，当线程被中断时，释放或者关闭线程正在使用的资源
 		for (int i = 0; i < 100; i++) {

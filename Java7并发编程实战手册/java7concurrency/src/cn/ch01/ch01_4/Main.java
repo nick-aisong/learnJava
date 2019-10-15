@@ -23,7 +23,7 @@ public class Main {
 }
 
 // 当运行这个范例时，程序将进入文件夹查找是否包含指定的文件
-// 例如，如果要查找的文件夹目录结构是\b\c\d,这个程序将递归调用processDirectory()方法3次
+// 例如，如果要查找的文件夹目录结构是\b\c\d，这个程序将递归调用processDirectory()方法3次
 // 不管递归调用了多少次，只要线程检测到它已经被中断了
 // 就会立即抛出InterruptedException异常，然后继续执行run()方法
 

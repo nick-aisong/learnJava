@@ -58,6 +58,7 @@ public class Main {
 			}
 		}
 	}
+}
 
 // 线程局部变量分别为每个线程存储了各自的属性值，并提供给每个线程使用
 // 你可以使用get()方法读取这个值，并用set()方法设置这个值
@@ -89,4 +90,3 @@ public class Main {
 // Starting Thread: 20 : Sun Oct 13 17:21:58 CST 2019
 // Thread Finished: 20 : Sun Oct 13 17:21:58 CST 2019
 // Thread Finished: 19 : Sun Oct 13 17:21:56 CST 2019
-}

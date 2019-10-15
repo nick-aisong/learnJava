@@ -13,7 +13,7 @@ public class PrimeGenerator extends Thread {
                 System.out.printf("Number %d is Prime\n", number);
             }
             // 3.一个数字处理完后，调用isInterrupted()方法来检查线程是否被中断
-            // 如果isInterrupted()返回值是true,就写一个信息并且结束线程的执行
+            // 如果isInterrupted()返回值是true，就写一个信息并且结束线程的执行
             if (isInterrupted()) {
                 System.out.printf("The Prime Generator has been Interrupted\n");
                 return;
@@ -23,7 +23,7 @@ public class PrimeGenerator extends Thread {
     }
 
     // 4.实现isPrime()方法
-    // isPrime()方法返回的 是一个布尔值，如果接收到的参数是一个质数就返回true,否则就返回false
+    // isPrime()方法返回的 是一个布尔值，如果接收到的参数是一个质数就返回true，否则就返回false
     private boolean isPrime(long number) {
         if (number < 2) {
             return true;

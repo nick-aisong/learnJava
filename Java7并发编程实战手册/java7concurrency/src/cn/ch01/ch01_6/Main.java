@@ -18,7 +18,7 @@ public class Main {
 		thread2.start();
 
 		// 8.使用join()方法等待两个线程的终止
-		// join()方法会抛出InterruptedException 异常,我们必须捕获并处理这个异常
+		// join()方法会抛出InterruptedException 异常，我们必须捕获并处理这个异常
 		try {
 			thread1.join();
 			thread2.join();

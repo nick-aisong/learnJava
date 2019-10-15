@@ -29,7 +29,7 @@ public class FileMain {
 
 // 如果休眠中线程被中断，该方法就会立即抛出InterruptedException异常，而不需要等待到线程休眠时间结束
 
-// Java并发API还提供了另外一个方法来使线程对象释放CPU,即yield()方法，它将通知JVM这个线程对象可以释放CPU了
+// Java并发API还提供了另外一个方法来使线程对象释放CPU，即yield()方法，它将通知JVM这个线程对象可以释放CPU了
 // JVM并不保证遵循这个要求
 // 通常来说，yield()方法只做调试使用
 
