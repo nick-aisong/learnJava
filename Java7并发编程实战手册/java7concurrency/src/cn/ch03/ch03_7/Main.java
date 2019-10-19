@@ -34,6 +34,11 @@ public class Main {
 // 运行这个范例，我们可以看到生产者和消费者是怎样并发工作的以及两个对象是怎样在每一步中交换数据的
 // 如果使用其他的同步辅助类，第一个线程调用exchange()后会被置于休眠，直到其他的线程到达
 
+// Exchanger类还提供了另外的exchange方法，即exchange(V data, long time, TimeUnit unit)方法
+// 其中第一个传入参数的类型是V，即要交换的数据结构(本例中是List<String>)
+// 这个方法被调用后，线程将休眠直到被中断，或者其他的线程到达，或者已耗费了指定的time值
+// 第三个传入参数的类型是TimeUnit，它是枚举类型，其值包含以下常量:
+// DAYS、HOURS、MICROSECONDS、MILLISECONDS、MINUTES、NANOSECONDS和SECONDS
 
 // Producer: Cycle 1
 // Consumer: Cycle 1
