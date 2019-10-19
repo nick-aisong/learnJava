@@ -1,6 +1,6 @@
 package cn.ch03.ch03_1;
 
-// 8.创建一个工作类Job, 并且实现Runnable接口。这个类将文档发送到打印机
+// 8.创建一个工作类Job，并且实现Runnable接口。这个类将文档发送到打印机
 public class Job implements Runnable {
 
 	// 9.声明一个打印队列对象printQueue
