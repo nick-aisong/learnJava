@@ -69,4 +69,24 @@ if (problem size > default size) {
 用这种方法，执行主任务的线程，称之为工作者线程(WorkerThread)，它将寻找其他的子任务来执行，并在子任务执行的时间里利用所有的线程优势
 - 如果将要实现的任务没有返回任何结果，那么，采用RecursiveAction类作为实现任务的基类
 
+### 3 合并任务的结果
+Fork/Join框架提供了执行任务并返回结果的能力。这些类型的任务都是通过RecursiveTask类来实现的。
+RecursiveTask类继承了ForkJoinTask类，并且实现了由执行器框架(Executor Framework)提供的Future接口。
+
+在任务中，必须使用Java API文档推荐的如下结构:
+```java
+if (problem size > size) {
+	tasks = Divide(task);
+	execute(tasks);
+	groupResults()
+	return result;
+} else {
+	resolve problem;
+	return result;
+}
+```
+如果任务需要解决的问题大于预先定义的大小，那么就要将这个问题拆分成多个子任务，并使用Fork/Join框架来执行这些子任务。
+执行完成后，原始任务获取到由所有这些子任务产生的结果，合并这些结果，返回最终的结果。
+当原始任务在线程池中执行结束后，将高效地获取到整个问题的最终结果
+
 
