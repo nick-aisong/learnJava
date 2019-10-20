@@ -45,6 +45,19 @@ public class Main {
 	}
 }
 
+// 本例子展示了发送任务列表给执行器，并且通过invokeAll()方法等待所有任务的完成
+// 这个方法接收一个Callable对象列表，并返回一个Future对象列表。在这个列表中，每一个任务对应一个Future对象
+// Future对象列表中的第一个对象控制Callable列表中第一个任务，以此类推
+// 需要注意的一点是，在存储结果的列表声明中，用在Future接口中的泛型参数的数据类型必须与Callable接口的泛型数据类型相兼容
+// 在这个例子中，我们使用的是相同的数据类型：Result类
+// 另一个关于invokeAll()方法重要的地方是，使用Future对象仅用来获取任务的结果
+// 当所有的任务执行结束时这个方法也执行结束了，如果在返回的Future对象上调用isDone()方法，那么所有的调用将返回true值
+
+// ExecutorService接口还提供了invokeAll()方法的另一个版本：
+// invokeAll(Collection<? extends Callable <T>> tasks, long timeout,TimeUnit unit)：
+// 当所有任务执行完成，或者超时的时候(无论哪个首先发生)，这个方法将返回保持任务状态和结果的Future列表
+// TimeUnit是一个枚举类，有如下的常量: DAYS、HOURS、MICROSECONDS、MILLISECONDS、MINUTES、NANOSECONDS和SECONDS
+
 // 0: Starting
 // 2: Starting
 // 1: Starting
