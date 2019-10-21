@@ -52,6 +52,31 @@ public class Main {
     }
 }
 
+// 在这个范例中，我们实现了两个不同的任务
+// ·DocumentTask类：这个类的任务需要处理由start和end属性决定的文档行
+// 如果这些行数小于10，那么，就每行创建一个LineTask对象，然后在任务执行结束后，合计返回的结果，并返回总数
+// 如果任务要处理的行数大于10，那么，将任务拆分成两组，并创建两个DocumentTask对象来处理这两组对象
+// 当这些任务执行结束后，同样合计返回的结果，并返回总数
+// ·LineTask类：这个类的任务需要处理文档中一行的某一组词
+// 如果一组词的个数小100，那么任务将直接在这一组词里搜索特定词，然后返回查找词在这一组词中出现的次数
+// 否则，任务将拆分这些词为两组，并创建两个LineTask对象来处理这两组词
+// 当这些任务执行完成后，合计返回的结果，并返回总数
+
+// 在Main主类中，我们通过默认的构造器创建了ForkJoinPool对象，然后执行DocumentTask类，来处理一个共有100行，每行1,000字的文档
+// 这个任务将问题拆分成DocumentTask对象和LineTask对象，然后当所有的任务执行完成后，使用原始的任务来获取整个文档中所要查找的词出现的次数
+// 由于任务继承了RecursiveTask 类，因此能够返回结果
+// 调用get()方法来获得Task返回的结果。这个方法声明在Future接口里，并由RecursiveTask类实现
+// 执行程序时，在控制台上，我们可以比较第一行与最后一行的输出信息
+// 第一行是文档生成时被查找的词出现的次数，最后一行则是通过Fork/Join任务计算而来的被查找的词出现的次数，而且这两个数字相同
+
+// ForkJoinTask类提供了另一个complete()方法来结束任务的执行并返回结果
+// 这个方法接收一个对象，对象的类型就是RecursiveTask类的泛型参数，然后在任务调用join()方法后返回这个对象作为结果
+// 这一过程采用了推荐的异步任务来返回任务的结果
+// 由于RecursiveTask类实现了Future接口，因此还有get()方法调用的其他版本：
+// ·get(long timeout, TimeUnit unit)：这个版本中，如果任务的结果未准备好，将等待指定的时间
+// 如果等待时间超出，而结果仍未准备好，那方法就会返回null值
+// TimeUnit是一个枚举类，有如下的常量： DAYS、HOURS、MICROSECONDS、MILLISECONDS、MINUTES、NANOSECONDS和SECONDS
+
 // DocumentMock: The word appears 33521 times in the document
 // *************************************************
 // Main: Parallelism: 4
