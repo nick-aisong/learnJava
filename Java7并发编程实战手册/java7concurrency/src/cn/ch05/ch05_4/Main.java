@@ -34,7 +34,29 @@ public class Main {
     }
 }
 
+// 在本节，我们实现的Task类用来处理一个数字数组
+// 它检查要处理的数字块规模是否包含有10个或更多个元素
+// 在这个情况下，Task类拆分这个数字块为两部分，然后创建两个新的Task对象用来处理这两部分
+// 否则，它将寻找位于数组中第4个位置(索引位为3)的元素
+// 如果这个元素位于任务处理块中，它将抛出一个RuntimeException异常
+// 虽然运行这个程序时将抛出异常，但是程序不会停止
+// 在Main主类中，调用原始任务ForkJoinTask类的isCompletedAbnormally()方法，如果主任务或者它的子任务之一拋出了异常，这个方法将返回true
+// 也可以使用getException()方法来获得抛出的Exception对象
+// 当任务抛出运行时异常时，会影响它的父任务(发送到ForkJoinPool类的任务)，以及父任务的父任务，以此类推
+// 查阅程序的输出结果，将会发现有一些任务没有结束的信息
+// 那些任务的开始信息如下：
+// Task: Starting form 0 to 100
+// Task: Starting form 0 to 50
+// Task: Starting form 0 to 25
+// Task: Starting form 0 to 12
+// Task: Starting form 0 to 6
+// 这些任务是那些抛出异常的任务和它的父任务。所有这些任务都是异常结束的
+// 记住一点：在用ForkJoinPool对象和ForkJoinTask对象开发一个程序时， 它们是会抛出异常的，如果不想要这种行为，就得采用其他方式
 
+// 在范例中，不采用抛出异常，而调用ForkJoinTask类的completeExceptionally()方法也可以获得同样的结果
+// 代码如下所示：
+// Exception e = new Exception("This task throws an Exception: " + "Task from " + start + " to " + end);
+// completeExceptionally(e);
 
 // Task: Start from 0 to 100
 // Task: Start from 0 to 50
