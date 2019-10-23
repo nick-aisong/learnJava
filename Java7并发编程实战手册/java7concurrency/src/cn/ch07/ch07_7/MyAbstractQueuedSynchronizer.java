@@ -21,5 +21,4 @@ public class MyAbstractQueuedSynchronizer extends AbstractQueuedSynchronizer {
 	protected boolean tryRelease(int arg) {
 		return state.compareAndSet(1, 0);
 	}
-
 }

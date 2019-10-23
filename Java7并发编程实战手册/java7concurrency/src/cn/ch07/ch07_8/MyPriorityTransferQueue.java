@@ -130,5 +130,4 @@ public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> impleme
 	public int getWaitingConsumerCount() {
 		return counter.get();
 	}
-
 }

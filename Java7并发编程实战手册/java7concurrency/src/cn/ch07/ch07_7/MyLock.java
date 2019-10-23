@@ -47,5 +47,4 @@ public class MyLock implements Lock {
 	public Condition newCondition() {
 		return sync.new ConditionObject();
 	}
-
 }

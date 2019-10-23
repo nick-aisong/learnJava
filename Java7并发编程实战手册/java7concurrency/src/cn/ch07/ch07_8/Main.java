@@ -36,5 +36,4 @@ public class Main {
 		consumerTread.join();
 		System.out.printf("Main: End of the program\n");
 	}
-
 }

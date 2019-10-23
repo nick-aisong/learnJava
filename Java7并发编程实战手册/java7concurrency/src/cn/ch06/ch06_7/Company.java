@@ -15,5 +15,4 @@ public class Company implements Runnable {
 			System.out.println(Thread.currentThread().getName() + "--" + i);
 		}
 	}
-
 }

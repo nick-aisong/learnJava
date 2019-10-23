@@ -33,5 +33,4 @@ public abstract class MyWorkerTask extends ForkJoinTask<Void> {
 		System.out.printf("MyWorkerTask: %s : %d Milliseconds to complete.\n", name, diff);
 		return true;
 	}
-
 }

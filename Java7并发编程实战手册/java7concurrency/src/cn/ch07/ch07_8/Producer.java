@@ -15,5 +15,4 @@ public class Producer implements Runnable {
 			buffer.put(event);
 		}
 	}
-
 }

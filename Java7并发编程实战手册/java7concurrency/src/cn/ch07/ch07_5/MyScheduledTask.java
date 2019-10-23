@@ -65,5 +65,4 @@ public class MyScheduledTask<V> extends FutureTask<V> implements RunnableSchedul
 	public void setPeriod(long period) {
 		this.period = period;
 	}
-
 }

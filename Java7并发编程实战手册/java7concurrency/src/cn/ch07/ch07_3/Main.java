@@ -14,5 +14,4 @@ public class Main {
 		System.out.printf("%s\n", thread);
 		System.out.printf("Main: End of the example.\n");
 	}
-
 }

@@ -25,5 +25,4 @@ public class Account {
 	public void substractAmount(long amount) {
 		this.balance.getAndAdd(-amount);
 	}
-
 }

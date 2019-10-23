@@ -38,5 +38,4 @@ public class Task extends MyWorkerTask {
 			e.printStackTrace();
 		}
 	}
-
 }

@@ -19,5 +19,4 @@ public class MyThreadFactory implements ThreadFactory {
 		counter++;
 		return myThread;
 	}
-
 }

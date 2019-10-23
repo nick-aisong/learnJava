@@ -21,5 +21,4 @@ public class Main {
 		executor.awaitTermination(1, TimeUnit.DAYS);
 		System.out.printf("Main: End of the program.\n");
 	}
-
 }

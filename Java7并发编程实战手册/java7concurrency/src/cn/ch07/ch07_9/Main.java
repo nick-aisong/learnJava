@@ -20,5 +20,4 @@ public class Main {
 		System.out.printf("Main: Number of cars: %d\n", counter.get());
 		System.out.printf("Main: End of the program.\n");
 	}
-
 }

@@ -22,5 +22,4 @@ public class Event implements Comparable<Event> {
 	public int compareTo(Event o) {
 		return 0;
 	}
-
 }

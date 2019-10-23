@@ -36,5 +36,4 @@ public class MyPriorityTask implements Comparable<MyPriorityTask>, Runnable {
 		}
 		return 0;
 	}
-
 }
