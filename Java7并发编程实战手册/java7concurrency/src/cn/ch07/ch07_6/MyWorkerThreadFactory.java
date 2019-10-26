@@ -1,4 +1,4 @@
-package cn.ch07.ch07_7;
+package cn.ch07.ch07_6;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinWorkerThread;
