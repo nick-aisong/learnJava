@@ -1,4 +1,4 @@
-package cn.ch07.ch07_9;
+package cn.ch07.ch07_10;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

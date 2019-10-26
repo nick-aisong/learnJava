@@ -2,38 +2,30 @@ package cn.ch07.ch07_8;
 
 import java.util.concurrent.TimeUnit;
 
-// 实现基于优先级的传输队列
+// 实现定制Lock类
 public class Main {
 
-	public static void main(String[] args) throws Exception {
-		
-		MyPriorityTransferQueue<Event> buffer = new MyPriorityTransferQueue<Event>();
-		Producer producer = new Producer(buffer);
-		Thread[] producerThreads = new Thread[10];
-		for (int i = 0; i < producerThreads.length; i++) {
-			producerThreads[i] = new Thread(producer);
-			producerThreads[i].start();
+	public static void main(String[] args) {
+		MyLock lock = new MyLock();
+		for (int i = 0; i < 10; i++) {
+			Task task = new Task("Task-" + i, lock);
+			Thread thread = new Thread(task);
+			thread.start();
 		}
-
-		Consumer consumer = new Consumer(buffer);
-		Thread consumerTread = new Thread(consumer);
-		consumerTread.start();
-		
-		System.out.printf("Main: Buffer: Consumer count: %d\n", buffer.getWaitingConsumerCount());
-		Event myEvent = new Event("Core Event", 0);
-		buffer.transfer(myEvent);
-		System.out.printf("Main: My Event has been transfered.\n");
-
-		for (int i = 0; i < producerThreads.length; i++) {
-			producerThreads[i].join();
-		}
-
-		TimeUnit.SECONDS.sleep(1);
-		System.out.printf("Main: Buffer: Consumer count: %d\n", buffer.getWaitingConsumerCount());
-
-		myEvent = new Event("Core Event 2", 0);
-		buffer.transfer(myEvent);
-		consumerTread.join();
+		boolean value;
+		do {
+			try {
+				value = lock.tryLock(1, TimeUnit.SECONDS);
+				if (!value) {
+					System.out.printf("Main: Trying to get the Lock\n");
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+				value = false;
+			}
+		} while (!value);
+		System.out.printf("Main: Got the lock\n");
+		lock.unlock();
 		System.out.printf("Main: End of the program\n");
 	}
 }

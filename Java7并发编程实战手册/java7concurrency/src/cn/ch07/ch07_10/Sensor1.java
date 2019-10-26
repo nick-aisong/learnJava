@@ -1,22 +1,22 @@
-package cn.ch07.ch07_9;
+package cn.ch07.ch07_10;
 
-public class Sensor2 implements Runnable {
+public class Sensor1 implements Runnable {
 	
 	private ParkingCounter counter;
 	
-	public Sensor2(ParkingCounter counter) {
+	public Sensor1(ParkingCounter counter) {
 		this.counter = counter;
 	}
 
 	@Override
 	public void run() {
 		counter.carIn();
+		counter.carIn();
+		counter.carIn();
+		counter.carIn();
 		counter.carOut();
 		counter.carOut();
-		counter.carIn();
-		counter.carIn();
-		counter.carIn();
-		counter.carIn();
+		counter.carOut();
 		counter.carIn();
 		counter.carIn();
 		counter.carIn();

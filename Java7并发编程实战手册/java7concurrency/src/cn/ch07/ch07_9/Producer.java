@@ -1,4 +1,4 @@
-package cn.ch07.ch07_8;
+package cn.ch07.ch07_9;
 
 public class Producer implements Runnable {
 

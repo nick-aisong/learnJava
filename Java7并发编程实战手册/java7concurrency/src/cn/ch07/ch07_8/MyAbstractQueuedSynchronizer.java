@@ -1,4 +1,4 @@
-package cn.ch07.ch07_7;
+package cn.ch07.ch07_8;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
