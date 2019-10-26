@@ -1,0 +1,28 @@
+[FINER] - Sun Oct 27 02:07:02 CST 2019 : Core.main : ENTRY
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Launching thread: 0
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Thread created: Thread-1
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Launching thread: 1
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Thread created: Thread-2
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Launching thread: 2
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Thread created: Thread-3
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Launching thread: 3
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Thread created: Thread-4
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Launching thread: 4
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Thread created: Thread-5
+[INFO] - Sun Oct 27 02:07:02 CST 2019 : cn.ch08.ch08_5.Main.main : Ten Threads created. Waiting for its finalization
+[FINER] - Sun Oct 27 02:07:02 CST 2019 : Thread-3.run() : ENTRY
+[FINER] - Sun Oct 27 02:07:02 CST 2019 : Thread-2.run() : ENTRY
+[FINER] - Sun Oct 27 02:07:02 CST 2019 : Thread-1.run() : ENTRY
+[FINER] - Sun Oct 27 02:07:02 CST 2019 : Thread-4.run() : ENTRY
+[FINER] - Sun Oct 27 02:07:02 CST 2019 : Thread-5.run() : ENTRY
+[FINER] - Sun Oct 27 02:07:04 CST 2019 : Thread-2.run() : RETURN {0}
+[FINER] - Sun Oct 27 02:07:04 CST 2019 : Thread-3.run() : RETURN {0}
+[FINER] - Sun Oct 27 02:07:04 CST 2019 : Thread-1.run() : RETURN {0}
+[INFO] - Sun Oct 27 02:07:04 CST 2019 : cn.ch08.ch08_5.Main.main : Thread has finished its execution
+[INFO] - Sun Oct 27 02:07:04 CST 2019 : cn.ch08.ch08_5.Main.main : Thread has finished its execution
+[INFO] - Sun Oct 27 02:07:04 CST 2019 : cn.ch08.ch08_5.Main.main : Thread has finished its execution
+[FINER] - Sun Oct 27 02:07:04 CST 2019 : Thread-4.run() : RETURN {0}
+[INFO] - Sun Oct 27 02:07:04 CST 2019 : cn.ch08.ch08_5.Main.main : Thread has finished its execution
+[FINER] - Sun Oct 27 02:07:04 CST 2019 : Thread-5.run() : RETURN {0}
+[INFO] - Sun Oct 27 02:07:04 CST 2019 : cn.ch08.ch08_5.Main.main : Thread has finished its execution
+[FINER] - Sun Oct 27 02:07:04 CST 2019 : Core.main : ENTRY
