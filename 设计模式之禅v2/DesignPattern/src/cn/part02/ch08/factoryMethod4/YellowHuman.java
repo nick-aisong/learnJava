@@ -1,7 +1,6 @@
-package cn.part02.ch09.abstractFactory;
+package cn.part02.ch08.factoryMethod4;
 
-//代码清单9-4 黄色人种
-public abstract class AbstractYellowHuman implements Human {
+public class YellowHuman implements Human {
     public void getColor() {
         System.out.println("黄色人种的皮肤颜色是黄色的！");
     }

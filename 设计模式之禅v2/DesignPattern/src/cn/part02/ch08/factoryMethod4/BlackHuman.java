@@ -1,7 +1,6 @@
-package cn.part02.ch09.abstractFactory;
+package cn.part02.ch08.factoryMethod4;
 
-//代码清单9-3 黑色人种
-public abstract class AbstractBlackHuman implements Human {
+public class BlackHuman implements Human {
     public void getColor() {
         System.out.println("黑色人种的皮肤颜色是黑色的！");
     }
