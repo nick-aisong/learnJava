@@ -1,4 +1,4 @@
-package cn.part02.ch11.builder;
+package cn.part02.ch11.builder2;
 
 //代码清单11-3 宝马模型代码
 public class BMWModel extends CarModel {
