@@ -2,39 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24f240cc-2674-491d-841e-2f681c7ad3a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder/汽车模型类图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder2/增加了建造者的汽车模型类图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder3/完整汽车模型类图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder2/BMWBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder2/BMWModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder2/BenzBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder2/BenzModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder2/CarBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder2/CarModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder2/Client1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder2/Client2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder3/BMWModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder3/BenzModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder3/CarBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder3/CarModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder3/Client.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder3/Director.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/builder/CarBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/builder/Client2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/builder/Client3.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/builder/Director.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder4/建造者模式通用类图.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder4/Builder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder4/ConcreteProduct.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder4/Director.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder4/Product.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Java必须知道的300个问题/Java300/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Java必须知道的300个问题/Java300/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Java网络编程v4/javanetwork/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Java网络编程v4/javanetwork/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DesignPattern.iml" afterPath="$PROJECT_DIR$/DesignPattern.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/part01/06开闭原则.md" afterPath="$PROJECT_DIR$/src/cn/part01/06开闭原则.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/builder/BMWModel.java" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder/BMWModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/builder/BenzModel.java" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder/BenzModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/builder/CarModel.java" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder/CarModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/builder/Client.java" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder/Client.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/建造者模式.md" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/建造者模式.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/builder/BMWBuilder.java" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder3/BMWBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/part02/ch11/builder/BenzBuilder.java" afterPath="$PROJECT_DIR$/src/cn/part02/ch11/builder3/BenzBuilder.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,12 +32,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="建造者模式.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="建造者模式.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/建造者模式.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="216">
-                <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+              <first_editor relative-caret-position="450">
+                <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -69,48 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BMWModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/BMWModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="汽车模型类图.png" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/汽车模型类图.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/CarModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Director.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/Director.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="74" column="16" lean-forward="false" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="34" />
+            <state relative-caret-position="0">
+              <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -147,11 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/cn/part02/ch09/abstractFactory/AbstractBlackHuman.java" />
-        <option value="$PROJECT_DIR$/src/cn/part02/ch09/abstractFactory/NvWa.java" />
-        <option value="$PROJECT_DIR$/src/cn/part02/ch09/abstractFactory2/ProductA1.java" />
-        <option value="$PROJECT_DIR$/src/cn/part02/ch09/abstractFactory2/ProductA2.java" />
-        <option value="$PROJECT_DIR$/src/cn/part02/ch09/abstractFactory2/AbstractProductB.java" />
         <option value="$PROJECT_DIR$/src/cn/part02/ch09/abstractFactory2/ProductB1.java" />
         <option value="$PROJECT_DIR$/src/cn/part02/ch09/abstractFactory2/ProductB2.java" />
         <option value="$PROJECT_DIR$/src/cn/part02/ch09/abstractFactory2/AbstractCreator.java" />
@@ -197,7 +131,12 @@
         <option value="$PROJECT_DIR$/src/cn/part02/ch11/builder3/CarBuilder.java" />
         <option value="$PROJECT_DIR$/src/cn/part02/ch11/builder3/Director.java" />
         <option value="$PROJECT_DIR$/src/cn/part02/ch11/builder3/Client.java" />
+        <option value="$PROJECT_DIR$/src/cn/part02/ch11/builder4/Product.java" />
+        <option value="$PROJECT_DIR$/src/cn/part02/ch11/builder4/Builder.java" />
+        <option value="$PROJECT_DIR$/src/cn/part02/ch11/builder4/ConcreteProduct.java" />
+        <option value="$PROJECT_DIR$/src/cn/part02/ch11/builder4/Director.java" />
         <option value="$PROJECT_DIR$/src/cn/part02/ch11/建造者模式.md" />
+        <option value="$PROJECT_DIR$/src/cn/part02/ch11/builder5/BenzBuilder.java" />
       </list>
     </option>
   </component>
@@ -841,96 +780,6 @@
               <option name="myItemId" value="part02" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch11" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="builder3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch11" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="builder2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch11" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -971,11 +820,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part02\ch11\builder5" />
+      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part02\ch11\builder4" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part02\ch11\builder3" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part02\ch11\builder2" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part02\ch11\builder" />
-      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part02\ch10\templateMethod4" />
-      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part02\ch10" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.part02.ch08.factoryMethod6" />
@@ -1540,10 +1389,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152583000" />
+    <option name="totallyTimeSpent" value="155271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1909" y="-11" width="1942" height="1102" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1566,10 +1416,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19379845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19379845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24676026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24676026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1621,74 +1471,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch08/factoryMethod2/ConcreteCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/Client2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/Client3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/Director.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/CarBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch09/abstractFactory2/抽象工厂模式的通用源码类图.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch10/templateMethod3/模板方法模式的通用类图.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch10/templateMethod3/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch10/模板方法模式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="398">
-            <caret line="37" column="47" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="47" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch08/factoryMethod6/延迟初始化的通用类图.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part02/ch08/factoryMethod6/ConcreteProduct2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1830,42 +1612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/CarModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-          <folding>
-            <element signature="e#191#199#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/BenzModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/BMWModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="30" />
-          <folding>
-            <element signature="e#355#363#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder2/BMWModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1941,6 +1687,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/汽车模型类图.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/BenzModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/BMWModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/CarModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/BenzBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1949,7 +1732,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/BenzModel.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder4/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder4/ConcreteProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder4/Builder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder4/Director.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder4/建造者模式通用类图.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/BMWModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -1957,18 +1777,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/BenzModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/BMWBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/CarBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="135">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1983,16 +1819,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/Director.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="74" column="16" lean-forward="false" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder5/BenzBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder5/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder5/Client2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder5/Client3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder5/Director.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -2000,25 +1868,12 @@
     <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/建造者模式.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="216">
-            <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <first_editor relative-caret-position="450">
+            <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder3/BMWModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch11/builder/汽车模型类图.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
   </component>
