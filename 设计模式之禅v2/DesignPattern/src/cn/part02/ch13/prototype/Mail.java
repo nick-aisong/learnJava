@@ -1,8 +1,6 @@
 package cn.part02.ch13.prototype;
 
-/**
- * Created by NKS on 2017/9/25.
- */
+//代码清单13-2 邮件类代码
 public class Mail {
 
     //收件人
@@ -12,16 +10,18 @@ public class Mail {
     //称谓
     private String appellation;
     //邮件内容
-    private String context;
-    //邮件的尾部，一般都是加上“XXX版权所有”等信息
+    private String contxt;
+    //邮件的尾部，一般都是加上"XXX版权所有"等信息
     private String tail;
 
+    //构造函数
     public Mail(AdvTemplate advTemplate) {
-        this.context = advTemplate.getAdvContext();
+        this.contxt = advTemplate.getAdvContext();
         this.subject = advTemplate.getAdvSubject();
     }
 
-    public String getReceiver(){
+    //以下为getter/setter方法
+    public String getReceiver() {
         return receiver;
     }
 
@@ -45,12 +45,12 @@ public class Mail {
         this.appellation = appellation;
     }
 
-    public String getContext() {
-        return context;
+    public String getContxt() {
+        return contxt;
     }
 
-    public void setContext(String context) {
-        this.context = context;
+    public void setContxt(String contxt) {
+        this.contxt = contxt;
     }
 
     public String getTail() {

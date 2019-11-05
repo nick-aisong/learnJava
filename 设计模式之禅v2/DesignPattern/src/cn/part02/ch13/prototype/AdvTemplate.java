@@ -1,19 +1,18 @@
 package cn.part02.ch13.prototype;
 
-/**
- * Created by NKS on 2017/9/25.
- */
+//代码清单13-1 广告信模板代码
 public class AdvTemplate {
 
-    private String advSubject = "XX银行国庆信用卡抽奖活动";
-
-    private String advContext = "国庆抽奖活动通知：只要刷卡就送你1百万！....";
-
-    public String getAdvSubject() {
-        return advSubject;
+    //广告信名称
+    private String advSubject ="XX银行国庆信用卡抽奖活动";
+    //广告信内容
+    private String advContext = "国庆抽奖活动通知：只要刷卡就送你一百万！...";
+    //取得广告信的名称
+    public String getAdvSubject(){
+        return this.advSubject;
     }
-
-    public String getAdvContext() {
-        return advContext;
+    //取得广告信的内容
+    public String getAdvContext(){
+        return this.advContext;
     }
 }

@@ -1,8 +1,6 @@
-package cn.part02.ch13.prototypeImpl;
+package cn.part02.ch13.prototype2;
 
-/**
- * Created by NKS on 2017/9/25.
- */
+//代码清单13-4 修改后的邮件类
 public class Mail implements Cloneable {
 
     //收件人
@@ -16,22 +14,24 @@ public class Mail implements Cloneable {
     //邮件的尾部，一般都是加上“XXX版权所有”等信息
     private String tail;
 
+    //构造函数
     public Mail(AdvTemplate advTemplate) {
         this.context = advTemplate.getAdvContext();
         this.subject = advTemplate.getAdvSubject();
     }
 
-    public Mail clone(){
+    public Mail clone() {
         Mail mail = null;
-        try{
-            mail = (Mail)super.clone();
-        }catch (CloneNotSupportedException e){
+        try {
+            mail = (Mail) super.clone();
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
         return mail;
     }
 
-    public String getReceiver(){
+    //以下为getter/setter方法
+    public String getReceiver() {
         return receiver;
     }
 

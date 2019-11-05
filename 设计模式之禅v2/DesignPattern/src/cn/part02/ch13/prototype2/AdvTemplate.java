@@ -1,8 +1,6 @@
-package cn.part02.ch13.prototypeImpl;
+package cn.part02.ch13.prototype2;
 
-/**
- * Created by NKS on 2017/9/25.
- */
+//代码清单13-1 广告信模板代码
 public class AdvTemplate {
 
     private String advSubject = "XX银行国庆信用卡抽奖活动";
