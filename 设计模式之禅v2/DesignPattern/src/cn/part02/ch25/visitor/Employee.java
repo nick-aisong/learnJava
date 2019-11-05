@@ -38,9 +38,9 @@ public abstract class Employee {
         this.sex = sex;
     }
 
-    public final void report(){
+    public final void report() {
         String info = "姓名：" + this.name + "\t";
-        info = info + "性别：" + (this.sex == FEMALE?"女":"男") + "\t";
+        info = info + "性别：" + (this.sex == FEMALE ? "女" : "男") + "\t";
         info = info + "薪水：" + this.salary + "\t";
         //获得员工的其他信息
         info = info + this.getOtherInfo();

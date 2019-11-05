@@ -5,7 +5,7 @@ package cn.part02.ch22.observerImpl2;
  */
 public class Client {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Observer liSi = new LiSi();
         Observer wangSi = new WangSi();
         Observer liuSi = new LiuSi();

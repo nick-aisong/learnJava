@@ -9,12 +9,12 @@ public abstract class AbstractMediator {
     protected Sale sale;
     protected Stock stock;
 
-    public AbstractMediator(){
+    public AbstractMediator() {
         this.purchase = new Purchase(this);
         sale = new Sale(this);
         stock = new Stock(this);
     }
 
-    public abstract void execute(String str, Object...objects);
+    public abstract void execute(String str, Object... objects);
 
 }

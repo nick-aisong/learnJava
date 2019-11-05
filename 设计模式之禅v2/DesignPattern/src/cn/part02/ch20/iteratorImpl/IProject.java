@@ -6,7 +6,7 @@ package cn.part02.ch20.iteratorImpl;
 public interface IProject {
 
     //增加项目
-    public void add(String name,int num,int cost);
+    public void add(String name, int num, int cost);
 
     //从老板这里看到的就是项目信息
     public String getProjectInfo();

@@ -1,6 +1,7 @@
 package cn.part02.ch11.builder;
 
 import java.util.ArrayList;
+
 //代码清单11-1 车辆模型的抽象类
 public abstract class CarModel {
     //这个参数是各个基本方法执行的顺序

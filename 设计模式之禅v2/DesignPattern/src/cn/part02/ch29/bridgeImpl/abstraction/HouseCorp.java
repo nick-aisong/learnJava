@@ -10,7 +10,7 @@ public class HouseCorp extends Corp {
         super(house);
     }
 
-    public void makeMoney(){
+    public void makeMoney() {
         super.makeMoney();
         System.out.println("房地产公司赚大钱了...");
     }

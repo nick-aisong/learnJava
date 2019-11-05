@@ -13,7 +13,7 @@ public class Root implements IRoot {
 
     private int salary = 0;
 
-    public Root(String name, String position, int salary){
+    public Root(String name, String position, int salary) {
         this.name = name;
         this.position = position;
         this.salary = salary;
@@ -22,7 +22,7 @@ public class Root implements IRoot {
     @Override
     public String getInfo() {
         String info = "";
-        info = "名称："+this.name;
+        info = "名称：" + this.name;
         info = info + "\t职位：" + this.position;
         info = info + "\t薪水: " + this.salary;
         return info;

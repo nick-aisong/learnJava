@@ -5,7 +5,7 @@ package cn.part02.ch15.command;
  */
 public class Client {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("-------------客户要求增加一个需求-----------------");
         Group rg = new RequirementGroup();
         rg.find();

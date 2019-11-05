@@ -5,7 +5,7 @@ package cn.part02.ch17.decorator;
  */
 public class Father {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         SchoolReport sr = new FouthGradeSchoolReport();
         sr.report();
 

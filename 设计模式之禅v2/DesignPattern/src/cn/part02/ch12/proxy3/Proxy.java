@@ -10,7 +10,7 @@ public class Proxy implements Subject {
         this.subject = new Proxy();
     }
 
-    public Proxy(Subject _subject){
+    public Proxy(Subject _subject) {
         this.subject = _subject;
     }
 

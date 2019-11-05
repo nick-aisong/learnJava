@@ -29,11 +29,12 @@ public abstract class Corp {
     }
 
     // 设置父节点
-    protected void setParent(Corp _parent){
+    protected void setParent(Corp _parent) {
         this.parent = _parent;
     }
+
     // 得到父节点
-    public Corp getParent(){
+    public Corp getParent() {
         return this.parent;
     }
 

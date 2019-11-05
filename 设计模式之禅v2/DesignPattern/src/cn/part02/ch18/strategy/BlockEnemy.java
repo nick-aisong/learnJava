@@ -1,6 +1,6 @@
 package cn.part02.ch18.strategy;
 
-public class BlockEnemy implements IStrategy{
+public class BlockEnemy implements IStrategy {
 
     @Override
     public void operate() {

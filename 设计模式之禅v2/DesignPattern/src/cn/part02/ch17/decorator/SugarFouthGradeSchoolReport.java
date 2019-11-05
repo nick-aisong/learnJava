@@ -5,15 +5,15 @@ package cn.part02.ch17.decorator;
  */
 public class SugarFouthGradeSchoolReport extends FouthGradeSchoolReport {
 
-    private void reportHighScore(){
+    private void reportHighScore() {
         System.out.println("这次考试语文最高是75，数学是78，自然是80");
     }
 
-    private void reportSort(){
+    private void reportSort() {
         System.out.println("我是排名第38名...");
     }
 
-    public void report(){
+    public void report() {
         this.reportHighScore();
         super.report();
         this.reportHighScore();

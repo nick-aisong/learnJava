@@ -5,7 +5,7 @@ package cn.part02.ch16.chainOfResponsibilityImpl;
  */
 public class Husband extends Handler {
 
-    public Husband(){
+    public Husband() {
         super(2);
     }
 

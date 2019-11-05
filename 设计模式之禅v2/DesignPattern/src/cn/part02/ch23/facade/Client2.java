@@ -5,7 +5,7 @@ package cn.part02.ch23.facade;
  */
 public class Client2 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         ModenPostOffice hellRoadPostOffice = new ModenPostOffice();
 

@@ -8,11 +8,11 @@ public class SortDecorator extends Decorator {
         super(sr);
     }
 
-    private void reportSort(){
+    private void reportSort() {
         System.out.println("我是排名第38名...");
     }
 
-    public void report(){
+    public void report() {
         super.report();
         this.reportSort();
     }

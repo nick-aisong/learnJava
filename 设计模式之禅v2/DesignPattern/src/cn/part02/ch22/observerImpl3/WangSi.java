@@ -14,7 +14,7 @@ public class WangSi implements Observer {
         System.out.println("王斯：真真的哭死了...\n");
     }
 
-    private void cry(String context){
-        System.out.println("王斯：因为"+context+"，——所以我悲伤呀！");
+    private void cry(String context) {
+        System.out.println("王斯：因为" + context + "，——所以我悲伤呀！");
     }
 }
