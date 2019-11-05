@@ -10,7 +10,7 @@ import cn.part02.ch29.bridgeImpl.implementor.IPod;
  */
 public class Client {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         House house = new House();
         System.out.println("-------房地产公司是这个样子运行的-------");
         HouseCorp houseCorp = new HouseCorp(house);

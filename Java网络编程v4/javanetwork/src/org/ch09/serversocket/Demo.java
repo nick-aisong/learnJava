@@ -14,32 +14,32 @@ import org.junit.Test;
 // daytime服务器
 public class Demo {
 
-	public final static int PORT = 13;
+    public final static int PORT = 13;
 
-	public static void main(String[] args) throws IOException {
-		try (ServerSocket server = new ServerSocket(PORT)) {
-			while (true) {
-				try (Socket connection = server.accept()) {
-					Writer out = new OutputStreamWriter(connection.getOutputStream());
-					Date now = new Date();
-					out.write(now.toString() + "\r\n");
-					out.flush();
-					connection.close();
-				}
-			}
-		}
-	}
+    public static void main(String[] args) throws IOException {
+        try (ServerSocket server = new ServerSocket(PORT)) {
+            while (true) {
+                try (Socket connection = server.accept()) {
+                    Writer out = new OutputStreamWriter(connection.getOutputStream());
+                    Date now = new Date();
+                    out.write(now.toString() + "\r\n");
+                    out.flush();
+                    connection.close();
+                }
+            }
+        }
+    }
 
-	@Test
-	public void test() throws Exception {
-		while (true) {
-			try (Socket s = new Socket("localhost", 13)) {
-				InputStreamReader in = new InputStreamReader(s.getInputStream());
-				int len;
-				while ((len = in.read()) != -1) {
-					System.out.print((char) len);
-				}
-			}
-		}
-	}
+    @Test
+    public void test() throws Exception {
+        while (true) {
+            try (Socket s = new Socket("localhost", 13)) {
+                InputStreamReader in = new InputStreamReader(s.getInputStream());
+                int len;
+                while ((len = in.read()) != -1) {
+                    System.out.print((char) len);
+                }
+            }
+        }
+    }
 }
