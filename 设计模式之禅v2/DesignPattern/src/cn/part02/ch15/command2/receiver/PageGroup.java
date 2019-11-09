@@ -1,4 +1,4 @@
-package cn.part02.ch15.command;
+package cn.part02.ch15.command2.receiver;
 
 //代码清单15-3 美工组
 public class PageGroup extends Group {

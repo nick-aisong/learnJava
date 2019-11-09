@@ -1,4 +1,4 @@
-package cn.part02.ch15.command;
+package cn.part02.ch15.command2.receiver;
 
 //代码清单15-2 需求组
 public class RequirementGroup extends Group {

@@ -1,4 +1,4 @@
-package cn.part02.ch15.command;
+package cn.part02.ch15.command2.receiver;
 
 //代码清单15-4 代码组
 public class CodeGroup extends Group {
