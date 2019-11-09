@@ -1,10 +1,7 @@
-package cn.part02.ch14.mediatorImpl;
+package cn.part02.ch14.mediator2;
 
-/**
- * Created by NKS on 2017/9/26.
- */
+//代码清单14-7 抽象同事类
 public class AbstractColleague {
-
     protected AbstractMediator mediator;
 
     public AbstractColleague(AbstractMediator _mediator) {
