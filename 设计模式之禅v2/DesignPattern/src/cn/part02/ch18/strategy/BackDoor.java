@@ -1,5 +1,6 @@
 package cn.part02.ch18.strategy;
 
+//代码清单18-2 乔国老开后门
 public class BackDoor implements IStrategy {
     @Override
     public void operate() {
