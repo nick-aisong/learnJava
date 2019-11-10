@@ -1,4 +1,4 @@
-package cn.part02.ch17.decoratorImpl;
+package cn.part02.ch17.decorator2;
 
 /**
  * Created by NKS on 2017/9/16.

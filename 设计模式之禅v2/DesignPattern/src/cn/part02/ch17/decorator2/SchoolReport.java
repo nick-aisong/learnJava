@@ -1,4 +1,4 @@
-package cn.part02.ch17.decorator;
+package cn.part02.ch17.decorator2;
 
 //代码清单17-1 抽象成绩单
 public abstract class SchoolReport {
