@@ -186,7 +186,7 @@ Java必须知道的300个- 问题
 - 问题162 Java中的异常如何分类?
 - 问题163 如何使用try…catch捕获并处理异常?
 - 问题164 try…catch…finally是如何处理异常的?
-- 问题165 使用tey…finally能处理异常吗?
+- 问题165 使用try…finally能处理异常吗?
 - 问题166 如何使用throws关键字声明方法抛出的异常?
 - 问题167 如何使用throw关键字在方法中抛出异常?
 - 问题168 关键字throw与throws的用法有什么差异?
@@ -317,7 +317,7 @@ Java必须知道的300个- 问题
 - 问题283 Java程序如何实现调用存储过程?
 - 问题284 SQL Server数据库几种登录方之间的区别有哪些?
 - 问题285 数据库管理系统、数据库系统的区别?
-- 问题286 Statement和PreparedStatemen区别?
+- 问题286 Statement和PreparedStatement区别?
 - 问题287 如何通过JDBC控制数据库事务?
 - 问题288 Java程序如何获得表结构?
 - 问题289 如何实现在数据库中存储图片?

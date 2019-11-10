@@ -72,8 +72,8 @@ Java是面向对象的程序设计语言，并不需要goto语句，而是将got
 
 为float型变量num正确赋值的代码如下:
 ```java
-float num= 3.14159f;
-float num= 3.14159F;
+float num = 3.14159f;
+float num = 3.14159F;
 ```
 在为float型的变量赋值为浮点数时，建议尽量少用强制类型转换，因为当把高精度的double型数据，
 强制类型转换为低精度的float型数据时，会有精度损失，而正确的做法则是在浮点数值后加后缀f或F,
