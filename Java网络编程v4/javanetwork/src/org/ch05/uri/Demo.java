@@ -11,7 +11,7 @@ public class Demo {
 
     // 5-1
     public static void main(String[] args) {
-        // 超文本传输xiey
+        // 超文本传输协议
         testProtocol("http://www.baidu.com");
         // 安全http
         testProtocol("https://www.baidu.com");

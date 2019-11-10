@@ -1,4 +1,4 @@
-package cn.part02.ch16.chainOfResponsibilityImpl;
+package cn.part02.ch16.chainOfResponsibility2;
 
 /**
  * Created by NKS on 2017/9/20.

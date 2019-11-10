@@ -1,25 +1,21 @@
-package cn.part02.ch16.chainOfResponsibilityImpl;
+package cn.part02.ch16.chainOfResponsibility2;
 
-
-/**
- * Created by NKS on 2017/9/21.
- */
+//代码清单16-12 女性类
 public class Women implements IWomen {
-
     /*
     * 通过一个int类型的参数来描述妇女的个人状况
-    * 1---未出嫁
-    * 2---出嫁
-    * 3---夫死
+    * 1--未出嫁
+    * 2--出嫁
+    * 3--夫死
     */
     private int type = 0;
-
+    //妇女的请示
     private String request = "";
 
+    //构造函数传递过来请求
     public Women(int _type, String _request) {
         this.type = _type;
-
-        //为了显示好看点，我在这里做了点处理
+        //为了便于显示，在这里做了点处理
         switch (this.type) {
             case 1:
                 this.request = "女儿的请求是：" + _request;
@@ -32,12 +28,12 @@ public class Women implements IWomen {
         }
     }
 
-    @Override
+    //获得自己的状况
     public int getType() {
         return this.type;
     }
 
-    @Override
+    //获得妇女的请求
     public String getRequest() {
         return this.request;
     }
