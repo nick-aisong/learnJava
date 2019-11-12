@@ -1,8 +1,6 @@
-package cn.part02.ch20.iteratorImpl;
+package cn.part02.ch20.iterator2;
 
-/**
- * Created by NKS on 2017/9/16.
- */
+//代码清单20-4 项目信息接口
 public interface IProject {
 
     //增加项目
