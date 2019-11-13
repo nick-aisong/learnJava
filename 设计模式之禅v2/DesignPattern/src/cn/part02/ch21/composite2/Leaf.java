@@ -1,23 +1,22 @@
-package cn.part02.ch21.compositeImpl;
+package cn.part02.ch21.composite2;
 
-/**
- * Created by NKS on 2017/9/18.
- */
-public class Leaf implements ICorp {
-
+//代码清单21-10 树叶接口
+public class Leaf implements ILeaf {
+    //小兵也有名称
     private String name = "";
-
+    //小兵也有职位
     private String position = "";
-
+    //小兵也有薪水，否则谁给你干
     private int salary = 0;
 
+    //通过一个构造函数传递小兵的信息
     public Leaf(String name, String position, int salary) {
         this.name = name;
         this.position = position;
         this.salary = salary;
     }
 
-    @Override
+    //获得小兵的信息
     public String getInfo() {
         String info = "";
         info = "姓名：" + this.name;

@@ -2,21 +2,20 @@ package cn.part02.ch21.composite;
 
 import java.util.ArrayList;
 
-/**
- * Created by NKS on 2017/9/18.
- */
+//代码清单21-7 场景类
 public class Client {
 
     public static void main(String[] args) {
-
-        IRoot ceo = new Root("Root", "boss", 1000000);
-
-        IBranch developDep = new Branch("Branch1", "DevManager", 100000);
-        IBranch saleDep = new Branch("Branch2", "saleManager", 100000);
-        IBranch finaceDep = new Branch("Branch3", "finaceManager", 100000);
-        IBranch firstDevGroup = new Branch("B1", "devGroup1", 50000);
-        IBranch secondDevGroup = new Branch("B2", "devGroup2", 50000);
-
+        //首先产生了一个根节点
+        IRoot ceo = new Root("王大麻子", "总经理", 100000);
+        //产生三个部门经理，也就是树枝节点
+        IBranch developDep = new Branch("刘大瘸子", "研发部门经理", 10000);
+        IBranch salesDep = new Branch("马二拐子", "销售部门经理", 20000);
+        IBranch financeDep = new Branch("赵三驼子", "财务部经理", 30000);
+        //再把三个小组长产生出来
+        IBranch firstDevGroup = new Branch("杨三乜斜", "开发一组组长", 5000);
+        IBranch secondDevGroup = new Branch("吴大棒槌", "开发二组组长", 6000);
+        //剩下的就是我们这些小兵了,就是路人甲、路人乙
         ILeaf a = new Leaf("a", "开发人员", 2000);
         ILeaf b = new Leaf("b", "开发人员", 2000);
         ILeaf c = new Leaf("c", "开发人员", 2000);
@@ -29,49 +28,69 @@ public class Client {
         ILeaf j = new Leaf("j", "财务人员", 5000);
         ILeaf k = new Leaf("k", "CEO秘书", 8000);
         ILeaf zhengLaoLiu = new Leaf("郑老六", "研发部副总", 20000);
-
+        //该产生的人都产生出来了，然后我们怎么组装这棵树
+        //首先是定义总经理下有三个部门经理
         ceo.add(developDep);
-        ceo.add(saleDep);
-        ceo.add(finaceDep);
+        ceo.add(salesDep);
+        ceo.add(financeDep);
+        //总经理下还有一个秘书
         ceo.add(k);
-
+        //定义研发部门下的结构
         developDep.add(firstDevGroup);
         developDep.add(secondDevGroup);
+        //研发部经理下还有一个副总
         developDep.add(zhengLaoLiu);
-
+        //看看开发两个开发小组下有什么
         firstDevGroup.add(a);
         firstDevGroup.add(b);
         firstDevGroup.add(c);
-
         secondDevGroup.add(d);
         secondDevGroup.add(e);
         secondDevGroup.add(f);
-
-        saleDep.add(h);
-        saleDep.add(i);
-
-        finaceDep.add(j);
-
+        //再看销售部下的人员情况
+        salesDep.add(h);
+        salesDep.add(i);
+        //最后一个财务
+        financeDep.add(j);
+        //打印写完的树状结构
         System.out.println(ceo.getInfo());
-
+        //打印出来整个树形
         getAllSubordinateInfo(ceo.getSubordinateInfo());
-
     }
 
+    //遍历所有的树枝节点，打印出信息
     private static void getAllSubordinateInfo(ArrayList subordinateList) {
-
         int length = subordinateList.size();
-
+        //定义一个ArrayList长度，不要在for循环中每次计算
         for (int m = 0; m < length; m++) {
             Object s = subordinateList.get(m);
-            if (s instanceof Leaf) {
-                ILeaf employee = (Leaf) s;
-                System.out.println(employee.getInfo());
+            if (s instanceof Leaf) { //是个叶子节点，也就是员工
+                ILeaf employee = (ILeaf) s;
+                System.out.println(((Leaf) s).getInfo());
             } else {
-                IBranch branch = (Branch) s;
+                IBranch branch = (IBranch) s;
                 System.out.println(branch.getInfo());
+                //再递归调用
                 getAllSubordinateInfo(branch.getSubordinateInfo());
             }
         }
     }
 }
+
+//名称：王大麻子	职位：总经理	薪水： 100000
+//名称：刘大瘸子	职位：研发部门经理	薪水：10000
+//名称：杨三乜斜	职位：开发一组组长	薪水：5000
+//名称：a	职位：开发人员	薪水：2000
+//名称：b	职位：开发人员	薪水：2000
+//名称：c	职位：开发人员	薪水：2000
+//名称：吴大棒槌	职位：开发二组组长	薪水：6000
+//名称：d	职位：开发人员	薪水：2000
+//名称：e	职位：开发人员	薪水：2000
+//名称：f	职位：开发人员	薪水：2000
+//名称：郑老六	职位：研发部副总	薪水：20000
+//名称：马二拐子	职位：销售部门经理	薪水：20000
+//名称：h	职位：销售人员	薪水：5000
+//名称：i	职位：销售人员	薪水：4000
+//名称：赵三驼子	职位：财务部经理	薪水：30000
+//名称：j	职位：财务人员	薪水：5000
+//名称：k	职位：CEO秘书	薪水：8000
