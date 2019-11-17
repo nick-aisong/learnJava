@@ -1,4 +1,4 @@
-package cn.part02.ch22.observer;
+package cn.part02.ch22.observer3;
 
 //代码清单22-1 被观察者接口
 public interface IHanFeiZi {

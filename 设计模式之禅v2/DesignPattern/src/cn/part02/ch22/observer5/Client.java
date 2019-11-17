@@ -1,10 +1,8 @@
-package cn.part02.ch22.observerImpl2;
+package cn.part02.ch22.observer5;
 
-/**
- * Created by NKS on 2017/9/19.
- */
+import java.util.Observer;
+
 public class Client {
-
     public static void main(String[] args) {
         Observer liSi = new LiSi();
         Observer wangSi = new WangSi();
@@ -17,7 +15,5 @@ public class Client {
         hanFeiZi.addObserver(liuSi);
 
         hanFeiZi.haveBreakfast();
-
     }
-
 }

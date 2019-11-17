@@ -1,4 +1,4 @@
-package cn.part02.ch22.observer;
+package cn.part02.ch22.observer2;
 
 //代码清单22-4 韩非子
 public class LiSi implements ILiSi {

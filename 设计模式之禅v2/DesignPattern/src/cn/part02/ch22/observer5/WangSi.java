@@ -1,13 +1,13 @@
-package cn.part02.ch22.observerImpl2;
+package cn.part02.ch22.observer5;
 
-/**
- * Created by NKS on 2017/9/19.
- */
+import java.util.Observable;
+import java.util.Observer;
+
 public class WangSi implements Observer {
     @Override
-    public void update(String context) {
+    public void update(Observable o, Object arg) {
         System.out.println("王斯：观察到韩非子活动，自己也开始活动了...");
-        this.cry(context);
+        this.cry(arg.toString());
         System.out.println("王斯：真真的哭死了...\n");
     }
 

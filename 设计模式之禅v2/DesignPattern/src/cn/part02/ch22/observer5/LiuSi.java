@@ -1,11 +1,8 @@
-package cn.part02.ch22.observerImpl3;
+package cn.part02.ch22.observer5;
 
 import java.util.Observable;
 import java.util.Observer;
 
-/**
- * Created by NKS on 2017/9/19.
- */
 public class LiuSi implements Observer {
     @Override
     public void update(Observable o, Object arg) {

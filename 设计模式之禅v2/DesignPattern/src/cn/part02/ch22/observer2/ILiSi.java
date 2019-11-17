@@ -1,4 +1,4 @@
-package cn.part02.ch22.observer;
+package cn.part02.ch22.observer2;
 
 //代码清单22-3 抽象观察者
 public interface ILiSi {
