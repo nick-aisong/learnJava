@@ -1,4 +1,4 @@
-package cn.part02.ch23.facade;
+package cn.part02.ch23.facade2;
 
 //代码清单23-2 写信过程的实现
 public class LetterProcessImpl implements ILetterProcess {
