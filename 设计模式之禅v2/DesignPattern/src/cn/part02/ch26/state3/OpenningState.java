@@ -1,15 +1,8 @@
 package cn.part02.ch26.state3;
 
-/**
- * Created by NKS on 2017/9/24.
- */
+//代码清单26-8 敞门状态
 public class OpenningState extends LiftState {
-    @Override
-    public void open() {
-        System.out.println("电梯门开启...");
-    }
-
-    @Override
+    //开启当然可以关闭了，我就想测试一下电梯门开关功能
     public void close() {
         //状态修改
         super.context.setLiftState(Context.closeingState);
@@ -17,12 +10,17 @@ public class OpenningState extends LiftState {
         super.context.getLiftState().close();
     }
 
-    @Override
+    //打开电梯门
+    public void open() {
+        System.out.println("电梯门开启...");
+    }
+
+    //门开着时电梯就运行跑，这电梯，吓死你！
     public void run() {
         //do nothing;
     }
 
-    @Override
+    //开门还不停止？
     public void stop() {
         //do nothing;
     }
