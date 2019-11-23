@@ -1,6 +1,5 @@
-package cn.part02.ch25.visitor;
+package cn.part02.ch25.visitor5;
 
-//代码清单25-2 普通员工
 public class CommonEmployee extends Employee {
 
     private String job;
@@ -14,7 +13,7 @@ public class CommonEmployee extends Employee {
     }
 
     @Override
-    protected String getOtherInfo() {
-        return "工作：" + this.job + "\t";
+    public void accept(IVisitor visitor) {
+        visitor.visit(this);
     }
 }

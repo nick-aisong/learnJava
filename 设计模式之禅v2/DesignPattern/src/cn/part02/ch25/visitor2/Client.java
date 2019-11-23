@@ -1,18 +1,17 @@
-package cn.part02.ch25.visitor;
+package cn.part02.ch25.visitor2;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//代码清单25-4 场景类
+//代码清单25-10 场景类
 public class Client {
-
     public static void main(String[] args) {
-
         for (Employee emp : mockEmployee()) {
-            emp.report();
+            emp.accept(new Visitor());
         }
     }
 
+    //模拟出公司的人员情况，我们可以想象这个数据是通过持久层传递过来的
     public static List<Employee> mockEmployee() {
         List<Employee> empList = new ArrayList<Employee>();
 
@@ -42,7 +41,3 @@ public class Client {
         return empList;
     }
 }
-
-//姓名：张三	性别：男	薪水：1800	工作：编写Java程序，绝对的蓝领、苦工加搬运工
-//姓名：李四	性别：女	薪水：1900	工作：页面美工，审美素质太不流行了！
-//姓名：王五	性别：男	薪水：18750	业绩：基本上是负值，但是我会拍马屁呀

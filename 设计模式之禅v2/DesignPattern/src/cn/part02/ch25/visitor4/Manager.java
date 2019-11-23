@@ -1,6 +1,5 @@
-package cn.part02.ch25.visitor;
+package cn.part02.ch25.visitor4;
 
-//代码清单25-3 管理阶层
 public class Manager extends Employee {
 
     private String performance;
@@ -14,7 +13,7 @@ public class Manager extends Employee {
     }
 
     @Override
-    protected String getOtherInfo() {
-        return "业绩：" + this.performance + "\t";
+    public void accept(IVisitor visitor) {
+        visitor.visit(this);
     }
 }

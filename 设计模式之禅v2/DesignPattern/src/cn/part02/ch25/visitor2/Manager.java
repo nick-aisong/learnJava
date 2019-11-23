@@ -1,8 +1,8 @@
-package cn.part02.ch25.visitor;
+package cn.part02.ch25.visitor2;
 
-//代码清单25-3 管理阶层
+//代码清单25-9 管理层员工
 public class Manager extends Employee {
-
+    //这类人物的职责非常明确：业绩
     private String performance;
 
     public String getPerformance() {
@@ -13,8 +13,9 @@ public class Manager extends Employee {
         this.performance = performance;
     }
 
+    //部门经理允许访问者访问
     @Override
-    protected String getOtherInfo() {
-        return "业绩：" + this.performance + "\t";
+    public void accept(IVisitor visitor) {
+        visitor.visit(this);
     }
 }

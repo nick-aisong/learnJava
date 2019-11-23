@@ -1,6 +1,5 @@
-package cn.part02.ch25.visitor;
+package cn.part02.ch25.visitor5;
 
-//代码清单25-1 抽象员工
 public abstract class Employee {
 
     public final static int MALE = 0;
@@ -36,15 +35,5 @@ public abstract class Employee {
         this.sex = sex;
     }
 
-    public final void report() {
-        String info = "姓名：" + this.name + "\t";
-        info = info + "性别：" + (this.sex == FEMALE ? "女" : "男") + "\t";
-        info = info + "薪水：" + this.salary + "\t";
-        //获得员工的其他信息
-        info = info + this.getOtherInfo();
-        System.out.println(info);
-    }
-
-    protected abstract String getOtherInfo();
-
+    public abstract void accept(IVisitor visitor);
 }
