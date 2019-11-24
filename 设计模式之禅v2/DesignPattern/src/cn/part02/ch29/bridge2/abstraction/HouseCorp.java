@@ -2,9 +2,6 @@ package cn.part02.ch29.bridge2.abstraction;
 
 import cn.part02.ch29.bridge2.implementor.House;
 
-/**
- * Created by NKS on 2017/9/16.
- */
 public class HouseCorp extends Corp {
     public HouseCorp(House house) {
         super(house);

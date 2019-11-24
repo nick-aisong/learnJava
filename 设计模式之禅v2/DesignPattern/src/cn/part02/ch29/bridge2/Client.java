@@ -5,9 +5,6 @@ import cn.part02.ch29.bridge2.abstraction.ShanZhaiCorp;
 import cn.part02.ch29.bridge2.implementor.House;
 import cn.part02.ch29.bridge2.implementor.IPod;
 
-/**
- * Created by NKS on 2017/9/16.
- */
 public class Client {
 
     public static void main(String[] args) {
