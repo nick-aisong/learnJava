@@ -1,4 +1,4 @@
-package cn.part02.ch29.bridge;
+package cn.part02.ch29.bridge2;
 
 //代码清单29-2 房地产公司
 public class HouseCorp extends Corp {

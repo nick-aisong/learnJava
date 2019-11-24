@@ -1,4 +1,4 @@
-package cn.part02.ch29.bridge;
+package cn.part02.ch29.bridge2;
 
 //代码清单29-1 抽象公司
 public abstract class Corp {
