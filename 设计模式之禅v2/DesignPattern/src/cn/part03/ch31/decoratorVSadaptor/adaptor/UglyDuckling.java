@@ -1,4 +1,4 @@
-package cn.part03.ch31.adaptor;
+package cn.part03.ch31.decoratorVSadaptor.adaptor;
 
 //代码清单31-16 把白天鹅当做小鸭子看待
 public class UglyDuckling extends WhiteSwan implements Duck {

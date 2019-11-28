@@ -1,4 +1,4 @@
-package cn.part03.ch31.decorator;
+package cn.part03.ch31.decoratorVSadaptor.decorator;
 
 //代码清单31-10 外形美化
 public class BeautifyAppearance extends Decorator {

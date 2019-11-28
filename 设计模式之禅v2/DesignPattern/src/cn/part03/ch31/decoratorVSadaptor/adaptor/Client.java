@@ -1,4 +1,4 @@
-package cn.part03.ch31.adaptor;
+package cn.part03.ch31.decoratorVSadaptor.adaptor;
 
 //代码清单31-17 场景类
 public class Client {

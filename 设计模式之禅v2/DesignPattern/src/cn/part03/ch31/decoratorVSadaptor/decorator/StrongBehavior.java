@@ -1,4 +1,4 @@
-package cn.part03.ch31.decorator;
+package cn.part03.ch31.decoratorVSadaptor.decorator;
 
 //代码清单31-11 强化行为
 public class StrongBehavior extends Decorator {

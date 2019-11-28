@@ -1,4 +1,4 @@
-package cn.part03.ch31.decorator;
+package cn.part03.ch31.decoratorVSadaptor.adaptor;
 
 //代码清单31-7 天鹅接口
 public interface Swan {

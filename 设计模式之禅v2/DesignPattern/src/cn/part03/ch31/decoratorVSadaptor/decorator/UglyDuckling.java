@@ -1,4 +1,4 @@
-package cn.part03.ch31.decorator;
+package cn.part03.ch31.decoratorVSadaptor.decorator;
 
 //代码清单31-8 丑小鸭
 public class UglyDuckling implements Swan {
