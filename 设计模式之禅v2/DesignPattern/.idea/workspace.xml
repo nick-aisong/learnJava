@@ -83,52 +83,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="ChildState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/strategyVSstate/state/ChildState.java">
+      <file leaf-file-name="DnsServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/DnsServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+            <state relative-caret-position="27">
+              <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SHDnsServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/SHDnsServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OldState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/strategyVSstate/state/OldState.java">
+      <file leaf-file-name="ChinaTopDnsServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/ChinaTopDnsServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Human.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/strategyVSstate/state/Human.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="47" />
+            <state relative-caret-position="243">
+              <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/strategyVSstate/state/Client.java">
+        <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="428">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="行为类模式大PK.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="行为类模式大PK.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/行为类模式大PK.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="486">
-                <caret line="261" column="0" lean-forward="true" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
+              <first_editor relative-caret-position="407">
+                <caret line="379" column="0" lean-forward="true" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -136,12 +140,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdultState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/strategyVSstate/state/AdultState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="38" lean-forward="false" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-              <folding />
+      <file leaf-file-name="跨战区PK.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cn/part03/ch33/跨战区PK.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="81">
+                <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -177,19 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/cn/part03/ch30/abstractFactoryVSbuilder/builder/Director.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch30/abstractFactoryVSbuilder/builder/Client.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch30/创建类模式大PK.md" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch31/proxy/IRunner.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch31/proxy/Runner.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch31/proxy/RunnerAgent.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch31/proxy/Client.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch31/decorator/Runner.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch31/decorator/RunnerWithJet.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch31/decorator/Swan.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch31/decorator/UglyDuckling.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch31/decorator/Decorator.java" />
-        <option value="$PROJECT_DIR$/src/cn/part03/ch31/decorator/StrongBehavior.java" />
         <option value="$PROJECT_DIR$/src/cn/part03/ch31/decorator/BeautifyAppearance.java" />
         <option value="$PROJECT_DIR$/src/cn/part03/ch31/decorator/Client.java" />
         <option value="$PROJECT_DIR$/src/cn/part03/ch31/adaptor/Duck.java" />
@@ -227,7 +221,20 @@
         <option value="$PROJECT_DIR$/src/cn/part03/ch32/state/OldState.java" />
         <option value="$PROJECT_DIR$/src/cn/part03/ch32/state/Human.java" />
         <option value="$PROJECT_DIR$/src/cn/part03/ch32/state/Client.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibility/Recorder.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibility/DnsServer.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibility/ChinaTopDnsServer.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibility/SHDnsServer.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibility/TopDnsServer.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibility/Client.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/Recorder.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/DnsServer.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/SHDnsServer.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/ChinaTopDnsServer.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/TopDnsServer.java" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/Client.java" />
         <option value="$PROJECT_DIR$/src/cn/part03/ch32/行为类模式大PK.md" />
+        <option value="$PROJECT_DIR$/src/cn/part03/ch33/跨战区PK.md" />
       </list>
     </option>
   </component>
@@ -596,25 +603,25 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch32\chainOfResponsibility" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch32\state" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch32\strategy" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch32" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch32\command" />
-      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch31\adaptor" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.part03.ch32.chainOfResponsibilityVSobserver.observer" />
       <recent name="cn.part03.ch31.adaptor" />
       <recent name="cn.part02.ch28.flyweight5" />
       <recent name="cn.part02.ch28.flyweight2" />
       <recent name="cn.part02.ch24.memento6" />
-      <recent name="cn.part02.ch23.facade3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch32\observer" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch32\strategy" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part05\ch37" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part05\ch38" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part02\ch29\bridge2" />
-      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part02\ch21\composite4" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -629,7 +636,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Client (2)">
     <configuration default="false" name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -710,14 +717,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Client (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="cn.part03.ch32.strategyVSstate.strategy.*" />
+          <option name="PATTERN" value="cn.part03.ch32.chainOfResponsibilityVSobserver.observer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="cn.part03.ch32.strategyVSstate.strategy.Client" />
+      <option name="MAIN_CLASS_NAME" value="cn.part03.ch32.chainOfResponsibilityVSobserver.observer.Client" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1133,11 +1140,11 @@
       <item index="1" class="java.lang.String" itemvalue="Application.Client" />
       <item index="2" class="java.lang.String" itemvalue="Application.Client (1)" />
       <item index="3" class="java.lang.String" itemvalue="Application.Client" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Client" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Client (2)" />
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Client" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Client (2)" />
         <item index="1" class="java.lang.String" itemvalue="Application.Client" />
       </list>
     </recent_temporary>
@@ -1162,7 +1169,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281328000" />
+    <option name="totallyTimeSpent" value="285815000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1198,7 +1205,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13732004" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2635659" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22138229" sideWeight="0.4952381" order="0" side_tool="false" content_ui="combo" />
@@ -1235,114 +1242,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch31/decoratorVSadaptor/adaptor/UglyDuckling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="57" lean-forward="true" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch31/decoratorVSadaptor/adaptor/WhiteSwan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch31/decoratorVSadaptor/adaptor/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch31/decoratorVSadaptor/decorator/装饰模式实现丑小鸭.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch30/创建类模式大PK.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="216">
-            <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="7" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/中介者模式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-4349">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/进销存示意图.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/mediator3/中介者模式通用类图.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/mediator2/扩展后的进销存示意图.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/mediator2/修改后的进销存示意图.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/mediator2/修改后的进销存类图.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/mediator3/Mediator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/mediator2/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/mediator2/AbstractMediator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/mediator2/Mediator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part02/ch14/mediator2/AbstractColleague.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1620,11 +1519,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/chainOfResponsibility/DNS解析示意图.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/chainOfResponsibility/Recorder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/chainOfResponsibility/SHDnsServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/chainOfResponsibility/TopDnsServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/chainOfResponsibility/ChinaTopDnsServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/chainOfResponsibility/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/chainOfResponsibility/DnsServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="41" column="77" lean-forward="true" selection-start-line="41" selection-start-column="77" selection-end-line="41" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/Recorder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/TopDnsServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/ChinaTopDnsServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.7.0_51/src.zip!/java/util/Observable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="131" column="16" lean-forward="false" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/DnsServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/SHDnsServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/chainOfResponsibilityVSobserver/observer/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part03/ch32/行为类模式大PK.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="486">
-            <caret line="261" column="0" lean-forward="true" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
+          <first_editor relative-caret-position="407">
+            <caret line="379" column="0" lean-forward="true" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part03/ch33/跨战区PK.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="81">
+            <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
             <folding />
           </first_editor>
           <second_editor />
