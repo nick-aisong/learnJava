@@ -2,41 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24f240cc-2674-491d-841e-2f681c7ad3a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/MVC框架的逻辑流.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/MVC框架示意图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/MVC系统架构.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/XML文件监控类图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/servlet-api.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/核心控制器类图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/模型管理器类图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/视图与语言类图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/AbsLangData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/AbsView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/AbstractInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/ActionDispather.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/ActionManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/ActionNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/ActionSupport.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/Checker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/CommonXmlValidate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/ENLangData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/FileWatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/FilterDispatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/GBLangData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/IActionDispather.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/IXmlValidate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/InterceptorFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/Interceptors.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/JspView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/LogicXmlValidate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/SwfView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/ViewManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/ViewPathVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/Watchable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/mvc/XmlActionNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/与规格的示意.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/加入规格后的设计类图.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/完整规格书类图.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/简单用户查询类图.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/AndSpecification.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/Client.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/Client2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/Client3.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/Client4.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/CompositeSpecification.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/IUserProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/IUserSpecification.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/UserByAgeThan.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/UserByNameEqual.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/UserByNameLike.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/specification/UserProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DesignPattern.iml" afterPath="$PROJECT_DIR$/DesignPattern.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/part05/ch37/MVC框架.md" afterPath="$PROJECT_DIR$/src/cn/part05/ch37/MVC框架.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/part05/ch38/新模式.md" afterPath="$PROJECT_DIR$/src/cn/part05/ch38/新模式.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,72 +46,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="ViewPathVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/ViewPathVisitor.java">
+      <file leaf-file-name="ISpecification.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/ISpecification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state relative-caret-position="108">
+              <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/ViewManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XmlActionNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/XmlActionNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-333">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MVC框架.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/MVC框架.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="11217">
-                <caret line="429" column="0" lean-forward="true" selection-start-line="429" selection-start-column="0" selection-end-line="429" selection-end-column="0" />
-                <folding>
-                  <marker date="1575191532017" expanded="true" signature="2292:2630" ph="..." />
-                  <marker date="1575191532017" expanded="true" signature="2305:2484" ph="..." />
-                  <marker date="1575191532017" expanded="true" signature="2505:2619" ph="..." />
-                  <marker date="1575191532017" expanded="true" signature="3105:3291" ph="..." />
-                  <marker date="1575191532017" expanded="true" signature="3170:3284" ph="..." />
-                  <marker date="1575191532017" expanded="true" signature="8548:8650" ph="..." />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SwfView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/SwfView.java">
+      <file leaf-file-name="NotSpecification.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/NotSpecification.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
-              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+              <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileWatcher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/FileWatcher.java">
+      <file leaf-file-name="OrSpecification.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/OrSpecification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            <state relative-caret-position="351">
+              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="规格模式通用类图.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/规格模式通用类图.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BizSpecification.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/BizSpecification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+              <folding>
+                <element signature="e#215#223#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,34 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Card.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Trade.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/IDeduction.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/SteadyDeduction.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch35/factory_strategy/SteadyDeduction.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch35/factory_strategy/FreeDeduction.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch35/factory_strategy/DeductionContext.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch35/factory_strategy/StrategyMan.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch35/factory_strategy/StrategyFactory.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch35/factory_strategy/DeductionFacade.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch35/factory_strategy/Client.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch35/工厂方法模式+策略模式.md" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Product.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/ProductEventType.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/ProductEvent.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/ProductManager.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/EventCustomType.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/EventCustomer.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Beggar.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Commoner.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Nobleman.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Client.java" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/观察者模式+中介者模式.md" />
-        <option value="$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/EventDispatch.java" />
-        <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/web.xml" />
-        <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/FilterDispatcher.java" />
-        <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/IXmlValidate.java" />
-        <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/CommonXmlValidate.java" />
         <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/LogicXmlValidate.java" />
         <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/Watchable.java" />
         <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/FileWatcher.java" />
@@ -214,6 +160,34 @@
         <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/ViewPathVisitor.java" />
         <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/XmlActionNode.java" />
         <option value="$PROJECT_DIR$/src/cn/part05/ch37/MVC框架.md" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/User.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/ValueStack.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch37/mvc/ValueStackHelper.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/IUserProvider.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/UserProvider_old.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/UserProvider.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/Client2.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/Client.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/Client3.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/Client4.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/IUserSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/CompositeSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/AndSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/OrSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/NotSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/UserByNameEqual.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/UserByAgeThan.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/UserByNameLike.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification/Client5.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification2/CompositeSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification2/AndSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification2/OrSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification2/NotSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification2/IUserSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/新模式.md" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification2/ISpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification2/BizSpecification.java" />
+        <option value="$PROJECT_DIR$/src/cn/part05/ch38/specification2/Client.java" />
       </list>
     </option>
   </component>
@@ -312,7 +286,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ch37" />
+              <option name="myItemId" value="ch38" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="specification2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesignPattern" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesignPattern" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="part05" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ch38" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="specification" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,218 +347,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ch37" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part04" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch36" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part04" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch36" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="observer_mediator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part04" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch35" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part04" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch34" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch33" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch32" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch31" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DesignPattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="part03" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -589,26 +385,30 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://G:/GitHub/learnJava/设计模式之禅v2/DesignPattern/src/cn/part02/ch12/proxy6/GamePlayerProxy.java" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cn.part05.ch38.specification2" />
+      <recent name="cn.part05.ch37.mvc" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part05\ch38\specification" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part05\ch37\mvc" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part04\ch36\observer_mediator" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part04\ch35\factory_strategy" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part04\ch34\command_chainOfResponsibility" />
-      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch33\bridge" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.part05.ch38.specification2" />
       <recent name="cn.part03.ch33.bridge" />
       <recent name="cn.part03.ch32.chainOfResponsibilityVSobserver.observer" />
       <recent name="cn.part03.ch31.adaptor" />
       <recent name="cn.part02.ch28.flyweight5" />
-      <recent name="cn.part02.ch28.flyweight2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part05\ch38\specification2" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part04\ch35\factory_strategy" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch32\observer" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part03\ch32\strategy" />
       <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part05\ch37" />
-      <recent name="G:\GitHub\learnJava\设计模式之禅v2\DesignPattern\src\cn\part05\ch38" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -623,15 +423,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client (3)">
-    <configuration default="false" name="Client (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Client (1)">
+    <configuration default="false" name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="cn.part04.ch36.observer_mediator.*" />
+          <option name="PATTERN" value="cn.part05.ch38.specification.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="cn.part04.ch36.observer_mediator.Client" />
+      <option name="MAIN_CLASS_NAME" value="cn.part05.ch38.specification.Client" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -644,14 +444,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Idolater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Client2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="cn.part03.ch33.wrappingPattern.proxy.*" />
+          <option name="PATTERN" value="cn.part05.ch38.specification.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="cn.part03.ch33.wrappingPattern.proxy.Idolater" />
+      <option name="MAIN_CLASS_NAME" value="cn.part05.ch38.specification.Client2" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -664,14 +464,34 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="direcotr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Client3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="cn.part03.ch33.wrappingPattern.adaptor.*" />
+          <option name="PATTERN" value="cn.part05.ch38.specification.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="cn.part03.ch33.wrappingPattern.adaptor.direcotr" />
+      <option name="MAIN_CLASS_NAME" value="cn.part05.ch38.specification.Client3" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="DesignPattern" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Client5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.part05.ch38.specification.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="cn.part05.ch38.specification.Client5" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -687,31 +507,11 @@
     <configuration default="false" name="Client (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="cn.part04.ch34.command_chainOfResponsibility.*" />
+          <option name="PATTERN" value="cn.part05.ch38.specification2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="cn.part04.ch34.command_chainOfResponsibility.Client" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="DesignPattern" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Client (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cn.part04.ch35.factory_strategy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="cn.part04.ch35.factory_strategy.Client" />
+      <option name="MAIN_CLASS_NAME" value="cn.part05.ch38.specification2.Client" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1123,18 +923,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Client (3)" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Idolater" />
-      <item index="2" class="java.lang.String" itemvalue="Application.direcotr" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Client (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Client (2)" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Client" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Client2" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Client3" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Client5" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Client (1)" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Client (3)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Client (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Client (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Application.direcotr" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Client (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Client5" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Client3" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Client2" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -1158,7 +959,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325435000" />
+    <option name="totallyTimeSpent" value="331486000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1171,7 +972,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1909" y="-11" width="1942" height="1102" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1197,9 +997,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19379845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22138229" sideWeight="0.4952381" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22138229" sideWeight="0.4952381" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22138229" sideWeight="0.50476193" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22138229" sideWeight="0.50476193" order="6" side_tool="true" content_ui="tabs" />
@@ -1236,7 +1036,7 @@
           <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="70" />
+      <option name="time" value="73" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1245,285 +1045,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch35/工厂方法模式+策略模式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="645">
-            <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/ProductEventType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/产品创建工厂.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/EventCustomType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Beggar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Commoner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/EventCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="e#207#224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Nobleman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_144/src.zip!/java/util/Observer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/EventDispatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#341#356#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/ProductManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/cn.part04.ch36.observer_mediator.EventCustomType">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>cn.part04.ch36.observer_mediator.EventCustomType</OriginalElement>
-          <nodes>
-            <node x="" y="">java.lang.Enum</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.EventCustomType</node>
-            <node x="" y="">java.lang.Comparable</node>
-            <node x="" y="">java.io.Serializable</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="187.0" y="119.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/cn.part04.ch36.observer_mediator.Client">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>cn.part04.ch36.observer_mediator.Client</OriginalElement>
-          <nodes>
-            <node x="" y="">cn.part04.ch36.observer_mediator.Client</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="62.5" y="23.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/cn.part04.ch36.observer_mediator.Commoner">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>cn.part04.ch36.observer_mediator.Commoner</OriginalElement>
-          <nodes>
-            <node x="" y="">cn.part04.ch36.observer_mediator.EventCustomer</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.Commoner</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="102.5" y="71.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/cn.part04.ch36.observer_mediator">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>cn.part04.ch36.observer_mediator</OriginalElement>
-          <nodes>
-            <node x="" y="">cn.part04.ch36.observer_mediator.EventCustomer</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.Product</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.Beggar</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.Commoner</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.Nobleman</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.EventCustomType</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.ProductEvent</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.Client</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.EventDispatch</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.ProductManager</node>
-            <node x="" y="">cn.part04.ch36.observer_mediator.ProductEventType</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="257.0" y="233.5" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part04/ch36/observer_mediator/ProductEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="36" column="51" lean-forward="false" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_144/jre/lib/rt.jar!/com/sun/net/httpserver/Filter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/LogicXmlValidate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/核心控制器类图.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/MVC系统架构.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/Watchable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/Checker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/CommonXmlValidate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/IXmlValidate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_144/src.zip!/java/util/Observable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="131" column="16" lean-forward="false" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/Checker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
@@ -1577,14 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/AbstractInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/Interceptors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1615,14 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/AbsView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1682,14 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/ViewPathVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/SwfView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1721,6 +1218,267 @@
             </folding>
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/AbsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/AbstractInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="68" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/ValueStackHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/ValueStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch37/mvc/ViewPathVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/Client2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding>
+            <element signature="e#204#210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/Client3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="15" selection-end-column="46" />
+          <folding>
+            <element signature="e#204#210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/Client4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="20" column="53" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="53" />
+          <folding>
+            <element signature="e#204#210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/NotSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/OrSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/UserByNameEqual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="59" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/UserByNameLike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/UserByAgeThan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/CompositeSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/Client5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding>
+            <element signature="e#220#226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/IUserProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/UserProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="46" column="37" lean-forward="false" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="37" />
+          <folding>
+            <element signature="e#1245#1251#0" expanded="true" />
+            <marker date="1575202604547" expanded="false" signature="765:771" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/AndSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/IUserSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/新模式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="707">
+            <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/CompositeSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification/IUserSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/AndSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/ISpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/NotSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/OrSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/规格模式通用类图.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/BizSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/part05/ch38/specification2/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="e#215#223#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
