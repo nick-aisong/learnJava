@@ -301,57 +301,392 @@ HotSpot虚拟机中，如果对象处于未被锁定的状态下，那么Mark Wo
 于存储对象哈希码，4bit用于存储对象分代年龄，2bit用于存储锁标志位，1bit固定为0，而在
 其他状态（轻量级锁定、重量级锁定、GC标记、可偏向）下对象的存储内容见表2-1
 
+对象头的另外一部分是类型指针，即对象指向它的类元数据的指针，虚拟机通过这个指
+针来确定这个对象是哪个类的实例。并不是所有的虚拟机实现都必须在对象数据上保留类型
+指针，换句话说，查找对象的元数据信息并不一定要经过对象本身，这点将在2.3.3节讨论。
+另外，如果对象是一个Java数组，那在对象头中还必须有一块用于记录数组长度的数据，因
+为虚拟机可以通过普通Java对象的元数据信息确定Java对象的大小，但是从数组的元数据中
+却无法确定数组的大小
 
+代码清单2-2为HotSpot虚拟机markOop.cpp中的代码（注释）片段，它描述了32bit下Mark
+Word的存储状态
 
+```
+//代码清单2-2 markOop.cpp片段
+//Bit-format of an object header(most significant first,big endian layout below)：
+//32 bits：
+//--------
+//hash：25------------>|age：4 biased_lock：1 lock：2(normal object)
+//JavaThread*：23 epoch：2 age：4 biased_lock：1 lock：2(biased object)
+//size：32------------------------------------------>|(CMS free block)
+//PromotedObject*：29---------->|promo_bits：3----->|(CMS promoted object)
+```
+接下来的实例数据部分是对象真正存储的有效信息，也是在程序代码中所定义的各种类
+型的字段内容。无论是从父类继承下来的，还是在子类中定义的，都需要记录起来。这部分
+的存储顺序会受到虚拟机分配策略参数（FieldsAllocationStyle）和字段在Java源码中定义顺
+序的影响。HotSpot虚拟机默认的分配策略为longs/doubles、ints、shorts/chars、
+bytes/booleans、oops（Ordinary Object Pointers），从分配策略中可以看出，相同宽度的字段
+总是被分配到一起。在满足这个前提条件的情况下，在父类中定义的变量会出现在子类之
+前。如果CompactFields参数值为true（默认为true），那么子类之中较窄的变量也可能会插入
+到父类变量的空隙之中
 
-
-
-
-
+第三部分对齐填充并不是必然存在的，也没有特别的含义，它仅仅起着占位符的作用。
+由于HotSpot VM的自动内存管理系统要求对象起始地址必须是8字节的整数倍，换句话说，
+就是对象的大小必须是8字节的整数倍。而对象头部分正好是8字节的倍数（1倍或者2倍），
+因此，当对象实例数据部分没有对齐时，就需要通过对齐填充来补全
 
 ###### 2.3.3 对象的访问定位
+建立对象是为了使用对象，我们的Java程序需要通过栈上的reference数据来操作堆上的
+具体对象。由于reference类型在Java虚拟机规范中只规定了一个指向对象的引用，并没有定
+义这个引用应该通过何种方式去定位、访问堆中的对象的具体位置，所以对象访问方式也是
+取决于虚拟机实现而定的。目前主流的访问方式有使用句柄和直接指针两种
 
+如果使用句柄访问的话，那么Java堆中将会划分出一块内存来作为句柄池，reference中
+存储的就是对象的句柄地址，而句柄中包含了对象实例数据与类型数据各自的具体地址信
+息，如图2-2所示
 
+如果使用直接指针访问，那么Java堆对象的布局中就必须考虑如何放置访问类型数据的
+相关信息，而reference中存储的直接就是对象地址，如图2-3所示
 
+这两种对象访问方式各有优势，使用句柄来访问的最大好处就是reference中存储的是稳
+定的句柄地址，在对象被移动（垃圾收集时移动对象是非常普遍的行为）时只会改变句柄中
+的实例数据指针，而reference本身不需要修改
+
+使用直接指针访问方式的最大好处就是速度更快，它节省了一次指针定位的时间开销，
+由于对象的访问在Java中非常频繁，因此这类开销积少成多后也是一项非常可观的执行成
+本。就本书讨论的主要虚拟机Sun HotSpot而言，它是使用第二种方式进行对象访问的，但从
+整个软件开发的范围来看，各种语言和框架使用句柄来访问的情况也十分常见
 
 ##### 2.4 实战：OutOfMemoryError异常
+在Java虚拟机规范的描述中，除了程序计数器外，虚拟机内存的其他几个运行时区域都
+有发生OutOfMemoryError（下文称OOM）异常的可能，本节将通过若干实例来验证异常发生
+的场景（代码清单2-3～代码清单2-9的几段简单代码），并且会初步介绍几个与内存相关的
+最基本的虚拟机参数
 
+本节内容的目的有两个：第一，通过代码验证Java虚拟机规范中描述的各个运行时区域
+存储的内容；第二，希望读者在工作中遇到实际的内存溢出异常时，能根据异常的信息快速
+判断是哪个区域的内存溢出，知道什么样的代码可能会导致这些区域内存溢出，以及出现这
+些异常后该如何处理
 
+下文代码的开头都注释了执行时所需要设置的虚拟机启动参数（注释中“VM Args”后面
+跟着的参数），这些参数对实验的结果有直接影响，读者调试代码的时候千万不要忽略。如
+果读者使用控制台命令来执行程序，那直接跟在Java命令之后书写就可以。如果读者使用
+Eclipse IDE，则可以参考图2-4在Debug/Run页签中的设置
 
+下文的代码都是基于Sun公司的HotSpot虚拟机运行的，对于不同公司的不同版本的虚拟
+机，参数和程序运行的结果可能会有所差别
 
 ###### 2.4.1 Java堆溢出
+Java堆用于存储对象实例，只要不断地创建对象，并且保证GC Roots到对象之间有可达
+路径来避免垃圾回收机制清除这些对象，那么在对象数量到达最大堆的容量限制后就会产生
+内存溢出异常
 
+代码清单2-3中代码限制Java堆的大小为20MB，不可扩展（将堆的最小值-Xms参数与最
+大值-Xmx参数设置为一样即可避免堆自动扩展），通过参数-XX：
++HeapDumpOnOutOfMemoryError可以让虚拟机在出现内存溢出异常时Dump出当前的内存堆
+转储快照以便事后进行分析
 
+```java
+//代码清单2-3 Java堆内存溢出异常测试
+     /**
+     *VM Args：-Xms20m-Xmx20m-XX：+HeapDumpOnOutOfMemoryError
+     *@author zzm
+     */
+    public class HeapOOM{
+        static class OOMObject{
+        }
+        public static void main(String[]args){
+            List<OOMObject>list = new ArrayList<OOMObject>();
+            while(true){
+                list.add(new OOMObject());
+            }
+        }
+    }
+    
+//运行结果：
+java.lang.OutOfMemoryError：Java heap space
+Dumping heap to java_pid3404.hprof……
+Heap dump file created[22045981 bytes in 0.663 secs]
+```
+Java堆内存的OOM异常是实际应用中常见的内存溢出异常情况。当出现Java堆内存溢出
+时，异常堆栈信息“java.lang.OutOfMemoryError”会跟着进一步提示“Java heap space”
 
+要解决这个区域的异常，一般的手段是先通过内存映像分析工具（如Eclipse Memory
+Analyzer）对Dump出来的堆转储快照进行分析，重点是确认内存中的对象是否是必要的，也
+就是要先分清楚到底是出现了内存泄漏（Memory Leak）还是内存溢出（Memory
+Overflow）。图2-5显示了使用Eclipse Memory Analyzer打开的堆转储快照文件
+
+如果是内存泄露，可进一步通过工具查看泄露对象到GC Roots的引用链。于是就能找到
+泄露对象是通过怎样的路径与GC Roots相关联并导致垃圾收集器无法自动回收它们的。掌握
+了泄露对象的类型信息及GC Roots引用链的信息，就可以比较准确地定位出泄露代码的位置
+
+如果不存在泄露，换句话说，就是内存中的对象确实都还必须存活着，那就应当检查虚
+拟机的堆参数（-Xmx与-Xms），与机器物理内存对比看是否还可以调大，从代码上检查是
+否存在某些对象生命周期过长、持有状态时间过长的情况，尝试减少程序运行期的内存消耗
+
+以上是处理Java堆内存问题的简单思路，处理这些问题所需要的知识、工具与经验是后
+面3章的主题
 
 ###### 2.4.2 虚拟机栈和本地方法栈溢出
+由于在HotSpot虚拟机中并不区分虚拟机栈和本地方法栈，因此，对于HotSpot来说，虽
+然-Xoss参数（设置本地方法栈大小）存在，但实际上是无效的，栈容量只由-Xss参数设定。
+关于虚拟机栈和本地方法栈，在Java虚拟机规范中描述了两种异常：
 
+- 如果线程请求的栈深度大于虚拟机所允许的最大深度，将抛出StackOverflowError异常
 
+- 如果虚拟机在扩展栈时无法申请到足够的内存空间，则抛出OutOfMemoryError异常
 
+这里把异常分成两种情况，看似更加严谨，但却存在着一些互相重叠的地方：当栈空间
+无法继续分配时，到底是内存太小，还是已使用的栈空间太大，其本质上只是对同一件事情
+的两种描述而已
+
+在笔者的实验中，将实验范围限制于单线程中的操作，尝试了下面两种方法均无法让虚
+拟机产生OutOfMemoryError异常，尝试的结果都是获得StackOverflowError异常，测试代码如
+代码清单2-4所示
+
+使用-Xss参数减少栈内存容量。结果：抛出StackOverflowError异常，异常出现时输出的
+堆栈深度相应缩小
+
+定义了大量的本地变量，增大此方法帧中本地变量表的长度。结果：抛出
+StackOverflowError异常时输出的堆栈深度相应缩小
+```java
+//代码清单2-4 虚拟机栈和本地方法栈OOM测试（仅作为第1点测试程序）
+     /**
+     *VM Args：-Xss128k
+     *@author zzm
+     */
+    public class JavaVMStackSOF{
+        private int stackLength = 1;
+        public void stackLeak(){
+            stackLength++;
+            stackLeak();
+        }
+        public static void main(String[]args)throws Throwable{
+            JavaVMStackSOF oom = new JavaVMStackSOF();
+            try{
+                oom.stackLeak();
+            }catch(Throwable e){
+                System.out.println("stack length："+oom.stackLength);
+                throw e;
+            }
+        }
+    }
+
+//运行结果：
+stack length：2402
+Exception in thread"main"java.lang.StackOverflowError
+at org.fenixsoft.oom.VMStackSOF.leak（VMStackSOF.java：20）
+at org.fenixsoft.oom.VMStackSOF.leak（VMStackSOF.java：21）
+at org.fenixsoft.oom.VMStackSOF.leak（VMStackSOF.java：21）
+……后续异常堆栈信息省略
+```
+实验结果表明：在单个线程下，无论是由于栈帧太大还是虚拟机栈容量太小，当内存无
+法分配的时候，虚拟机抛出的都是StackOverflowError异常
+
+如果测试时不限于单线程，通过不断地建立线程的方式倒是可以产生内存溢出异常，如
+代码清单2-5所示。但是这样产生的内存溢出异常与栈空间是否足够大并不存在任何联系，
+或者准确地说，在这种情况下，为每个线程的栈分配的内存越大，反而越容易产生内存溢出
+异常
+
+其实原因不难理解，操作系统分配给每个进程的内存是有限制的，譬如32位的Windows
+限制为2GB。虚拟机提供了参数来控制Java堆和方法区的这两部分内存的最大值。剩余的内
+存为2GB（操作系统限制）减去Xmx（最大堆容量），再减去MaxPermSize（最大方法区容
+量），程序计数器消耗内存很小，可以忽略掉。如果虚拟机进程本身耗费的内存不计算在
+内，剩下的内存就由虚拟机栈和本地方法栈“瓜分”了。每个线程分配到的栈容量越大，可以
+建立的线程数量自然就越少，建立线程时就越容易把剩下的内存耗尽
+
+这一点读者需要在开发多线程的应用时特别注意，出现StackOverflowError异常时有错误
+堆栈可以阅读，相对来说，比较容易找到问题的所在。而且，如果使用虚拟机默认参数，栈
+深度在大多数情况下（因为每个方法压入栈的帧大小并不是一样的，所以只能说在大多数情
+况下）达到1000～2000完全没有问题，对于正常的方法调用（包括递归），这个深度应该完
+全够用了。但是，如果是建立过多线程导致的内存溢出，在不能减少线程数或者更换64位虚
+拟机的情况下，就只能通过减少最大堆和减少栈容量来换取更多的线程。如果没有这方面的
+处理经验，这种通过“减少内存”的手段来解决内存溢出的方式会比较难以想到
+```java
+//代码清单2-5 创建线程导致内存溢出异常
+     /**
+     *VM Args：-Xss2M(这时候不妨设置大些)
+     *@author zzm
+     */
+    public class JavaVMStackOOM{
+        private void dontStop(){
+            while(true){
+            }
+        }
+        public void stackLeakByThread(){
+            while(true){
+                Thread thread = new Thread(new Runnable(){
+                    @Override
+                    public void run(){
+                        dontStop();
+                    }
+                });
+                thread.start();
+            }
+        }
+        public static void main(String[]args)throws Throwable{
+            JavaVMStackOOM oom = new JavaVMStackOOM();
+            oom.stackLeakByThread();
+        }
+    }
+
+//运行结果：
+Exception in thread"main"java.lang.OutOfMemoryError：unable to create new native thread
+```
+注意 特别提示一下，如果读者要尝试运行上面这段代码，记得要先保存当前的工作。
+由于在Windows平台的虚拟机中，Java的线程是映射到操作系统的内核线程上的，因此上述
+代码执行时有较大的风险，可能会导致操作系统假死
 
 ###### 2.4.3 方法区和运行时常量池溢出
+由于运行时常量池是方法区的一部分，因此这两个区域的溢出测试就放在一起进行。前
+面提到JDK 1.7开始逐步“去永久代”的事情，在此就以测试代码观察一下这件事对程序的实际
+影响
 
+String.intern()是一个Native方法，它的作用是：如果字符串常量池中已经包含一个等
+于此String对象的字符串，则返回代表池中这个字符串的String对象；否则，将此String对象包
+含的字符串添加到常量池中，并且返回此String对象的引用。在JDK 1.6及之前的版本中，由
+于常量池分配在永久代内，我们可以通过-XX：PermSize和-XX：MaxPermSize限制方法区大
+小，从而间接限制其中常量池的容量，如代码清单2-6所示
+```java
+//代码清单2-6 运行时常量池导致的内存溢出异常
+ /**
+     *VM Args：-XX：PermSize=10M-XX：MaxPermSize=10M
+     *@author zzm
+     */
+    public class RuntimeConstantPoolOOM{
+        public static void main(String[]args){
+            //使用List保持着常量池引用，避免Full GC回收常量池行为
+            List<String>list = new ArrayList<String>();
+            //10MB的PermSize在integer范围内足够产生OOM了
+            int i = 0;
+            while(true){
+                list.add(String.valueOf(i++).intern());
+            }
+        }
+    }
 
+//运行结果：
+Exception in thread"main"java.lang.OutOfMemoryError：PermGen space
+at java.lang.String.intern（Native Method）
+at org.fenixsoft.oom.RuntimeConstantPoolOOM.main（RuntimeConstantPoolOOM.java：18）
 
+```
+从运行结果中可以看到，运行时常量池溢出，在OutOfMemoryError后面跟随的提示信息
+是“PermGen space”，说明运行时常量池属于方法区（HotSpot虚拟机中的永久代）的一部分
+
+而使用JDK 1.7运行这段程序就不会得到相同的结果，while循环将一直进行下去。关于
+这个字符串常量池的实现问题，还可以引申出一个更有意思的影响，如代码清单2-7所示
+```java
+//代码清单2-7 String.intern()返回引用的测试
+public class RuntimeConstantPoolOOM{
+    public static void main(String[]args){
+        String str1 = new StringBuilder("计算机").append("软件").toString();
+        System.out.println(str1.intern() == str1);
+        String str2 = new StringBuilder("ja").append("va").toString();
+        System.out.println(str2.intern() == str2);
+    }
+}
+```
+这段代码在JDK 1.6中运行，会得到两个false，而在JDK 1.7中运行，会得到一个true和一
+个false。产生差异的原因是：在JDK 1.6中，intern()方法会把首次遇到的字符串实例复制
+到永久代中，返回的也是永久代中这个字符串实例的引用，而由StringBuilder创建的字符串
+实例在Java堆上，所以必然不是同一个引用，将返回false。而JDK 1.7（以及部分其他虚拟
+机，例如JRockit）的intern()实现不会再复制实例，只是在常量池中记录首次出现的实例
+引用，因此intern()返回的引用和由StringBuilder创建的那个字符串实例是同一个。对str2比
+较返回false是因为“java”这个字符串在执行StringBuilder.toString()之前已经出现过，字符串
+常量池中已经有它的引用了，不符合“首次出现”的原则，而“计算机软件”这个字符串则是首
+次出现的，因此返回true
+
+方法区用于存放Class的相关信息，如类名、访问修饰符、常量池、字段描述、方法描述
+等。对于这些区域的测试，基本的思路是运行时产生大量的类去填满方法区，直到溢出。虽
+然直接使用Java SE API也可以动态产生类（如反射时的GeneratedConstructorAccessor和动态
+代理等），但在本次实验中操作起来比较麻烦。在代码清单2-8中，笔者借助CGLib直接操
+作字节码运行时生成了大量的动态类
+
+值得特别注意的是，我们在这个例子中模拟的场景并非纯粹是一个实验，这样的应用经
+常会出现在实际应用中：当前的很多主流框架，如Spring、Hibernate，在对类进行增强时，
+都会使用到CGLib这类字节码技术，增强的类越多，就需要越大的方法区来保证动态生成的
+Class可以加载入内存。另外，JVM上的动态语言（例如Groovy等）通常都会持续创建类来实
+现语言的动态性，随着这类语言的流行，也越来越容易遇到与代码清单2-8相似的溢出场景
+
+```java
+//代码清单2-8 借助CGLib使方法区出现内存溢出异常
+     /**
+     *VM Args：-XX：PermSize=10M-XX：MaxPermSize=10M
+     *@author zzm
+     */
+    public class JavaMethodAreaOOM{
+        public static void main(String[]args){
+            while(true){
+                Enhancer enhancer = new Enhancer();
+                enhancer.setSuperclass(OOMObject.class);
+                enhancer.setUseCache(false);
+                enhancer.setCallback(new MethodInterceptor(){
+                    public Object intercept(Object obj, Method method, Object[]args, MethodProxy proxy) throws Throwable{
+                        return proxy.invokeSuper(obj, args);
+                    }
+                });
+                enhancer.create();
+            }
+        }
+        static class OOMObject{
+        }
+    }
+
+//运行结果：
+Caused by：java.lang.OutOfMemoryError：PermGen space
+at java.lang.ClassLoader.defineClass1（Native Method）
+at java.lang.ClassLoader.defineClassCond（ClassLoader.java：632）
+at java.lang.ClassLoader.defineClass（ClassLoader.java：616）
+……8 more
+```
+方法区溢出也是一种常见的内存溢出异常，一个类要被垃圾收集器回收掉，判定条件是
+比较苛刻的。在经常动态生成大量Class的应用中，需要特别注意类的回收状况。这类场景除
+了上面提到的程序使用了CGLib字节码增强和动态语言之外，常见的还有：大量JSP或动态产
+生JSP文件的应用（JSP第一次运行时需要编译为Java类）、基于OSGi的应用（即使是同一个
+类文件，被不同的加载器加载也会视为不同的类）等。
+
+*CGLib开源项目：http://cglib.sourceforge.net/*
 
 ###### 2.4.4 本机直接内存溢出
-
-
-
+DirectMemory容量可通过-XX：MaxDirectMemorySize指定，如果不指定，则默认与Java
+堆最大值（-Xmx指定）一样，代码清单2-9越过了DirectByteBuffer类，直接通过反射获取
+Unsafe实例进行内存分配（Unsafe类的getUnsafe()方法限制了只有引导类加载器才会返回
+实例，也就是设计者希望只有rt.jar中的类才能使用Unsafe的功能）。因为，虽然使用
+DirectByteBuffer分配内存也会抛出内存溢出异常，但它抛出异常时并没有真正向操作系统申
+请分配内存，而是通过计算得知内存无法分配，于是手动抛出异常，真正申请分配内存的方
+法是unsafe.allocateMemory()
+```java
+//代码清单2-9 使用unsafe分配本机内存
+     /**
+     *VM Args：-Xmx20M-XX：MaxDirectMemorySize=10M
+     *@author zzm
+     */
+    public class DirectMemoryOOM{
+        private static final int_1MB = 1024 * 1024;
+        public static void main(String[]args)throws Exception{
+            Field unsafeField = Unsafe.class.getDeclaredFields()[0];
+            unsafeField.setAccessible(true);
+            Unsafe unsafe = (Unsafe)unsafeField.get(null);
+            while(true){
+                unsafe.allocateMemory(_1MB);
+            }
+        }
+    }
+    
+//运行结果：
+Exception in thread"main"java.lang.OutOfMemoryError
+at sun.misc.Unsafe.allocateMemory（Native Method）
+at org.fenixsoft.oom.DMOOM.main（DMOOM.java：20）
+```
+由DirectMemory导致的内存溢出，一个明显的特征是在Heap Dump文件中不会看见明显
+的异常，如果读者发现OOM之后Dump文件很小，而程序中又直接或间接使用了NIO，那就
+可以考虑检查一下是不是这方面的原因
 
 ##### 2.5 本章小结
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+通过本章的学习，我们明白了虚拟机中的内存是如何划分的，哪部分区域、什么样的代
+码和操作可能导致内存溢出异常。虽然Java有垃圾收集机制，但内存溢出异常离我们仍然并
+不遥远，本章只是讲解了各个区域出现内存溢出异常的原因，第3章将详细讲解Java垃圾收
+集机制为了避免内存溢出异常的出现都做了哪些努力
 

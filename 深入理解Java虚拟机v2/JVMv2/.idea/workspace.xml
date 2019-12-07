@@ -38,15 +38,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Java内存区域与内存溢出异常.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Java内存区域与内存溢出异常.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part02/ch02/Java内存区域与内存溢出异常.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="327">
-                <caret line="298" column="30" lean-forward="false" selection-start-line="298" selection-start-column="30" selection-end-line="298" selection-end-column="30" />
+              <first_editor relative-caret-position="-5506">
+                <caret line="464" column="31" lean-forward="false" selection-start-line="464" selection-start-column="31" selection-end-line="464" selection-end-column="31" />
                 <folding>
-                  <marker date="1575646963331" expanded="true" signature="7400:7426" ph="/.../" />
-                  <marker date="1575646963331" expanded="true" signature="7400:7443" ph="/.../" />
+                  <marker date="1575707474286" expanded="true" signature="7400:7426" ph="/.../" />
+                  <marker date="1575707474286" expanded="true" signature="7400:7443" ph="/.../" />
+                  <marker date="1575707474286" expanded="true" signature="10554:10932" ph="/.../" />
+                  <marker date="1575707474286" expanded="true" signature="12942:13031" ph="/**...*/" />
+                  <marker date="1575707474286" expanded="true" signature="13088:13099" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="13145:13300" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="13194:13205" ph="&lt;~&gt;" />
+                  <marker date="1575707474286" expanded="true" signature="14689:14741" ph="/**...*/" />
+                  <marker date="1575707474286" expanded="true" signature="14843:14906" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="14968:15225" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="16283:16344" ph="/**...*/" />
+                  <marker date="1575707474286" expanded="true" signature="16409:16459" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="16499:16787" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="16583:16729" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="16652:16711" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="16849:16952" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="17550:17629" ph="/**...*/" />
+                  <marker date="1575707474286" expanded="true" signature="17716:17994" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="17808:17816" ph="&lt;~&gt;" />
+                  <marker date="1575707474286" expanded="true" signature="18509:18761" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="19662:19741" ph="/**...*/" />
+                  <marker date="1575707474286" expanded="true" signature="19823:20349" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="20064:20288" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="20186:20270" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="20380:20391" ph="{...}" />
+                  <marker date="1575707474286" expanded="true" signature="21275:21353" ph="/**...*/" />
+                  <marker date="1575707474286" expanded="true" signature="21501:21769" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -61,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/src/ch02/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="81">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,12 +114,18 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>）</find>
       <find>＆</find>
+      <find>（</find>
+      <find>＞</find>
+      <find>；</find>
+      <find>）</find>
     </findStrings>
     <replaceStrings>
-      <replace>)</replace>
       <replace>&amp;</replace>
+      <replace>(</replace>
+      <replace>&gt;</replace>
+      <replace>;</replace>
+      <replace>)</replace>
     </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -120,8 +151,8 @@
         <option value="$PROJECT_DIR$/part04/ch11/晚期（运行期）优化.md" />
         <option value="$PROJECT_DIR$/part05/ch12/Java内存模型与线程.md" />
         <option value="$PROJECT_DIR$/part05/ch13/线程安全与锁优化.md" />
-        <option value="$PROJECT_DIR$/Demo/src/ch02/Test.java" />
         <option value="$PROJECT_DIR$/part02/ch02/Java内存区域与内存溢出异常.md" />
+        <option value="$PROJECT_DIR$/Demo/src/ch02/Test.java" />
       </list>
     </option>
   </component>
@@ -489,11 +520,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2\part01\ch01\img" />
       <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2\part02\ch02\img" />
+      <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2\part01\ch01\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2" />
@@ -511,7 +545,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Test">
+    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ch02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="ch02.Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Demo" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -903,9 +957,20 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -914,12 +979,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575472041555</updated>
-      <workItem from="1575472043067" duration="11121000" />
+      <workItem from="1575472043067" duration="17576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11121000" />
+    <option name="totallyTimeSpent" value="17576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1909" y="-11" width="1942" height="1102" extended-state="6" />
@@ -942,10 +1007,11 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39709443" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18210863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18141593" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27213824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -957,7 +1023,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="109" y="73" width="1742" height="902" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -972,6 +1037,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/深入理解Java虚拟机v2">
@@ -1146,27 +1215,126 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/src/ch02/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/part02/ch02/Java内存区域与内存溢出异常.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="327">
-            <caret line="298" column="30" lean-forward="false" selection-start-line="298" selection-start-column="30" selection-end-line="298" selection-end-column="30" />
+          <first_editor relative-caret-position="-5506">
+            <caret line="464" column="31" lean-forward="false" selection-start-line="464" selection-start-column="31" selection-end-line="464" selection-end-column="31" />
             <folding>
-              <marker date="1575646963331" expanded="true" signature="7400:7426" ph="/.../" />
-              <marker date="1575646963331" expanded="true" signature="7400:7443" ph="/.../" />
+              <marker date="1575707474286" expanded="true" signature="7400:7426" ph="/.../" />
+              <marker date="1575707474286" expanded="true" signature="7400:7443" ph="/.../" />
+              <marker date="1575707474286" expanded="true" signature="10554:10932" ph="/.../" />
+              <marker date="1575707474286" expanded="true" signature="12942:13031" ph="/**...*/" />
+              <marker date="1575707474286" expanded="true" signature="13088:13099" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="13145:13300" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="13194:13205" ph="&lt;~&gt;" />
+              <marker date="1575707474286" expanded="true" signature="14689:14741" ph="/**...*/" />
+              <marker date="1575707474286" expanded="true" signature="14843:14906" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="14968:15225" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="16283:16344" ph="/**...*/" />
+              <marker date="1575707474286" expanded="true" signature="16409:16459" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="16499:16787" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="16583:16729" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="16652:16711" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="16849:16952" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="17550:17629" ph="/**...*/" />
+              <marker date="1575707474286" expanded="true" signature="17716:17994" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="17808:17816" ph="&lt;~&gt;" />
+              <marker date="1575707474286" expanded="true" signature="18509:18761" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="19662:19741" ph="/**...*/" />
+              <marker date="1575707474286" expanded="true" signature="19823:20349" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="20064:20288" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="20186:20270" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="20380:20391" ph="{...}" />
+              <marker date="1575707474286" expanded="true" signature="21275:21353" ph="/**...*/" />
+              <marker date="1575707474286" expanded="true" signature="21501:21769" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/src/ch02/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Demo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
