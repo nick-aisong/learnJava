@@ -405,7 +405,7 @@ Java堆用于存储对象实例，只要不断地创建对象，并且保证GC R
     }
     
 //运行结果：
-java.lang.OutOfMemoryError：Java heap space
+java.lang.OutOfMemoryError:Java heap space
 Dumping heap to java_pid3404.hprof……
 Heap dump file created[22045981 bytes in 0.663 secs]
 ```
@@ -474,11 +474,11 @@ StackOverflowError异常时输出的堆栈深度相应缩小
     }
 
 //运行结果：
-stack length：2402
+stack length:2402
 Exception in thread"main"java.lang.StackOverflowError
-at org.fenixsoft.oom.VMStackSOF.leak（VMStackSOF.java：20）
-at org.fenixsoft.oom.VMStackSOF.leak（VMStackSOF.java：21）
-at org.fenixsoft.oom.VMStackSOF.leak（VMStackSOF.java：21）
+at org.fenixsoft.oom.VMStackSOF.leak(VMStackSOF.java:20)
+at org.fenixsoft.oom.VMStackSOF.leak(VMStackSOF.java:21)
+at org.fenixsoft.oom.VMStackSOF.leak(VMStackSOF.java:21)
 ……后续异常堆栈信息省略
 ```
 实验结果表明：在单个线程下，无论是由于栈帧太大还是虚拟机栈容量太小，当内存无
@@ -567,9 +567,9 @@ String.intern()是一个Native方法，它的作用是：如果字符串常量�
     }
 
 //运行结果：
-Exception in thread"main"java.lang.OutOfMemoryError：PermGen space
-at java.lang.String.intern（Native Method）
-at org.fenixsoft.oom.RuntimeConstantPoolOOM.main（RuntimeConstantPoolOOM.java：18）
+Exception in thread"main"java.lang.OutOfMemoryError:PermGen space
+at java.lang.String.intern(Native Method)
+at org.fenixsoft.oom.RuntimeConstantPoolOOM.main(RuntimeConstantPoolOOM.java:18)
 
 ```
 从运行结果中可以看到，运行时常量池溢出，在OutOfMemoryError后面跟随的提示信息
@@ -635,10 +635,10 @@ Class可以加载入内存。另外，JVM上的动态语言（例如Groovy等）
     }
 
 //运行结果：
-Caused by：java.lang.OutOfMemoryError：PermGen space
-at java.lang.ClassLoader.defineClass1（Native Method）
-at java.lang.ClassLoader.defineClassCond（ClassLoader.java：632）
-at java.lang.ClassLoader.defineClass（ClassLoader.java：616）
+Caused by:java.lang.OutOfMemoryError:PermGen space
+at java.lang.ClassLoader.defineClass1(Native Method)
+at java.lang.ClassLoader.defineClassCond(ClassLoader.java:632)
+at java.lang.ClassLoader.defineClass(ClassLoader.java:616)
 ……8 more
 ```
 方法区溢出也是一种常见的内存溢出异常，一个类要被垃圾收集器回收掉，判定条件是
@@ -677,8 +677,8 @@ DirectByteBuffer分配内存也会抛出内存溢出异常，但它抛出异常�
     
 //运行结果：
 Exception in thread"main"java.lang.OutOfMemoryError
-at sun.misc.Unsafe.allocateMemory（Native Method）
-at org.fenixsoft.oom.DMOOM.main（DMOOM.java：20）
+at sun.misc.Unsafe.allocateMemory(Native Method)
+at org.fenixsoft.oom.DMOOM.main(DMOOM.java:20)
 ```
 由DirectMemory导致的内存溢出，一个明显的特征是在Heap Dump文件中不会看见明显
 的异常，如果读者发现OOM之后Dump文件很小，而程序中又直接或间接使用了NIO，那就
@@ -690,4 +690,3 @@ at org.fenixsoft.oom.DMOOM.main（DMOOM.java：20）
 码和操作可能导致内存溢出异常。虽然Java有垃圾收集机制，但内存溢出异常离我们仍然并
 不遥远，本章只是讲解了各个区域出现内存溢出异常的原因，第3章将详细讲解Java垃圾收
 集机制为了避免内存溢出异常的出现都做了哪些努力
-
