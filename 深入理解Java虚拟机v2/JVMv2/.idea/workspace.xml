@@ -12,15 +12,30 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="虚拟机性能监控与故障处理工具.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="虚拟机性能监控与故障处理工具.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part02/ch04/虚拟机性能监控与故障处理工具.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="802">
-                <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
+              <first_editor relative-caret-position="727">
+                <caret line="799" column="39" lean-forward="false" selection-start-line="799" selection-start-column="39" selection-end-line="799" selection-end-column="39" />
                 <folding>
-                  <marker date="1577979497044" expanded="true" signature="9934:9967" ph="{...}" />
-                  <marker date="1577979497044" expanded="true" signature="10012:10045" ph="{...}" />
+                  <marker date="1577984327684" expanded="true" signature="9934:9967" ph="{...}" />
+                  <marker date="1577984327684" expanded="true" signature="10012:10045" ph="{...}" />
+                  <marker date="1577984327684" expanded="true" signature="13076:13112" ph="/**...*/" />
+                  <marker date="1577984327684" expanded="true" signature="13256:13433" ph="{...}" />
+                  <marker date="1577984327684" expanded="true" signature="13295:13306" ph="&lt;~&gt;" />
+                  <marker date="1577984327684" expanded="true" signature="13491:13511" ph="{...}" />
+                  <marker date="1577984327684" expanded="true" signature="14462:14499" ph="/.../" />
+                  <marker date="1577984327684" expanded="true" signature="15941:15960" ph="/**...*/" />
+                  <marker date="1577984327684" expanded="true" signature="16063:16110" ph="{...}" />
+                  <marker date="1577984327684" expanded="true" signature="16148:16314" ph="{...}" />
+                  <marker date="1577984327684" expanded="true" signature="16357:16508" ph="{...}" />
+                  <marker date="1577984327684" expanded="true" signature="20611:20631" ph="{...}" />
+                  <marker date="1577984327684" expanded="true" signature="20692:21014" ph="{...}" />
+                  <marker date="1577984327684" expanded="true" signature="21103:21153" ph="/.../" />
+                  <marker date="1577984327684" expanded="true" signature="21161:21234" ph="..." />
+                  <marker date="1577984327684" expanded="true" signature="21274:21389" ph="@{...}" />
+                  <marker date="1577984327684" expanded="true" signature="21498:21655" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -42,12 +57,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="调优案例分析与实战.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="调优案例分析与实战.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/part02/ch05/调优案例分析与实战.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="486">
-                <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <first_editor relative-caret-position="324">
+                <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -59,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/part02/ch02/Java内存区域与内存溢出异常.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="349">
+              <first_editor relative-caret-position="18387">
                 <caret line="681" column="3" lean-forward="true" selection-start-line="681" selection-start-column="3" selection-end-line="681" selection-end-column="3" />
                 <folding>
                   <marker date="1576999480509" expanded="true" signature="7401:7427" ph="/.../" />
@@ -124,6 +139,7 @@
       <find>＆</find>
       <find>pdf</find>
       <find>；</find>
+      <find>4603K</find>
     </findStrings>
     <replaceStrings>
       <replace>&gt;</replace>
@@ -147,7 +163,6 @@
         <option value="$PROJECT_DIR$/part02/ch02/自动内存管理机制.md" />
         <option value="$PROJECT_DIR$/part01/ch01/走进Java.md" />
         <option value="$PROJECT_DIR$/part02/ch03/垃圾收集器与内存分配策略.md" />
-        <option value="$PROJECT_DIR$/part02/ch05/调优案例分析与实战.md" />
         <option value="$PROJECT_DIR$/part03/ch08/虚拟机字节码执行引擎.md" />
         <option value="$PROJECT_DIR$/part03/ch09/类加载及执行子系统的案例与实战.md" />
         <option value="$PROJECT_DIR$/part04/ch10/早期（编译期）优化.md" />
@@ -159,6 +174,7 @@
         <option value="$PROJECT_DIR$/Demo/src/ch02/Test.java" />
         <option value="$PROJECT_DIR$/part03/ch07/虚拟机类加载机制.md" />
         <option value="$PROJECT_DIR$/part02/ch04/虚拟机性能监控与故障处理工具.md" />
+        <option value="$PROJECT_DIR$/part02/ch05/调优案例分析与实战.md" />
       </list>
     </option>
   </component>
@@ -992,7 +1008,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38387000" />
+    <option name="totallyTimeSpent" value="41738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1909" y="-11" width="1942" height="1102" extended-state="6" />
@@ -1533,17 +1549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part02/ch05/调优案例分析与实战.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="486">
-            <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/part04/ch10/早期（编译期）优化.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1562,45 +1567,6 @@
     <entry file="file://$PROJECT_DIR$/part01/ch01/img/Description of Java Conceptual Diagram 8.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part02/ch02/Java内存区域与内存溢出异常.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="349">
-            <caret line="681" column="3" lean-forward="true" selection-start-line="681" selection-start-column="3" selection-end-line="681" selection-end-column="3" />
-            <folding>
-              <marker date="1576999480509" expanded="true" signature="7401:7427" ph="/.../" />
-              <marker date="1576999480509" expanded="true" signature="7401:7444" ph="/.../" />
-              <marker date="1576999480509" expanded="true" signature="10555:10933" ph="/.../" />
-              <marker date="1576999480509" expanded="true" signature="12943:13032" ph="/**...*/" />
-              <marker date="1576999480509" expanded="true" signature="13089:13100" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="13146:13301" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="13195:13206" ph="&lt;~&gt;" />
-              <marker date="1576999480509" expanded="true" signature="14690:14742" ph="/**...*/" />
-              <marker date="1576999480509" expanded="true" signature="14844:14907" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="14969:15226" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="16284:16345" ph="/**...*/" />
-              <marker date="1576999480509" expanded="true" signature="16410:16460" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="16500:16788" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="16584:16730" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="16653:16712" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="16850:16953" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="17551:17630" ph="/**...*/" />
-              <marker date="1576999480509" expanded="true" signature="17717:17995" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="17809:17817" ph="&lt;~&gt;" />
-              <marker date="1576999480509" expanded="true" signature="18510:18762" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="19663:19742" ph="/**...*/" />
-              <marker date="1576999480509" expanded="true" signature="19824:20350" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="20065:20289" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="20187:20271" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="20381:20392" ph="{...}" />
-              <marker date="1576999480509" expanded="true" signature="21276:21354" ph="/**...*/" />
-              <marker date="1576999480509" expanded="true" signature="21502:21770" ph="{...}" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/part03/ch08/虚拟机字节码执行引擎.md">
@@ -1713,12 +1679,77 @@
     <entry file="file://$PROJECT_DIR$/part02/ch04/虚拟机性能监控与故障处理工具.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="802">
-            <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
+          <first_editor relative-caret-position="727">
+            <caret line="799" column="39" lean-forward="false" selection-start-line="799" selection-start-column="39" selection-end-line="799" selection-end-column="39" />
             <folding>
-              <marker date="1577979497044" expanded="true" signature="9934:9967" ph="{...}" />
-              <marker date="1577979497044" expanded="true" signature="10012:10045" ph="{...}" />
+              <marker date="1577984327684" expanded="true" signature="9934:9967" ph="{...}" />
+              <marker date="1577984327684" expanded="true" signature="10012:10045" ph="{...}" />
+              <marker date="1577984327684" expanded="true" signature="13076:13112" ph="/**...*/" />
+              <marker date="1577984327684" expanded="true" signature="13256:13433" ph="{...}" />
+              <marker date="1577984327684" expanded="true" signature="13295:13306" ph="&lt;~&gt;" />
+              <marker date="1577984327684" expanded="true" signature="13491:13511" ph="{...}" />
+              <marker date="1577984327684" expanded="true" signature="14462:14499" ph="/.../" />
+              <marker date="1577984327684" expanded="true" signature="15941:15960" ph="/**...*/" />
+              <marker date="1577984327684" expanded="true" signature="16063:16110" ph="{...}" />
+              <marker date="1577984327684" expanded="true" signature="16148:16314" ph="{...}" />
+              <marker date="1577984327684" expanded="true" signature="16357:16508" ph="{...}" />
+              <marker date="1577984327684" expanded="true" signature="20611:20631" ph="{...}" />
+              <marker date="1577984327684" expanded="true" signature="20692:21014" ph="{...}" />
+              <marker date="1577984327684" expanded="true" signature="21103:21153" ph="/.../" />
+              <marker date="1577984327684" expanded="true" signature="21161:21234" ph="..." />
+              <marker date="1577984327684" expanded="true" signature="21274:21389" ph="@{...}" />
+              <marker date="1577984327684" expanded="true" signature="21498:21655" ph="{...}" />
             </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part02/ch02/Java内存区域与内存溢出异常.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="18387">
+            <caret line="681" column="3" lean-forward="true" selection-start-line="681" selection-start-column="3" selection-end-line="681" selection-end-column="3" />
+            <folding>
+              <marker date="1576999480509" expanded="true" signature="7401:7427" ph="/.../" />
+              <marker date="1576999480509" expanded="true" signature="7401:7444" ph="/.../" />
+              <marker date="1576999480509" expanded="true" signature="10555:10933" ph="/.../" />
+              <marker date="1576999480509" expanded="true" signature="12943:13032" ph="/**...*/" />
+              <marker date="1576999480509" expanded="true" signature="13089:13100" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="13146:13301" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="13195:13206" ph="&lt;~&gt;" />
+              <marker date="1576999480509" expanded="true" signature="14690:14742" ph="/**...*/" />
+              <marker date="1576999480509" expanded="true" signature="14844:14907" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="14969:15226" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="16284:16345" ph="/**...*/" />
+              <marker date="1576999480509" expanded="true" signature="16410:16460" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="16500:16788" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="16584:16730" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="16653:16712" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="16850:16953" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="17551:17630" ph="/**...*/" />
+              <marker date="1576999480509" expanded="true" signature="17717:17995" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="17809:17817" ph="&lt;~&gt;" />
+              <marker date="1576999480509" expanded="true" signature="18510:18762" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="19663:19742" ph="/**...*/" />
+              <marker date="1576999480509" expanded="true" signature="19824:20350" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="20065:20289" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="20187:20271" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="20381:20392" ph="{...}" />
+              <marker date="1576999480509" expanded="true" signature="21276:21354" ph="/**...*/" />
+              <marker date="1576999480509" expanded="true" signature="21502:21770" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part02/ch05/调优案例分析与实战.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="324">
+            <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
