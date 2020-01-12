@@ -408,8 +408,7 @@ mov%eax，0x150（%esi）这句便是赋值操作）多执行了一个“lock ad
 当于对Cache中的变量做了一次前面介绍Java内存模式中所说的“store和write”操作。所以通
 过这样一个空操作，可让前面volatile变量的修改对其他CPU立即可见
 
-(Doug Lea列出了各种处理器架构下的内存屏障指令：
-http://g.oswego.edu/dl/jmm/cookbook.html)
+(Doug Lea列出了各种处理器架构下的内存屏障指令：http://g.oswego.edu/dl/jmm/cookbook.html)
 
 在本节的最后，我们回头看一下Java内存模型中对volatile变量定义的特殊规则。假定T
 表示一个线程，V和W分别表示两个volatile型变量，那么在进行read、load、use、assign、
