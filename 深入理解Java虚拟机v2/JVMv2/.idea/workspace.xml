@@ -12,7 +12,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="早期（编译期）优化.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="早期（编译期）优化.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part04/ch10/早期（编译期）优化.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -82,12 +82,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="晚期（运行期）优化.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="晚期（运行期）优化.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/part04/ch11/晚期（运行期）优化.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="405">
-                <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+              <first_editor relative-caret-position="133">
+                <caret line="861" column="3" lean-forward="true" selection-start-line="861" selection-start-column="3" selection-end-line="861" selection-end-column="3" />
+                <folding>
+                  <marker date="1578932777409" expanded="true" signature="15582:15611" ph="{...}" />
+                  <marker date="1578932777409" expanded="true" signature="15631:15704" ph="{...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="走进Java.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/part01/ch01/走进Java.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="675">
+                <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -182,51 +198,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="虚拟机类加载机制.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/part03/ch07/虚拟机类加载机制.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-1298">
-                <caret line="816" column="5" lean-forward="false" selection-start-line="816" selection-start-column="5" selection-end-line="816" selection-end-column="5" />
-                <folding>
-                  <marker date="1576406111609" expanded="true" signature="2105:2165" ph="/**...*/" />
-                  <marker date="1576406111609" expanded="true" signature="2193:2315" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="2209:2272" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="2360:2443" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="2376:2437" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="2448:2477" ph="/**...*/" />
-                  <marker date="1576406111609" expanded="true" signature="2512:2624" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="2559:2618" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="2928:2986" ph="/**...*/" />
-                  <marker date="1576406111609" expanded="true" signature="3068:3129" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="12888:12922" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="12970:13004" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="13033:13067" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="13117:13165" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="13227:13275" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="13321:13371" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="15072:15168" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="15498:15583" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="15547:15577" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="15619:15659" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="15701:15743" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="16372:16629" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="16677:17122" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="16719:16975" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="16750:16965" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="18098:18161" ph="/**...*/" />
-                  <marker date="1576406111609" expanded="true" signature="18194:19332" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="18257:19326" ph="{...}" />
-                  <marker date="1576406111609" expanded="true" signature="18294:18422" ph="loadClass(name) → {" />
-                  <marker date="1576406111609" expanded="true" signature="19052:19071" ph="}" />
-                  <marker date="1576406111609" expanded="true" signature="20607:20901" ph="/.../" />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -273,7 +244,6 @@
         <option value="$PROJECT_DIR$/part02/ch02/自动内存管理机制.md" />
         <option value="$PROJECT_DIR$/part01/ch01/走进Java.md" />
         <option value="$PROJECT_DIR$/part02/ch03/垃圾收集器与内存分配策略.md" />
-        <option value="$PROJECT_DIR$/part04/ch11/晚期（运行期）优化.md" />
         <option value="$PROJECT_DIR$/part05/ch12/Java内存模型与线程.md" />
         <option value="$PROJECT_DIR$/part05/ch13/线程安全与锁优化.md" />
         <option value="$PROJECT_DIR$/part02/ch02/Java内存区域与内存溢出异常.md" />
@@ -285,6 +255,7 @@
         <option value="$PROJECT_DIR$/part03/ch09/类加载及执行子系统的案例与实战.md" />
         <option value="$PROJECT_DIR$/part02/ch04/虚拟机性能监控与故障处理工具.md" />
         <option value="$PROJECT_DIR$/part04/ch10/早期（编译期）优化.md" />
+        <option value="$PROJECT_DIR$/part04/ch11/晚期（运行期）优化.md" />
       </list>
     </option>
   </component>
@@ -380,6 +351,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ch11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVMv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVMv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="part04" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ch11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -600,13 +593,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2\part04\ch11\img" />
       <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2\part04\ch10\img" />
       <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2\part03\ch09\img" />
       <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2\part03\ch08\img" />
       <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2\part02\ch05\img" />
-      <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2\part02\ch04\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2\part04\ch11\img" />
       <recent name="G:\GitHub\learnJava\深入理解Java虚拟机v2\JVMv2" />
     </key>
   </component>
@@ -1061,7 +1055,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98755000" />
+    <option name="totallyTimeSpent" value="107141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1909" y="-11" width="1942" height="1102" extended-state="6" />
@@ -1563,16 +1557,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/深入理解Java虚拟机v2" />
-    <entry file="file://$PROJECT_DIR$/part01/ch01/走进Java.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="27">
-            <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/part05/ch13/线程安全与锁优化.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1671,17 +1655,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="592">
             <caret line="1341" column="32" lean-forward="false" selection-start-line="1341" selection-start-column="13" selection-end-line="1341" selection-end-column="32" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part04/ch11/晚期（运行期）优化.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="405">
-            <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1874,6 +1847,31 @@
               <marker date="1578849400459" expanded="true" signature="25435:25459" ph="{...}" />
               <marker date="1578849400459" expanded="true" signature="25581:25595" ph="{...}" />
               <marker date="1578849400459" expanded="true" signature="25635:25649" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part01/ch01/走进Java.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="675">
+            <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part04/ch11/晚期（运行期）优化.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="133">
+            <caret line="861" column="3" lean-forward="true" selection-start-line="861" selection-start-column="3" selection-end-line="861" selection-end-column="3" />
+            <folding>
+              <marker date="1578932777409" expanded="true" signature="15582:15611" ph="{...}" />
+              <marker date="1578932777409" expanded="true" signature="15631:15704" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
