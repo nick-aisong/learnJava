@@ -8,6 +8,7 @@ public class Singleton3 {
     public static final Singleton3 INSTANCE;
     private String info;
 
+    // 应对复杂加载情况
     static {
         Properties pro = new Properties();
         try {

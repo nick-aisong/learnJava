@@ -13,7 +13,6 @@ public class Singleton5 {
                 if (instance == null) {
                     instance = new Singleton5();
                 }
-
             }
         }
         return instance;
