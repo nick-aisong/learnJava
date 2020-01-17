@@ -961,39 +961,98 @@ Golang的Groutine、D语言的Fiber等。Loom项目就准备提供一套与目�
 好的语言”（梗）
 
 ##### 1.6 实战：自己编译JDK
+想要窥探Java虚拟机内部的实现原理，最直接的一条路径就是编译一套自己的JDK，通过阅读和
+跟踪调试JDK源码来了解Java技术体系的运作，虽然这样门槛会比阅读资料更高一点，但肯定也会比
+阅读各种文章、书籍来得更加贴近本质。此外，Java类库里的很多底层方法都是Native的，在了解这些
+方法的运作过程，或对JDK进行Hack（根据需要进行定制微调）的时候，都需要有能自行编译、调试
+虚拟机代码的能力
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+现在网络上有不少开源的JDK实现可以供我们选择，但毫无疑问OpenJDK是使用得最广泛的
+JDK，我们也将选择OpenJDK来进行这次编译实战
 
 ###### 1.6.1 获取源码
+编译源码之前，我们要先明确OpenJDK和OracleJDK之间、OpenJDK的各个不同版本之间存在什
+么联系，这有助于确定接下来编译要使用的JDK版本和源码分支，也有助于理解我们编译出来的JDK
+与Oracle官方提供的JDK有什么差异
 
+从前面介绍的Java发展史中我们已经知道OpenJDK是Sun公司在2006年年末把Java开源而形成的项
+目，这里的“开源”是通常意义上的源码开放形式，即源码是可被复用的，例如OracleJDK、Oracle
+OpenJDK、AdoptOpenJDK、Azul Zulu、SAP SapMachine、Amazon Corretto、IcedTea、UltraViolet等
+都是从OpenJDK源码衍生出的发行版。但如果仅从“开源”字面意义（开放可阅读的源码）上讲的话，
+其实Sun公司自JDK 5时代起就曾经以JRL（Java Research License）的形式公开过Java的源码，主要是开
+放给研究人员阅读使用，这种JRL许可证的开放源码一直持续到JDK 6 Update 23才因OpenJDK项目日
+渐成熟而终止。如果拿OpenJDK中的源码跟对应版本的JRL许可证形式开放的Sun/OracleJDK源码互相
+比较的话，会发现除了文件头的版权注释之外，其余代码几乎都是相同的，只有少量涉及引用第三方
+的代码存在差异，如字体栅格化渲染，这部分内容OracleJDK采用了商业实现，源码版权不属于Oracle
+自己，所以也无权开源，而OpenJDK中使用的是同样开源的FreeType代替
 
+当然，笔者说的“代码相同”必须建立在两者共有的组件基础之上，OpenJDK中的源码仓库只包含
+了标准Java SE的源代码，而一些额外的模块，典型的如JavaFX，虽然后来也是被Oracle开源并放到
+OpenJDK组织进行管理（OpenJFX项目），但是它是存放在独立的源码仓库中，因此OracleJDK的安
+装包中会包含JavaFX这种独立的模块，而用OpenJDK的话则需要单独下载安装
 
+此外，在JDK 11以前，OracleJDK中还会存在一些OpenJDK没有的、闭源的功能，即OracleJDK
+的“商业特性”。例如JDK 8起从JRockit移植改造而来的Java Flight Recorder和Java Mission Control组件、
+JDK 10中的应用类型共享功能（AppCDS）和JDK 11中的ZGC收集器，这些功能在JDK 11时才全部开
+源到了OpenJDK中。到了这个阶段，我们已经可以认为OpenJDK与OracleJDK代码实质上<sup>[1]</sup>已达到完
+全一致的程度
 
+根据Oracle的项目发布经理Joe Darcy在OSCON大会上对两者关系的介绍<sup>[2]</sup>也证实了OpenJDK和
+OracleJDK在程序上是非常接近的，两者共用了绝大部分相同的代码（如图1-7所示，注意图中的英文
+提示了两者共同代码的占比要远高于图形上看到的比例），所以我们编译的OpenJDK，基本上可以认
+为性能、功能和执行逻辑上都和官方的OracleJDK是一致的
 
+下面再来看一下OpenJDK内部不同版本之间的关系，在OpenJDK接收Sun公司移交的JDK源码
+时，Java正处于JDK 6时代的初期，JDK 6 Update 1才刚刚发布不久，JDK 7则还完全处于研发状态的
+半成品。OpenJDK的第一个版本就是来自于当时Sun公司正在开发的JDK 7，考虑到OpenJDK 7的状况
+在当时完全不足以支持实际的生产部署，因此又在OpenJDK 7 Build 22的基础上建立了一条新的
+OpenJDK 6分支，剥离掉所有JDK 7新功能的代码，形成一个可以通过TCK 6测试的独立分支，先把
+OpenJDK 6发布出去给公众使用。等到OpenJDK 7达到了可正式对外发布的状态之后，就从OpenJDK
+7的主分支延伸出用于研发下一代Java版本的OpenJDK 8以及用于发布更新补丁的OpenJDK 7 Update两
+条子分支，按照开发习惯，新的功能或Bug修复通常是在最新分支上进行的，当功能或修复在最新分
+支上稳定之后会同步到其他老版本的维护分支上。后续的JDK 8和JDK 9都重复延续着类似的研发流
+程。通过图1-8（依然是从Joe Darcy的OSCON演示稿截取的图片）可以比较清楚地理解不同版本分支
+之间的关系
 
+到了JDK 10及以后的版本，在组织上出现了一些新变化，此时全部开发工作统一归属到JDK和
+JDK Updates两条主分支上，主分支不再带版本号，在内部再用子分支来区分具体的JDK版本。
+OpenJDK不同版本的源码都可以在它们的主页（http://openjdk.java.net/）上找到，在本次编译实践中，
+笔者选用的版本是OpenJDK 12
 
+获取OpenJDK源码有两种方式。一是通过Mercurial代码版本管理工具从Repository中直接取得源
+码（Repository地址：https://hg.openjdk.java.net/jdk/jdk12），获取过程如以下命令所示：
 
+```text
+hg clone https://hg.openjdk.java.net/jdk/jdk12
+```
 
+这是直接取得OpenJDK源码的方式，从版本管理中看变更轨迹也能够更精确地了解到Java代码发
+生的变化，但弊端是在中国访问的速度实在太慢，虽然代码总量只有几百MB，无奈文件数量将近十
+万，而且仓库没有国内的CDN节点。以笔者的网络状况，不科学上网的话，全部复制到本地需要耗费
+数小时时间。另外，考虑到Mercurial远不如Git常用，甚至普及程度还不如SVN、ClearCase以及更古老
+的CVS等版本控制工具，对于大多数读者，笔者建议采用第二种方式，即直接在仓库中打包出源码压
+缩包，再进行下载
 
+读者可以直接访问准备下载的JDK版本的仓库页面（譬如本例中OpenJDK 12的页面
+为https://hg.openjdk.java.net/jdk/jdk12/），然后点击左边菜单中的“Browse”，将显示如图1-9的源码根目
+录页面
 
+此时点击左边的“zip”链接即可下载当前版本打包好的源码，到本地直接解压即可。在国内使用这
+种方式下载比起从Mercurial复制一堆零散文件要快非常多。笔者下载的OpenJDK 12源码包大小为
+171MB，解压之后约为579MB
 
+[1] 严格来说，这里“实质上”可以理解为除去一些版权信息（如java-version的输出）、除去针对Oracle
+自身特殊硬件平台的适配、除去JDK 12中OracleJDK排除了Shenandoah这类特意设置的差异之外是一致的
 
-
+[2] 全文地址：https://blogs.oracle.com/darcy/resource/OSCON/oscon2011_OpenJDKState.pdf
 
 ###### 1.6.2 系统需求
-
+如果可能，笔者建议尽量在Linux或者MacOS上构建OpenJDK，这两个系统在准备构建工具链和依
+赖项上要比在Windows或Solaris平台上要容易许多，本篇实践中笔者将以Ubuntu 18.04 LTS为平台进行
+构建。如果读者确实有在Windows平台上完成编译的需求，或需要编译较老版本的OpenJDK，可参考
+本书附录A，这篇附录是本书第1版中介绍如何在Windows下编译OpenJDK 6的实践例子，虽然里面的
+部分内容已经过时了（例如安装Plug部分），但对Windows上构建安装环境和较老版本的OpenJDK编
+译还是有一定参考意义的，所以笔者并没有把它删除掉，而是挪到附录之中
 
 
 
