@@ -1054,88 +1054,206 @@ hg clone https://hg.openjdk.java.net/jdk/jdk12
 部分内容已经过时了（例如安装Plug部分），但对Windows上构建安装环境和较老版本的OpenJDK编
 译还是有一定参考意义的，所以笔者并没有把它删除掉，而是挪到附录之中
 
+无论在什么平台下进行编译，都建议读者认真阅读一遍源码中的doc/building.html文档，编译过程
+中需要注意的细节较多，如果读者是第一次编译OpenJDK，那有可能会在一些小问题上耗费许多时
+间。在本次编译中采用的是64位操作系统，默认参数下编译出来的也是64位的OpenJDK，如果需要编
+译32位版本，笔者同样推荐在64位的操作系统上进行，理由是编译过程可以使用更大内存（32位系统
+受4G内存限制），通过编译参数（--with-target-bits=32）来指定需要生成32位编译结果即可。在官方
+文档上要求编译OpenJDK至少需要2～4GB的内存空间（CPU核心数越多，需要的内存越大），而且
+至少要6～8GB的空闲磁盘空间，不要看OpenJDK源码的大小只有不到600MB，要完成编译，过程中
+会产生大量的中间文件，并且编译出不同优化级别（Product、FastDebug、SlowDebug）的HotSpot虚
+拟机可能要重复生成这些中间文件，这都会占用大量磁盘空间
 
-
-
-
-
-
-
-
-
-
-
+对系统环境的最后一点建议是，所有的文件，包括源码和依赖项目，都不要放在包含中文的目录
+里面，这样做不是一定会产生不可解决的问题，只是没有必要给自己找麻烦
 
 ###### 1.6.3 构建编译环境
+在MacOS<sup>[1]</sup>和Linux上构建OpenJDK编译环境相对简单，对于MacOS，需要MacOS X 10.13版本以
+上，并安装好最新版本的XCode和Command Line Tools for XCode（在Apple Developer网站<sup>[2]</sup>上可以免
+费下载），这两个SDK提供了OpenJDK所需的CLang编译器以及Makefile中用到的其他外部命令
 
+对于Linux系统，要准备的依赖与MacOS类似，在MacOS中CLang编译器来源于XCode SDK，而
+Ubuntu里用户可以自行选择安装GCC或CLang来进行编译，但必须确保最低的版本为GCC 4.8或者
+CLang 3.2以上，官方推荐使用GCC 7.8或者CLang 9.1来完成编译。在Ubuntu系统上安装GCC的命令为：
+```text
+sudo apt-get install build-essential
+```
+在编译过程中需要依赖FreeType、CUPS等若干第三方库，OpenJDK全部的依赖库已在表1-1中列
+出，读者可执行相应的安装命令完成安装
 
+最后，假设要编译大版本号为N的JDK，我们还要另外准备一个大版本号至少为N-1的、已经编译
+好的JDK，这是因为OpenJDK由多个部分（HotSpot、JDK类库、JAXWS、JAXP……）构成，其中一
+部分（HotSpot）代码使用C、C++编写，而更多的代码则是使用Java语言来实现，因此编译这些Java代
+码就需要用到另一个编译期可用的JDK，官方称这个JDK为“Bootstrap JDK”。编译OpenJDK 12时，
+Bootstrap JDK必须使用JDK 11及之后的版本。在Ubuntu中使用以下命令安装OpenJDK 11：
+```text
+sudo apt-get install openjdk-11-jdk
+```
 
+[1] 注意，在OpenJDK 7u4和之后的版本才能编译出MacOS系统下的JDK包，之前的版本虽然在源码和
+编译脚本中也包含了MacOS目录，但是尚未完善
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+[2] https://developer.apple.com/
 
 ###### 1.6.4 进行编译
+需要下载的编译环境和依赖项目都齐备后，我们就可以按照默认配置来开始编译了，但通常我们
+编译OpenJDK的目的都不仅仅是为了得到在自己机器中诞生的编译成品，而是带着调试、定制化等需
+求，这样就必须了解OpenJDK提供的编译参数才行，这些参数可以使用“bash configure --help”命令查询
+到，笔者对它们中最有用的部分简要说明如下：
 
+- --with-debug-level=<level>：设置编译的级别，可选值为release、fastdebug、slowde-bug，越往后进
+行的优化措施就越少，带的调试信息就越多。还有一些虚拟机调试参数必须在特定模式下才可以使
+用。默认值为release
 
+- --enable-debug：等效于--with-debug-level=fastdebug
 
+- --with-native-debug-symbols=<method>：确定调试符号信息的编译方式，可选值为none、
+internal、external、zipped
 
+- --with-version-string=<string>：设置编译JDK的版本号，譬如java-version的输出就会显示该信息。
+这个参数还有--with-version-<part>=<value>的形式，其中part可以是pre、opt、build、major、minor、
+security、patch之一，用于设置版本号的某一个部分
 
+- --with-jvm-variants=<variant>[，<variant>...]：编译特定模式（Variants）的HotSpot虚拟机，可以
+多个模式并存，可选值为server、client、minimal、core、zero、custom
 
+- --with-jvm-features=<feature>[，<feature>...]：针对--with-jvm-variants=custom时的自定义虚拟机特
+性列表（Features），可以多个特性并存，由于可选值较多，请参见help命令输出
 
+- --with-target-bits=<bits>：指明要编译32位还是64位的Java虚拟机，在64位机器上也可以通过交叉
+编译生成32位的虚拟机
 
+- --with-<lib>=<path>：用于指明依赖包的具体路径，通常使用在安装了多个不同版本的Bootstrap
+JDK和依赖包的情况。其中lib的可选值包括boot-jd、freetype、cups、x、alsa、libffi、jtreg、libjpeg、
+giflib、libpng、lcms、zlib
 
+- --with-extra-<flagtype>=<flags>：用于设定C、C++和Java代码编译时的额外编译器参数，其中
+flagtype可选值为cflags、cxxflags、ldflags，分别代表C、C++和Java代码的参数
 
+- --with-conf-name=<name>：指定编译配置名称，OpenJDK支持使用不同的配置进行编译，默认会
+根据编译的操作系统、指令集架构、调试级别自动生成一个配置名称，譬如“linux-x86_64-serverrelease”，如果在这些信息都相同的情况下保存不同的编译参数配置，就需要使用这个参数来自定义配
+置名称
 
-
-
-
-
-
-
-
+以上是configure命令的部分参数，其他未介绍到的可以使用“bash configure --help”来查看，所有参
+数均通过以下形式使用：
+```text
+bash configure [options]
+```
+譬如，编译FastDebug版、仅含Server模式的HotSpot虚拟机，命令应为：
+```text
+bash configure --enable-debug --with-jvm-variants=server
+```
+configure命令承担了依赖项检查、参数配置和构建输出目录结构等多项职责，如果编译过程中需
+要的工具链或者依赖项有缺失，命令执行后将会得到明确的提示，并且给出该依赖的安装命令，这比
+编译旧版OpenJDK时的“make sanity”检查要友好得多，譬如以下例子所示：
+```text
+configure: error: Could not find fontconfig! You might be able to fix this by running 'sudo apt-get install libfontconfig1-dev'.
+configure exiting with result code 1
+```
+如果一切顺利的话，就会收到配置成功的提示，并且输出调试级别，Java虚拟机的模式、特性，
+使用的编译器版本等配置摘要信息，如下所示：
+```text
+A new configuration has been successfully created in
+/home/icyfenix/develop/java/jdk12/build/linux-x86_64-server-release
+using default settings.
+Configuration summary:
+* Debug level: release
+* HS debug level: product
+* JVM variants: server
+* JVM features: server: 'aot cds cmsgc compiler1 compiler2 epsilongc g1gc graal jfr jni-check jvmci jvmti management nmt parallelgc serialgc services shenandoahgc vm-structs zgc'
+* OpenJDK target: OS: linux, CPU architecture: x86, address length: 64
+* Version string: 12-internal+0-adhoc.icyfenix.jdk12 (12-internal)
+Tools summary:
+* Boot JDK: openjdk version "11.0.3" 2019-04-16 OpenJDK Runtime Environment (build 11.0.3+7-Ubuntu-1ubuntu218.04.1) OpenJDK 64-Bit Server VM (build 11.0.3+7-Ubuntu-1ubuntu218.04.1, mixed mode, sharing) (at /usr/lib/jvm/java-11-openjdk-amd64)
+* Toolchain: gcc (GNU Compiler Collection)
+* C Compiler: Version 7.4.0 (at /usr/bin/gcc)
+* C++ Compiler: Version 7.4.0 (at /usr/bin/g++)
+Build performance summary:
+* Cores to use: 4
+* Memory limit: 7976 MB
+```
+在configure命令以及后面的make命令的执行过程中，会在“build/配置名称”目录下产生如下目录结
+构。不常使用C/C++的读者要特别注意，如果多次编译，或者目录结构成功产生后又再次修改了配
+置，必须先使用“make clean”和“make dist-clean”命令清理目录，才能确保新的配置生效。编译产生的目
+录结构以及用途如下所示：
+```text
+buildtools/：用于生成、存放编译过程中用到的工具
+hotspot/：HotSpot虚拟机编译的中间文件
+images/：使用make *-image产生的镜像存放在这里
+jdk/：编译后产生的JDK就放在这里
+support/：存放编译时产生的中间文件
+test-results/：存放编译后的自动化测试结果
+configure-support/：这三个目录是存放执行configure、make和test的临时文件
+make-support/
+test-support/
+```
+依赖检查通过后便可以输入“make images”执行整个OpenJDK编译了，这里“images”是“productimages”编译目标（Target）的简写别名，这个目标的作用是编译出整个JDK镜像，除了“productimages”以外，其他编译目标还有：
+```text
+hotspot：只编译HotSpot虚拟机
+hotspot-<variant>：只编译特定模式的HotSpot虚拟机
+docs-image：产生JDK的文档镜像
+test-image：产生JDK的测试镜像
+all-images：相当于连续调用product、docs、test三个编译目标
+bootcycle-images：编译两次JDK，其中第二次使用第一次的编译结果作为Bootstrap JDK
+clean：清理make命令产生的临时文件
+dist-clean：清理make和configure命令产生的临时文件
+```
+笔者使用Oracle VM VirtualBox虚拟机，启动4条编译线程，8GB内存，全量编译整个OpenJDK 12
+大概需近15分钟时间，如果之前已经全量编译过，只是修改了少量文件的话，增量编译可以在数十秒
+内完成。编译完成之后，进入OpenJDK源码的“build/配置名称/jdk”目录下就可以看到OpenJDK的完整
+编译结果了，把它复制到JAVA_HOME目录，就可以作为一个完整的JDK来使用，如果没有人为设置
+过JDK开发版本的话，这个JDK的开发版本号里默认会带上编译的机器名，如下所示：
+```text
+> ./java -version
+openjdk version "12-internal" 2019-03-19
+OpenJDK Runtime Environment (build 12-internal+0-adhoc.icyfenix.jdk12)
+OpenJDK 64-Bit Server VM (build 12-internal+0-adhoc.icyfenix.jdk12, mixed mode)
+```
 
 ###### 1.6.5 在IDE工具中进行源码调试
+我们在阅读OpenJDK源码的过程中，肯定会运行和跟踪调试程序来帮助理解。现在我们已学会了
+如何编译一个可调试版本HotSpot虚拟机，并禁用优化，带有符号信息，这样的编译结果已经可以直接
+使用GDB在命令行中进行调试了。据笔者所知，不少对Java虚拟机研发接触比较多的开发人员确实就
+是使用GDB和VIM编辑器来开发、修改HotSpot源码的，不过相信大多数读者都还是更倾向于在IDE环
+境而不是纯文本下阅读、跟踪HotSpot源码。为此，本节将会讲解如何在IDE中进行HotSpot源码调试
 
+在本次实战里，笔者采用的IDE是JetBrains的CLion 2019.1，读者可以在JetBrains网站<sup>[1]</sup>上直接下
+载并免费使用30天，如果希望使用其他IDE，譬如Eclipst CDT或者Net-Beans，可以参考本书第2版中
+相同章节的内容，为节省篇幅笔者就没有把它放到附录中了
 
+CLion安装后，新建一个项目，选择“New CMake Project from Sources”，在源码文件夹中填入
+OpenJDK源码根目录，此时，CLion已经自动选择好了需要导入的源码，如图1-10所示。点击OK按钮
+就会导入源码并自动创建好CMakeLists.txt文件
 
+这份自动生成的CMakeLists.txt并不能直接使用，OpenJDK本身也没有为任何IDE提供支持，但如
+果只是为了能够在CLion中跟踪、阅读源码，而不需要修改重新编译的话，那直接在Run/Debug
+Configurations中增加一个CMake Application，然后Executable选择我们刚才编译出来的FastDebug或者
+SlowDebug版的java命令，运行参数加上-version或者某个Class文件的路径，再把Before launch里面的
+Build去掉，就可以开始运行调试了，如图1-11所示
 
+不过如果读者需要在CLion中修改源码，并重新编译产生新的JDK，又或者不想阅读时看见一堆头
+文件缺失提示的话，那还是需要把CMakeLists.txt修好，在GitHub上已经有现成的[2]参考，读者可以
+直接下载，内容较多，篇幅所限，笔者就不在本文中列出了
 
+读者在调试Java代码执行时，如果要跟踪具体Java代码在虚拟机中是如何执行的，一开始可能会觉
+得有些无处入手，因为目前HotSpot在主流的操作系统上，都采用模板解释器来执行字节码，它与即时
+编译器一样，最终执行的汇编代码都是运行期间产生的，无法直接设置断点，所以HotSpot增加了以下
+参数来方便开发人员调试解释器：
+```text
+-XX:+TraceBytecodes -XX:StopInterpreterAt=<n>
+```
+这组参数的作用是当遇到序号为<n>的字节码指令时，便会中断程序执行，进入断点调试。调试
+解释器部分代码时，把这两个参数加到java命令的参数后面即可
 
+完成以上配置之后，一个可修改、编译、调试的HotSpot工程就完全建立起来了，Hot-Spot虚拟机
+启动器的执行入口是java.c的JavaMain()方法，读者可以设置断点单步跟踪，如图1-12所示
 
+[1] 官网地址：https://www.jetbrains.com/clion/
 
-
-
-
-
-
-
-
-
-
-
-
+[2] https://github.com/ojdkbuild/ojdkbuild/blob/master/src/java-12-openjdk/CMakeLists.txt
 
 ##### 1.7 本章小结
-
-
-
-
-
-
-
-
-
-
-
-
+本章介绍了Java技术体系的过去、现在和未来的发展趋势，并在实践中介绍了如何自己编译一个
+OpenJDK 12。作为全书的引言部分，本章建立了后文研究所必需的环境。在了解Java技术的来龙去脉
+后，后面章节将分为四部分去介绍Java在“自动内存管理”“Class文件结构与执行引擎”“编译器优
+化”及“多线程并发”方面的实现原理
