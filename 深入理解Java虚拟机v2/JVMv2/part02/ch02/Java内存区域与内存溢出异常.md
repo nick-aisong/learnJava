@@ -224,7 +224,7 @@ Java堆是否规整决定，而Java堆是否规整又由所采用的垃圾收集
 下面的代码清单2-1是HotSpot虚拟机bytecodeInterpreter.cpp中的代码片段（这个解释器实
 现很少有机会实际使用，因为大部分平台上都使用模板解释器；当代码通过JIT编译器执行
 时差异就更大了。不过，这段代码用于了解HotSpot的运作过程是没有什么问题的）
-```
+```C++
 //代码清单2-1 HotSpot解释器的代码片段
 //确保常量池中存放的是已解释的类
 if (!constants -> tag_at(index).is_unresolved_klass()) {
@@ -248,7 +248,7 @@ if (!constants -> tag_at(index).is_unresolved_klass()) {
         if (result == NULL) {
             need_zero = true;
             //直接在eden中分配对象
-            retry:
+retry:
             HeapWord * compare_to =*Universe:
             heap()->top_addr();
             HeapWord * new_top = compare_to + obj_size;

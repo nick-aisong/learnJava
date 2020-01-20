@@ -413,25 +413,55 @@ reference本身不需要被修改
 使用句柄来访问的情况也十分常见
 
 ##### 2.4 实战：OutOfMemoryError异常
+在《Java虚拟机规范》的规定里，除了程序计数器外，虚拟机内存的其他几个运行时区域都有发
+生OutOfMemoryError（下文称OOM）异常的可能，本节将通过若干实例来验证异常实际发生的代码
+场景（代码清单2-3～2-9），并且将初步介绍若干最基本的与自动内存管理子系统相关的HotSpot虚拟
+机参数
 
+本节实战的目的有两个：第一，通过代码验证《Java虚拟机规范》中描述的各个运行时区域储存
+的内容；第二，希望读者在工作中遇到实际的内存溢出异常时，能根据异常的提示信息迅速得知是哪
+个区域的内存溢出，知道怎样的代码可能会导致这些区域内存溢出，以及出现这些异常后该如何处理
 
+本节代码清单开头都注释了执行时需要设置的虚拟机启动参数（注释中“VM Args”后面跟着的参
+数），这些参数对实验的结果有直接影响，请读者调试代码的时候不要忽略掉。如果读者使用控制台
+命令来执行程序，那直接跟在Java命令之后书写就可以。如果读者使用Eclipse，则可以参考图2-4在
+Debug/Run页签中的设置，其他IDE工具均有类似的设置
 
-
-
-
-
-
-
-
-
-
-
+本节所列的代码均由笔者在基于OpenJDK 7中的HotSpot虚拟机上进行过实际测试，如无特殊说
+明，对其他OpenJDK版本也应当适用。不过读者需意识到内存溢出异常与虚拟机本身的实现细节密切
+相关，并非全是Java语言中约定的公共行为。因此，不同发行商、不同版本的Java虚拟机，其需要的参
+数和程序运行的结果都很可能会有所差别
 
 ###### 2.4.1 Java堆溢出
+Java堆用于储存对象实例，我们只要不断地创建对象，并且保证GC Roots到对象之间有可达路径
+来避免垃圾回收机制清除这些对象，那么随着对象数量的增加，总容量触及最大堆的容量限制后就会
+产生内存溢出异常
 
+代码清单2-3中限制Java堆的大小为20MB，不可扩展（将堆的最小值-Xms参数与最大值-Xmx参数
+设置为一样即可避免堆自动扩展），通过参数-XX：+HeapDumpOnOutOf-MemoryError可以让虚拟机
+在出现内存溢出异常的时候Dump出当前的内存堆转储快照以便进行事后分析[1]
+```java
+//代码清单2-3 Java堆内存溢出异常测试
+/**
+ * VM Args：-Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
+ * @author zzm
+ */
+public class HeapOOM {
+    static class OOMObject {
+    }
+    public static void main(String[] args) {
+        List<OOMObject> list = new ArrayList<OOMObject>();
+        while (true) {
+            list.add(new OOMObject());
+        }
+    }
+}
 
-
-
+//运行结果：
+java.lang.OutOfMemoryError: Java heap space
+Dumping heap to java_pid3404.hprof ...
+Heap dump file created [22045981 bytes in 0.663 secs]
+```
 
 
 
