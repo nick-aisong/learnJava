@@ -30,9 +30,3 @@ lock
 ##### 34_SemaphoreDemo
 
 
-
-
-
-
-
-
