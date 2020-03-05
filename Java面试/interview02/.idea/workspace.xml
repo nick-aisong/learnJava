@@ -24,8 +24,8 @@
         <entry file="file://$PROJECT_DIR$/src/part07_jvm/part07_jvm.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="324">
-                <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="23" />
+              <first_editor relative-caret-position="378">
+                <caret line="62" column="37" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="37" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -106,8 +106,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1909" />
-    <option name="y" value="-11" />
+    <option name="x" value="1934" />
+    <option name="y" value="97" />
     <option name="width" value="1942" />
     <option name="height" value="1102" />
   </component>
@@ -698,15 +698,15 @@
       <workItem from="1581660727896" duration="1430000" />
       <workItem from="1581936329129" duration="10148000" />
       <workItem from="1582626597635" duration="14454000" />
-      <workItem from="1583149945137" duration="5014000" />
+      <workItem from="1583149945137" duration="8006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56208000" />
+    <option name="totallyTimeSpent" value="59200000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1909" y="-11" width="1942" height="1102" extended-state="1" />
+    <frame x="1934" y="97" width="1942" height="1102" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1083,8 +1083,8 @@
     <entry file="file://$PROJECT_DIR$/src/part07_jvm/part07_jvm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="324">
-            <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="23" />
+          <first_editor relative-caret-position="378">
+            <caret line="62" column="37" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="37" />
             <folding />
           </first_editor>
           <second_editor>
