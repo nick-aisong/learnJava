@@ -1,0 +1,4 @@
+
+https://www.manning.com/books/the-well-grounded-java-developer
+
+https://manning-content.s3.amazonaws.com/download/f/a2dc33b-2e7a-4c2d-aa02-bcc40175c201/evans_errata.html
