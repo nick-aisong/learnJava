@@ -173,7 +173,22 @@
 ![](src\part07_jvm\img\81JVM盘点家底查看修改变更值.png)
 ### 82堆内存初始大小快速复习
 ![](src\part07_jvm\img\82堆内存初始大小快速复习.png)
+
+可以用ps直接看传递给java的参数：
+
+```shell
+f70018443a17:/tmp # ps -ef > temp
+f70018443a17:/tmp # cat temp
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  2 Jun02 ?        00:11:18 /usr/lib/jvm/zulu-8-amd64/bin/java -Djava.util.logging.config.file=/opt/apache-tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Xmx4096m -Dcom.sun.management.jmxremote.port=18443 -Djava.rmi.server.hostname=16.187.188.182 -XX:+UseConcMarkSweepGC -XX:HeapDumpPath=/opt/apache-tomcat/temp/dump -XX:+HeapDumpOnOutOfMemoryError -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=30023 -Dignore.endorsed.dirs= -classpath /opt/apache-tomcat/bin/bootstrap.jar:/opt/apache-tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/apache-tomcat -Dcatalina.home=/opt/apache-tomcat -Djava.io.tmpdir=/opt/apache-tomcat/temp org.apache.catalina.startup.Bootstrap start
+root      1454     0  0 02:33 ?        00:00:00 bash
+root      1522  1454 90 02:35 ?        00:00:00 ps -ef
+```
+
+
+
 ### 83常用基础参数栈内存Xss讲解
+
 ![](src\part07_jvm\img\83常用基础参数栈内存Xss讲解.png)
 ### 84常用基础参数元空间MetaspaceSize讲解
 ![](src\part07_jvm\img\84常用基础参数元空间MetaspaceSize讲解.png)
