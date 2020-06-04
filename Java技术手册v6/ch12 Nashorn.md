@@ -494,16 +494,70 @@ print(cube2(3));
 
 JavaScript 支持 try、catch 和 throw 语句，而且处理方式和 Java 类似。
 
+> JavaScript 不支持已检异常，所有异常都是未检异常。
 
+可是，标准的 JavaScript 只允许在 try 块后跟一个 catch 子句，也就是说，不支持使用不同的 catch 子句处理不同的异常类型。幸好，Mozilla 已经实现了支持多个 catch 子句的句法扩展，而且 Nashorn 也实现了，如下述示例所示：
+```
+function fnThatMightThrow() {
+    if (Math.random() < 0.5) {
+        throw new TypeError();
+    } else {
+        throw new Error();
+    }
+}
 
-
+try {
+    fnThatMightThrow();
+} catch (e if e instanceof TypeError) {
+    print("Caught TypeError");
+} catch (e) {
+    print("Caught some other error");
+}
+```
+Nashorn 还实现了一些其他非标准的句法扩展（前面介绍 jjs 的脚本模式时见过一些其他有用的句法革新），不过前面介绍的这几个扩展最为人熟知，而且使用广泛。
 
 ###### 12.4.3 实现细节
 
+前面说过，Nashorn 的工作方式是直接把 JavaScript 程序编译成 JVM 字节码，然后像任何其他类一样运行。正是因为这样，才能把 JavaScript 函数当作 lambda 表达式，并在二者之间相互操作。
 
+下面仔细分析前面的一个示例，说明 JavaScript 函数为何能当作 Java 接口的匿名实现：
 
+```
+jjs> var clz = Java.type("java.util.concurrent.Callable");
+jjs> var obj = new clz(function () { print("Foo"); } );
+jjs> print(obj);
+jdk.nashorn.javaadapters.java.util.concurrent.Callable@290dbf45
+```
+可以看出，实现 Callable 接口的 JavaScript 对象其实属于 jdk.nashorn.javaadapters.java.util.concurrent.Callable 类。当然，Nashorn 没有提供这个类。Nashorn 会动态生成字节码，实现所需的任何接口，并且为了可读性，会在包结构中保留接口原来的名称。
+
+> 记住，动态生成代码是 Nashorn 的基本特性，Nashorn 会把所有 JavaScript 代码编译成 Java 字节码，绝不会直接解释。
+
+最后还有一点要注意，因为 Nashorn 坚持 100% 符合规范，所以有时会限制实现的功能。例如，像下面这样打印一个对象：
+```
+jjs> var obj = {foo:"bar",cat:2};
+jjs> print(obj);
+[object Object]
+```
+根据 ECMAScript 规范，打印出的内容只能是 [object Object]——符合规范的实现不能提供更具体的有用信息（例如 obj 对象的完整属性列表和其中包含的值）。
 
 ##### 12.5 小结
 
+本章介绍了 Nashorn，这是在 JVM 之上实现的 JavaScript 引擎，在 Java 8 中引入。我们说明了如何使用 Nashorn 执行脚本，以及如何利用 Java 和 JVM 的全部功能，增强 JavaScript脚本，甚至代替 bash 和 Perl 脚本。我们还介绍了 JavaScript 引擎 API，说明了 Java 与脚本语言之间是如何相互操作的。
 
+我们介绍了 Nashorn 提供的 JavaScript 和 Java 之间的紧密集成，以及一些小小的语言句法扩展，让编程变得更简单一些。最后，我们简要说明了 Nashorn 实现这些功能的细节。下面我们快速展望一下未来，介绍一下 Avatar 项目，这个项目可能代表着 Java/JavaScript Web 应用的未来。
 
+##### Avatar项目
+
+最近几年，JavaScript 社区最成功的新产物是 Node.js。这是一个简单的服务器端 JavaScript 实现，由 Ryan Dahl 开发，现在则由 Joyent 公司管理。Node.js 提供的编程模型大量采用异步机制——围绕回调、非阻塞 I/O 和一个简单的单线程事件轮询模型设计。
+
+虽然 Node.js 不适合开发复杂的企业应用（因为在大型代码基中回调模型有诸多限制），但比较适合开发原型、简单的“胶水”服务器，以及不是很复杂的单用途 HTTP 和 TCP 服务器应用。
+
+Node 生态系统的繁荣得益于提倡重用代码，制成 Node 包。类似于 Maven 档案文件（和较早期的系统，例如 Perl CPAN），Node 包简化了代码的创建和分发，不过，JavaScript 缺少模块化和部署功能，这些相对不完善的机制限制了 Node 包的使用。
+
+Node 的原始实现包含几个基本组建——一个执行 JavaScript 的引擎（谷歌为 Chrome 浏览器开发的 V8 引擎）、一个简单的抽象层和一个标准库（主要是 JavaScript 代码）。
+
+2013 年 9 月，甲骨文公司宣布了 Avatar 项目。甲骨文希望通过这个项目建立 Web 应用未来的架构，并把 JavaScript（和 Node）带入已经成熟的 Java Web 应用生态系统。
+
+作为 Avatar 项目的一部分，甲骨文开源了他们对 Node API 的实现。这个实现运行在 Nashorn 和 JVM 之上，叫作 Avatar.js，准确实现了大多数 Node API。目前（截至 2014 年4 月），这个实现能运行大量 Node 模块——基本上都是不依赖本地代码的模块。
+
+当然，未来是不可预知的，不过 Avatar 项目指出了一种可能的发展方向：新一代 Web 应用以 JVM 为基础，结合 JavaScript 和 Java，尽量发挥二者各自的优势。
