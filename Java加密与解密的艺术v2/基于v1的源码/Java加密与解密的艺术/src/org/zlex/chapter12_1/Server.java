@@ -58,7 +58,6 @@ public class Server extends JFrame {
      */
     public Server() {
         init();
-
     }
 
     /**
@@ -135,13 +134,11 @@ public class Server extends JFrame {
                 con = null;
             }
         }
-
         return responseData;
     }
 
     public static void main(String args[]) {
         new Server();
-
     }
 
     /**
@@ -169,13 +166,11 @@ public class Server extends JFrame {
      * 初始化主体面板
      */
     private void initBodyPanel() {
-
         initRequestPanel();
         initResponsePanel();
         initButtonPanel();
         container.add(splitPane, BorderLayout.CENTER);
         container.add(buttonPanel, BorderLayout.NORTH);
-
     }
 
     private void initButtonPanel() {
@@ -235,9 +230,7 @@ public class Server extends JFrame {
 
         String request = requestTextArea.getText().trim();
         if (!request.isEmpty()) {
-
             try {
-
                 String protocolResponse = new String(
                         httpPost(addressTextField.getText().trim(), request
                                 .getBytes(CHARACTER_ENCODING)),

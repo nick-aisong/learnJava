@@ -45,5 +45,4 @@ public abstract class Base64Coder {
         byte[] b = decoder.decodeBuffer(data);
         return new String(b, ENCODING);
     }
-
 }

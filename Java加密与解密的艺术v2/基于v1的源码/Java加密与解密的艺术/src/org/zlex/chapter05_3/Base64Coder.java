@@ -64,5 +64,4 @@ public abstract class Base64Coder {
 
         return new String(b, ENCODING);
     }
-
 }

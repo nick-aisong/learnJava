@@ -33,5 +33,4 @@ public class CRCTest {
         System.err.println("原文：\t" + str);
         System.err.println("CRC-32：\t" + hex);
     }
-
 }

@@ -68,15 +68,10 @@ public class HTTPSCoderTest {
 
         // 如果内容长度为-1，则放弃解析
         if (length != -1) {
-
             DataInputStream dis = new DataInputStream(conn.getInputStream());
-
             data = new byte[length];
-
             dis.readFully(data);
-
             dis.close();
-
             System.err.println(new String(data));
         }
 
@@ -84,7 +79,5 @@ public class HTTPSCoderTest {
 
         // 验证
         assertNotNull(data);
-
     }
-
 }

@@ -270,7 +270,5 @@ public abstract class CertificateCoder {
         signature.update(data);
 
         return signature.verify(sign);
-
     }
-
 }

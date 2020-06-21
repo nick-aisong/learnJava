@@ -180,5 +180,4 @@ public class RipeMDCoderTest {
         // 校验
         assertEquals(data1, data2);
     }
-
 }

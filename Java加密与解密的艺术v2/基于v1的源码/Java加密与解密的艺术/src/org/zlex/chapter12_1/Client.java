@@ -67,5 +67,4 @@ public class Client implements Runnable {
         InputStream socketIn = socket.getInputStream();
         return new BufferedReader(new InputStreamReader(socketIn));
     }
-
 }

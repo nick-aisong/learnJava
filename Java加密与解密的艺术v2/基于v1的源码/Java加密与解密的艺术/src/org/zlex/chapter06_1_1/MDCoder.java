@@ -43,5 +43,4 @@ public abstract class MDCoder {
         // 执行消息摘要
         return md.digest(data);
     }
-
 }

@@ -172,5 +172,4 @@ public class SHACoderTest {
         // 校验
         assertEquals(data1, data2);
     }
-
 }

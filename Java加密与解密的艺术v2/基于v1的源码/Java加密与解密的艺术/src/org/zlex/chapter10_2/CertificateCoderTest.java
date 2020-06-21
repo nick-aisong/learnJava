@@ -130,7 +130,5 @@ public class CertificateCoderTest {
             e.printStackTrace();
             fail(e.getMessage());
         }
-
     }
-
 }

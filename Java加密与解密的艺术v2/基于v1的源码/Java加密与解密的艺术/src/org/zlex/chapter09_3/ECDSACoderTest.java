@@ -67,7 +67,5 @@ public class ECDSACoderTest {
         boolean status = ECDSACoder.verify(data, publicKey, sign);
         System.err.println("状态:\r" + status);
         assertTrue(status);
-
     }
-
 }

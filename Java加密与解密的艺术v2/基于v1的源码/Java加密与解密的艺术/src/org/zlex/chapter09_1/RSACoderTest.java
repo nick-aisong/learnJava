@@ -69,5 +69,4 @@ public class RSACoderTest {
         assertTrue(status);
 
     }
-
 }

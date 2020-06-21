@@ -110,5 +110,4 @@ public class HmacRipeMDCoderTest {
         // 校验
         assertEquals(data1, data2);
     }
-
 }

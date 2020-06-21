@@ -117,5 +117,4 @@ public abstract class SHACoder {
         // 执行消息摘要
         return DigestUtils.sha512Hex(data);
     }
-
 }

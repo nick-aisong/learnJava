@@ -96,5 +96,4 @@ public class SHATest {
         // 验证
         assertEquals(shahex, "a7c6e483af48273638416e1d3fca52b7");
     }
-
 }

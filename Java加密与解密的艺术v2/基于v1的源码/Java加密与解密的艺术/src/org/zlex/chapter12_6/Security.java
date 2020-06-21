@@ -143,6 +143,5 @@ public abstract class Security {
      */
     public static boolean validate(byte[] data, byte[] messageDigest) {
         return md5Hex(data).equals(messageDigest);
-
     }
 }

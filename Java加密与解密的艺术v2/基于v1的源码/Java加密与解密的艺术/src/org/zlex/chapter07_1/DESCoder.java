@@ -118,7 +118,7 @@ public abstract class DESCoder {
         KeyGenerator kg = KeyGenerator.getInstance(KEY_ALGORITHM);
 
 		/*
-		 * 初始化密钥生成器 若要使用64bit密钥注意替换 将下述代码kg.init(56); 替换为kg.init(64);
+         * 初始化密钥生成器 若要使用64bit密钥注意替换 将下述代码kg.init(56); 替换为kg.init(64);
 		 */
         kg.init(56, new SecureRandom());
 

@@ -109,7 +109,5 @@ public class CertificateCoderTest {
 
         // 校验
         assertTrue(status);
-
     }
-
 }

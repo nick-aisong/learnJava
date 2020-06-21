@@ -194,5 +194,4 @@ public class InitDialog extends JDialog {
     public String getRemoteHost() {
         return remoteHost;
     }
-
 }

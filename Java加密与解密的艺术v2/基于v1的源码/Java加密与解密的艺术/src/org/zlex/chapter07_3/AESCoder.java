@@ -85,7 +85,7 @@ public abstract class AESCoder {
         Key k = toKey(key);
 
 		/*
-		 * 实例化 
+         * 实例化
 		 * 使用PKCS7Padding填充方式，按如下方式实现
 		 * Cipher.getInstance(CIPHER_ALGORITHM, "BC");
 		 */

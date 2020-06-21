@@ -42,5 +42,4 @@ public class PBECoderTest {
         // 校验
         assertEquals(inputStr, outputStr);
     }
-
 }

@@ -48,5 +48,4 @@ public abstract class UrlBase64Coder {
 
         return new String(b, ENCODING);
     }
-
 }

@@ -67,7 +67,5 @@ public class DSACoderTest {
         boolean status = DSACoder.verify(data, publicKey, sign);
         System.err.println("状态:\r" + status);
         assertTrue(status);
-
     }
-
 }

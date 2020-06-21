@@ -93,7 +93,7 @@ public abstract class DESedeCoder {
         Key k = toKey(key);
 
 		/* 
-		 * 实例化
+         * 实例化
 		 * 使用PKCS7Padding填充方式
 		 * Cipher.getInstance(CIPHER_ALGORITHM, "BC");
 		 */

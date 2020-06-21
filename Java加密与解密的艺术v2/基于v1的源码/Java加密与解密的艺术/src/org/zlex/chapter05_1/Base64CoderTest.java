@@ -25,12 +25,10 @@ public class Base64CoderTest {
     public final void test() throws Exception {
 
         String inputStr = "Java加密与解密的艺术";
-
         System.err.println("原文:\n\t" + inputStr);
 
         // 进行Base64编码
         String code = Base64Coder.encode(inputStr);
-
         System.err.println("Base64编码后:\n\t" + code);
 
         // 进行Base64解码
@@ -62,7 +60,5 @@ public class Base64CoderTest {
         BASE64Decoder decoder = new BASE64Decoder();
         byte[] output = decoder.decodeBuffer(data);
         System.err.println("解码后:\n\t" + new String(output));
-
     }
-
 }

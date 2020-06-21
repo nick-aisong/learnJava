@@ -43,7 +43,6 @@ public abstract class CertificateCoder {
 
         // 获得私钥
         return (PrivateKey) ks.getKey(alias, password.toCharArray());
-
     }
 
     /**
@@ -286,7 +285,5 @@ public abstract class CertificateCoder {
         signature.update(data);
 
         return signature.verify(sign);
-
     }
-
 }

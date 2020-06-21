@@ -50,5 +50,4 @@ public class MDCoderTest {
         // 校验
         assertArrayEquals(data1, data2);
     }
-
 }

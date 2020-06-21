@@ -122,5 +122,4 @@ public abstract class Security {
     public static String initKeyHex() throws Exception {
         return Hex.encodeHexString(initKey());
     }
-
 }

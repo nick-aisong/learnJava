@@ -98,5 +98,4 @@ public class MD5Test {
         // 验证
         assertEquals(md5hex, "5a077abefee447cbb271e2aa7f6d5a47");
     }
-
 }

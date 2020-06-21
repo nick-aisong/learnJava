@@ -158,5 +158,4 @@ public abstract class RipeMDCoder {
         // 做十六进制编码处理
         return new String(Hex.encode(b));
     }
-
 }

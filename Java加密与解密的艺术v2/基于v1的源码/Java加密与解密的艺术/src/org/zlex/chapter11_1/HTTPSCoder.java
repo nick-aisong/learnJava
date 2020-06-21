@@ -92,7 +92,6 @@ public abstract class HTTPSCoder {
 
         // 获得SSLSocketFactory
         return ctx.getSocketFactory();
-
     }
 
     /**

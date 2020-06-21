@@ -115,5 +115,4 @@ public class MACCoderTest {
         // 校验
         assertArrayEquals(data1, data2);
     }
-
 }

@@ -55,5 +55,4 @@ public class MD5CoderTest {
         // 校验
         assertEquals(data1, data2);
     }
-
 }
