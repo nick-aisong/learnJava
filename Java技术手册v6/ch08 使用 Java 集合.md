@@ -718,31 +718,116 @@ System.out.println("Sum of some primes: " + sumPrimes);
 
 ###### 8.2.2 流 API
 
+库的设计者之所以引入流 API，是因为集合核心接口的大量实现已经广泛使用。这些实现在 Java 8 和 lambda 表达式之前就已存在，因此没有执行任何函数式运算的方法。更糟的是，map() 和 filter() 等方法从未出现在集合 API 的接口中，实现这些接口的类可能已经使用这些名称定义了方法。
 
+为了解决这个问题，设计者引入了一层新的抽象——Stream。Stream 对象可以通过 stream() 方法从集合对象上生成。设计者引入这个全新的 Stream 对象是为了避免方法名冲突，这的确在一定程度上减少了冲突的几率，因为只有包含 stream() 方法的实现才会受到影响。
 
+在处理集合的新方式中，Stream 对象的作用和 Iterator 对象类似。总体思想是让开发者把一系列操作（也叫“管道”，例如映射、过滤器或化简）当成一个整体运用在集合上。具体执行的各个操作一般使用 lambda 表达式表示。
 
+在管道的末尾需要收集结果，或者再次“具化”为真正的集合。这一步使用 Collector 对象完成，或者以“终结方法”（例如 reduce()）结束管道，返回一个具体的值，而不是另一个流。总的来说，处理集合的新方式类似下面这样：
+```
+        stream()   filter()   map()   collect()
+Collection -> Stream -> Stream -> Stream -> Collection
+```
+Stream 类相当于一系列元素，一次访问一个元素（不过有些类型的流也支持并行访问，可以使用多线程方式处理大型集合）。Stream 对象和 Iterator 对象的工作方式一样，依次读取每个元素。
 
+和 Java 中的大多数泛型类一样，Stream 类也使用引用类型参数化。不过，多数情况下，其实需要使用基本类型，尤其是 int 和 double 类型构成的流，但是又没有 Stream\<int\> 类型，所以 java.util.stream 包提供了专用的（非泛型）类，例如 IntStream 和 DoubleStream。这些类是 Stream 类的基本类型特化，其 API 和一般的 Stream 类十分类似，不过在适当的情况下会使用基本类型的值。
 
+例如，在前面 reduce() 方法的示例中，多数时候，在管道中使用的其实就是 Stream 类的基本类型特化。
 
+1. 惰性求值
 
+其实，流比迭代器（甚至是集合）通用，因为流不用管理数据的存储空间。在早期的 Java 版本中，总是假定集合中的所有元素都存在（一般存储在内存中），不过有些处理方式也能避开这个问题，例如坚持在所有地方都使用迭代器，或者让迭代器即时构建元素。可是，这些方式既不十分便利，也不那么常用。
 
+然而，流是管理数据的一种抽象，不关心存储细节。因此，除了有限的集合之外，流还能处理更复杂的数据结构。例如，使用 Stream 接口可以轻易实现无限流，处理一切平方数。实现方式如下所示：
+```java
+public class SquareGenerator implements IntSupplier {
+    private int current = 1;
+    
+    @Override
+    public synchronized int getAsInt() {
+        int thisResult = current * current;
+        current++;
+        return thisResult;
+    }
+}
 
+IntStream squares = IntStream.generate(new SquareGenerator());
+PrimitiveIterator.OfInt stepThrough = squares.iterator();
+for (int i = 0; i < 10; i++) {
+    System.out.println(stepThrough.nextInt());
+}
+System.out.println("First iterator done...");
 
+// 只要想就可以一直这样进行下去……
+for (int i = 0; i < 10; i++) {
+    System.out.println(stepThrough.nextInt());
+}
+```
+通过构建上述无限流，我们能得出一个重要结论：不能使用 collect() 这样的方法。这是因为无法把整个流具化为一个集合（在创建所需的无限个对象之前就会耗尽内存）。因此，我们采取的方式必须在需要时才从流中取出元素。其实，我们需要的是按需读取下一个元素的代码。为了实现这种操作，需要使用一个关键技术——惰性求值（lazy evaluation）。这个技术的本质是，需要时才计算值。
 
+> 惰性求值对 Java 来说是个重大的变化，在 JDK 8 之前，表达式赋值给变量（或传入方法）后会立即计算它的值。这种立即计算值的方式我们已经熟知，术语叫“及早求值”（eager evaluation）。在多数主流编程语言中，“及早求值”都是计算表达式的默认方式。
 
+幸好，实现惰性求值的重担几乎都落在了库的编写者身上，开发者则轻松得多，而且使用流 API 时，大多数情况下 Java 开发者都无需仔细考虑惰性求值。下面以一个示例结束对流的讨论。这个示例使用 reduce() 方法计算几个莎士比亚语录的平均单词长度：
+```java
+String[] billyQuotes = {"For Brutus is an honourable man",
+  "Give me your hands if we be friends and Robin shall restore amends",
+  "Misery acquaints a man with strange bedfellows"};
+List<String> quotes = Arrays.asList(billyQuotes);
+
+// 创建一个临时集合，保存单词
+List<String> words = quotes.stream()
+    .flatMap(line -> Stream.of(line.split(" +")))
+    .collect(Collectors.toList());
+long wordCount = words.size();
+
+// 校正为double类型只是为了避免Java按照整数方式计算除法
+double aveLength = ((double) words.stream()
+    .map(String::length)
+    .reduce(0, (x, y) -> {return x + y;})) / wordCount;
+System.out.println("Average word length: " + aveLength);
+```
+这个示例用到了 flatMap() 方法。在这个示例中，向 flatMap() 方法传入一个字符串 line，得到的是一个由字符串组成的流，流中的数据是拆分一句话得到的所有单词。然后再“整平”这些单词，把处理每句话得到的流都合并到一个流中。
+
+这样做的目的是把每句话都拆分成单个单词，然后再组成一个总流。为了计算单词数量，我们创建了一个对象 words。其实，在管道处理流的过程中会“中断”，再次具化，把单词存入集合，在流操作恢复之前获取单词的数量。
+
+这一步完成之后，下一步是化简运算，先计算所有语录中的单词总长度，然后再除以已经获取的单词数量。记住，流是惰性抽象，如果要执行及早操作（例如，计算流下面的集合大小），得重新具化为集合。
+
+2. 处理流的实用默认方法
+
+借着引入流 API 的机会，Java 8 向集合库引入了一些新方法。现在 Java 已经支持默认方法，因此可以向集合接口中添加新方法，而不会破坏向后兼容性。
+
+新添加的方法中有一些是“基架方法”，用于创建抽象的流，例如 Collection::stream、Collection::parallelStream 和 Collection::spliterator （这个方法可以细分为 List::spliterator 和Set::spliterator）。
+
+另一些则是“缺失方法”，例如 Map::remove 和 Map::replace。List::sort 也属于“缺失方法”，在 List 接口中的定义如下所示：
+```java
+// 其实是把具体操作交给Collections类的辅助方法完成
+public default void sort(Comparator<? super E> c) {
+    Collections.<E>sort(this, c);
+}
+```
+Map::putIfAbsent 也是缺失方法，根据 java.util.concurrent 包中 ConcurrentMap 接口的同名方法改写。
+
+另一个值得关注的缺失方法是 Map::getOrDefault，程序员使用这个方法能省去很多检查 null 值的繁琐操作，因为如果找不到要查询的键，这个方法会返回指定的值。
+
+其余的方法则使用 java.util.function 接口提供额外的函数式技术。
+
+- Collection::removeIf
+
+这个方法的参数是一个 Predicate 对象，它会迭代整个集合，把满足判断条件的元素移除。
+
+- Map::forEach
+
+这个方法只有一个参数，是一个 lambda 表达式；而这个 lambda 表达式有两个参数（一个是键的类型，一个是值的类型），返回 void。这个 lambda 表达式会转换成 BiConsumer 对象，应用在映射中的每个键值对上。
+
+- Map::computeIfAbsent
+
+这个方法有两个参数：键和 lambda 表达式。lambda 表达式的作用是把键映射到值上。如果映射中没有指定的键（第一个参数），那就使用 lambda 表达式计算一个默认值，然后存入映射。
+
+（其他值得学习的方法：Map::computeIfPresent、Map::compute 和 Map::merge。）
 
 ##### 8.3 小结
 
+本章介绍了 Java 集合库，也说明了如何开始使用 Java 实现的基本和经典数据结构。我们学习了通用的 Collection 接口，以及 List、Set 和 Map 接口；学习了处理集合的原始迭代方式，也介绍了 Java 8 从函数式编程语言借鉴来的新方式。最后，我们学习了流 API，发现这种新方式更通用，而且处理复杂的编程概念时比经典方式更具表现力。
 
-
-
-
-
-
-
-
-
-
-
-
-
+我们继续学习。下一章继续讨论数据，会介绍一些常见任务的处理方式，例如处理文本和数字数据，还会介绍 Java 8 引入的新日期和时间库。
