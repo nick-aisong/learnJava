@@ -414,103 +414,420 @@ TreeMap 类实现 SortedMap 接口。这个接口扩展 Map 接口，添加了�
 
 ###### 8.1.5 Queue 接口和 BlockingQueue 接口
 
+队列（queue）是一组有序的元素，提取元素时按顺序从队头读取。队列一般按照插入元素的顺序实现，因此分成两类：先进先出（first-in, first-out，FIFO）队列和后进先出（last-in, first-out，LIFO）队列。
 
+> LIFO 队列也叫栈（stack），Java 提供了 Stack 类，但强烈不建议使用——应该使用实现 Deque 接口的类。
 
+队列也可以使用其他顺序： 优先队列（priority queue）根据外部 Comparator 对象或 Comparable 类型元素的自然顺序排序元素。与 Set 不同的是，Queue 的实现往往允许出现重复的元素。而与 List 不同的是，Queue 接口没有定义处理任意索引位元素的方法，只有队列的头一个元素能访问。Queue 的所有实现都要具有一个固定的容量：队列已满时，不能再添加元素。类似地，队列为空时，不能再删除元素。很多基于队列的算法都会用到满和空这两个状态，所以 Queue 接口定义的方法通过返回值表明这两个状态，而不会抛出异常。具体而言，peek() 和 poll() 方法返回 null 表示队列为空。因此，多数 Queue 接口的实现不允许用 null 作元素。
 
+阻塞式队列（blocking queue）是一种定义了阻塞式 put() 和 take() 方法的队列。put() 方法的作用是把元素添加到队列中，如果需要，这个方法会一直等待，直到队列中有存储元素的空间为止。而 take() 方法的作用是从队头移除元素，如果需要，这个方法会一直等待，直到队列中有元素可供移除为止。阻塞式队列是很多多线程算法的重要组成部分，因此 BlockingQueue 接口（扩展 Queue 接口）在 java.util.concurrent 包中定义。
 
+队列不像集、列表和映射那么常用，只在特定的多线程编程风格中会用到。这里，我们不举实例，而是试着厘清一些令人困惑的队列插入和移除操作。
 
+1. 把元素添加到队列中
 
+- add()方法
 
+这个方法在 Collection 接口中定义，只是使用常规的方式添加元素。对有界的队列来说，如果队列已满，这个方法可能会抛出异常。
 
+- offer()方法
 
+这个方法在 Queue 接口中定义，但是由于有界的队列已满而无法添加元素时，这个方法返回 false，而不会抛出异常。
 
+BlockingQueue 接口定义了一个超时版 offer() 方法，如果队列已满，会在指定的时间内等待空间。这个版本和基本版一样，成功插入元素时返回 true，否则返回 false。
 
+- put()方法
+
+这个方法在 BlockingQueue 接口中定义，会阻塞操作：如果因为队列已满而无法插入元素，put() 方法会一直等待，直到其他线程从队列中移除元素，有空间插入新元素为止。
+
+2. 把元素从队列中移除
+
+- remove()方法
+
+Collection 接口中定义了 remove() 方法，把指定的元素从队列中移除。除此之外，Queue 接口还定义了一个没有参数的 remove() 方法，移除并返回队头的元素。如果队列为空，这个方法会抛出 NoSuchElementException 异常。
+
+- poll()方法
+
+这个方法在 Queue 接口中定义，作用和 remove() 方法类似，移除并返回队头的元素，不过，如果队列为空，这个方法会返回 null，而不抛出异常。
+
+BlockingQueue 接口定义了一个超时版 poll() 方法，在指定的时间内等待元素添加到空队列中。
+
+- take()方法
+
+这个方法在 BlockingQueue 接口中定义，用于删除并返回队头的元素。如果队列为空，这个方法会等待，直到其他线程把元素添加到队列中为止。
+
+- drainTo()方法
+
+这个方法在 BlockingQueue 接口中定义，作用是把队列中的所有元素都移除，然后把这
+些元素添加到指定的 Collection 对象中。这个方法不会阻塞操作，等待有元素添加到
+队列中。这个方法有个变体，接受一个参数，指定最多移除多少个元素。
+
+3. 查询
+
+就队列而言，“查询”的意思是访问队头的元素，但不将其从队列中移除。
+
+- element()方法
+
+这个方法在 Queue 接口中定义，其作用是返回队头的元素，但不将其从队列中移除。如果队列为空，这个方法抛出 NoSuchElementException 异常。
+
+- peek()方法
+
+这个方法在 Queue 接口中定义，作用和 element() 方法类似，但队列为空时，返回 null。
+
+> 使用队列时，最好选定一种处理失败的方式。例如，如果想在操作成功之前一直阻塞，应该选择 put() 和 take() 方法；如果想检查方法的返回值，判断操作是否成功，应该选择 offer() 和 poll() 方法。
+
+LinkedList 类也实现了 Queue 接口，提供的是无界 FIFO 顺序，插入和移除操作需要常数时间。LinkedList 对象可以使用 null 作元素，不过，当列表用作队列时不建议使用 null。
+
+java.util 包中还有另外两个 Queue 接口的实现。一个是 PriorityQueue 类，这种队列根据 Comparator 对象排序元素，或者根据 Comparable 类型元素的 compareTo() 方法排序元素。PriorityQueue 对象的队头始终是根据指定排序方式得到的最小值。另外一个是 ArrayDeque 类，实现的是双端队列，一般在需要用到栈的情况下使用。
+
+java.util.concurrent 包中也包含一些 BlockingQueue 接口的实现，目的是在多线程编程环境中使用。有些实现很高级，甚至无需使用同步方法。
 
 ###### 8.1.6 实用方法
 
+java.util.Collections 类定义了一些静态实用方法，用于处理集合。其中有一类方法很重要，是集合的包装方法：这些方法包装指定的集合，返回特殊的集合。包装集合的目的是把集合本身没有提供的功能绑定到集合上。包装集合能提供的功能有：线程安全性、写保护和运行时类型检查。包装集合都以原来的集合为后盾，因此，在包装集合上调用的方法其实会分派给原集合的等效方法完成。这意味着，通过包装集合修改集合后，改动也会体现在原集合身上；反之亦然。
 
+第一种包装方法为包装的集合提供线程安全性。java.util 包中的集合实现，除了过时的 Vector 和 Hashtable 类之外，都没有 synchronized 方法，不能禁止多个线程并发访问。如果需要使用线程安全的集合，而且不介意同步带来的额外开销，可以像下面这样创建集合：
+```java
+List<String> list = Collections.synchronizedList(new ArrayList<String>());
+Set<Integer> set = Collections.synchronizedSet(new HashSet<Integer>());
+Map<String,Integer> map = Collections.synchronizedMap(new HashMap<String,Integer>());
+```
+第二种包装方法创建的集合对象不能修改底层集合，得到的集合是只读的，只要试图修改集合的内容，就会抛出 UnsupportedOperationException 异常。如果要把集合传入方法，但不允许修改集合，也不允许使用任何方式改变集合的内容，就可以使用这种包装集合：
+```java
+List<Integer> primes = new ArrayList<Integer>();
+List<Integer> readonly = Collections.unmodifiableList(primes);
+// 可以修改primes列表
+primes.addAll(Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19));
+// 但不能修改只读的包装集合
+readonly.add(23); // 抛出UnsupportedOperationException异常
+```
+java.util.Collections 类还定义了用来操作集合的方法。其中最值得关注的是排序和搜索集合元素的方法：
+```java
+Collections.sort(list);
+// 必须先排序列表中的元素
+int pos = Collections.binarySearch(list, "key");
+```
+Collections 类中还有些方法值得关注：
+```java
+// 把list2中的元素复制到list1中，覆盖list1
+Collections.copy(list1, list2);
+// 使用对象o填充list
+Collections.fill(list, o);
+// 找出集合c中最大的元素
+Collections.max(c);
 
+// 找出集合c中最小的元素
+Collections.min(c);
+Collections.reverse(list); // 反转列表
+Collections.shuffle(list); // 打乱列表
+```
+你最好全面熟悉 Collections 和 Arrays 类中的实用方法，这样遇到常见任务时就不用自己动手实现了。
 
+特殊的集合
 
+除了包装方法之外，java.util.Collections 类还定义了其他实用方法，一些用于创建只包含一个元素的不可变集合实例，一些用于创建空集合。singleton()、singletonList() 和singletonMap() 方法分别返回不可变的 Set、List 和 Map 对象，而且只包含一个指定的对象或键值对。如果要把单个对象当成集合传入方法，可以使用这些方法。
 
-
-
-
-
-
-
+Collections 类还定义了一些返回空集合的方法。如果你编写的方法要返回一个集合，遇到没有返回值的情况时，一般最好返回空集合，而不要返回 null 等特殊的值：
+```java
+Set<Integer> si = Collections.emptySet();
+List<String> ss = Collections.emptyList();
+Map<String,Integer> m = Collections.emptyMap();
+```
+最后还有个 nCopies() 方法。这个方法返回一个不可变的 List 对象，包含指定数量个指定对象的副本：
+```java
+List<Integer> tenzeros = Collections.nCopies(10, 0);
+```
 
 ###### 8.1.7 数组和辅助方法
 
+由对象组成的数组和集合的作用类似，而且二者之间可以相互转换：
+```java
+String[] a ={ "this", "is", "a", "test" }; // 一个数组
+// 把数组当成大小不可变的列表
+List<String> l = Arrays.asList(a);
+// 创建一个大小可变的副本
+List<String> m = new ArrayList<String>(l);
 
+// asList()是个变长参数方法，所以也可以这么做：
+Set<Character> abc = new HashSet<Character>(Arrays.asList('a', 'b', 'c'));
 
+// Collection接口定义了toArray()方法。不传入参数时，这个方法创建
+// Object[]类型的数组，把集合中的元素复制到数组中，然后返回这个数组
+// 把set中的元素存入数组
+Object[] members = set.toArray();
+// 把list中的元素存入数组
+Object[] items = list.toArray();
+// 把map的键存入数组
+Object[] keys = map.keySet().toArray();
+// 把map的值存入数组
+Object[] values = map.values().toArray();
 
+// 如果不想返回Object[]类型的值，可以把一个所需类型的数组传入toArray()方法
+// 如果传入的数组不够大，会再创建一个相同类型的数组
+// 如果传入的数组太大，复制集合元素后剩余的位置使用null填充
+String[] c = l.toArray(new String[0]);
+```
+除此之外，还有一些有用的辅助方法，用于处理 Java 数组。为了完整性，这里也会介绍。
 
+java.lang.System 类定义了一个 arraycopy() 方法，作用是把一个数组中的指定元素复制到另一个数组的指定位置。这两个数组的类型必须相同，甚至可以是同一个数组：
+```java
+char[] text = "Now is the time".toCharArray();
+char[] copy = new char[100];
+// 从text的第4个元素开始，复制10个字符到copy中
+// 这10个字符的位置从copy[0]开始
+System.arraycopy(text, 4, copy, 0, 10);
 
+// 把一些元素向后移，留出位置插入其他元素
+System.arraycopy(copy, 3, copy, 6, 7);
+```
+Arrays 类还定义了一些有用的静态方法：
+```java
+int[] intarray = new int[] { 10, 5, 7, -3 }; // 由整数组成的数组
+Arrays.sort(intarray); // 原地排序数组
+// 在索引2找到值7
+int pos = Arrays.binarySearch(intarray, 7);
+// 未找到：返回负数
+pos = Arrays.binarySearch(intarray, 12);
 
+// 由对象组成的数组也能排序和搜索
+String[] strarray = new String[] { "now", "is", "the", "time" };
+Arrays.sort(strarray); // 排序的结果：{ "is", "now", "the", "time" }
 
+// Arrays.equals()方法比较两个数组中的所有元素
+String[] clone = (String[]) strarray.clone();
+boolean b1 = Arrays.equals(strarray, clone); // 是的，两个数组相等
 
-
-
-
-
+// Arrays.fill()方法用于初始化数组的元素
+// 一个空数组，所有元素都是0
+byte[] data = new byte[100];
+// 把元素都设为-1
+Arrays.fill(data, (byte) -1);
+// 把第5-9个元素设为-2
+Arrays.fill(data, 5, 10, (byte) -2);
+```
+在 Java 中，数组可以视作对象，也可以按照对象的方法处理。假如有个对象 o，可以使用类似下面的代码判断这个对象是否为数组。如果是，则判断是什么类型的数组：
+```java
+Class type = o.getClass();
+if (type.isArray()) {
+    Class elementType = type.getComponentType();
+}
+```
 
 ##### 8.2 在 Java 集合框架中使用 lambda 表达式
 
+Java 8 引入 lambda 表达式的一个主要原因是大幅修改集合 API，让 Java 开发者使用更现代化的编程风格。在 Java 8 发布之前，使用 Java 处理数据结构的方式有点过时。现在，很多语言都支持把集合看成一个整体，而不用打散后再迭代。
 
+事实上，很多 Java 开发者已经使用了替代的数据结构库，获取他们认为集合 API 缺乏的表现力和生产力。升级集合 API 的关键是引入参数能使用 lambda 表达式的新方法，定义需要做什么，而不用管具体怎么做。
 
+> 有默认方法这个新语言特性的支持，才能在现有的接口中添加新方法（详情参见 4.1.6 节）。没有这个新机制的话，集合接口的原有实现在 Java 8 中不能编译，而且在 Java 8 的运行时中加载时无法链接。
 
-
-
-
-
-
-
+本节简要介绍如何在 Java 集合框架中使用 lambda 表达式。完整的说明参阅 Richard Warburton 写的《Java 8 函数式编程》一书（O’Reilly 出版，http://shop.oreilly.com/product/0636920030713.do 。
 
 ###### 8.2.1 函数式方式
 
+Java 8 想实现的方式源于函数式编程语言和风格。我们在 4.5.2 节已经介绍过一些关键的模式，这里会再次介绍，并举些例子。
 
+1. 过滤器
 
+这个模式把集合中的每个元素代入一段代码（返回 true 或 false），然后使用“通过测试”（即代入元素的那段代码返回 true）的元素构建一个新集合。
 
+例如，下面这段代码处理一个由猫科动物名组成的集合，选出是老虎的元素：
+```java
+String[] input = {"tiger", "cat", "TIGER", "Tiger", "leopard"};
+List<String> cats = Arrays.asList(input);
+String search = "tiger";
+String tigers = cats.stream()
+    .filter(s -> s.equalsIgnoreCase(search))
+    .collect(Collectors.joining(", "));
+System.out.println(tigers);
+```
+上述代码的关键是对 filter() 方法的调用。filter() 方法的参数是一个 lambda 表达式，这个 lambda 表达式接受一个字符串参数，返回布尔值。整个 cats 集合中的元素都会代入这个表达式，然后创建一个新集合，只包含老虎（不过有些使用大写）。
 
+filter() 方法的参数是一个 Predicate 接口的实例。Predicate 接口在新包 java.util.function 中定义。这是个函数式接口，只有一个非默认方法，因此特别适合 lambda 表达式。
 
+注意，最后还调用了 collect() 方法。这个方法是流 API 的重要部分，作用是在 lambda 表达式执行完毕后“收集”结果。下一节会深入介绍这个方法。
 
+Predicate 接口有一些十分有用的默认方法，例如用于合并判断条件的逻辑操作方法。假如想把豹子纳入老虎种群，可以使用 or() 方法：
+```java
+Predicate<String> p = s -> s.equalsIgnoreCase(search);
+Predicate<String> combined = p.or(s -> s.equals("leopard"));
+String pride = cats.stream()
+    .filter(combined)
+    .collect(Collectors.joining(", "));
+System.out.println(pride);
+```
+注意，必须显式创建 Predicate\<String\> 类型的对象 p，这样才能在 p 上调用默认方法 or()，并把另一个 lambda 表达式（也会自动转换成 Predicate\<String\> 类型的对象）传给 or() 方法。
 
+2. 映射
 
+Java 8 中的映射模式使用 java.util.function 包中的新接口 Function\<T, R\>。这个接口和 Predicate\<T\> 接口一样，是函数式接口，因此只有一个非默认方法——apply()。映射模式把一种类型元素组成的集合转换成另一种类型元素组成的集合。这一点在 API 中就体现出来了，因为 Function\<T, R\> 接口有两个不同的类型参数，其中，类型参数 R 的名称表示这个方法的返回类型。
 
+下面看一个使用 map() 方法的示例代码：
+```java
+List<Integer> namesLength = cats.stream()
+    .map(String::length)
+    .collect(Collectors.toList());
+System.out.println(namesLength);
+```
+3. 遍历
 
+映射和过滤器模式的作用是以一个集合为基础，创建另一个集合。在完全支持函数式编程的语言中，除了这种方式之外，还需要 lambda 表达式的主体处理各个元素时不影响原来的集合。用计算机科学的术语来说，这意味着 lambda 表达式的主体“不能有副作用”。
 
+当然，在 Java 中经常需要处理可变的数据，所以新的集合 API 提供了一个方法，在遍历集合时修改元素——forEach() 方法。这个方法的参数是一个 Consumer\<T\> 类型的对象。Consumer\<T\> 是函数式接口，要求使用副作用执行操作（然而，到底会不会真得修改数据不是那么重要）。因此，能转换成 Consumer\<T\> 类型的 lambda 表达式，其签名为 (T t) ->void。下面是一个使用 forEach() 方法的简单示例：
+```java
+List<String> pets = Arrays.asList("dog", "cat", "fish", "iguana", "ferret");
+pets.stream().forEach(System.out::println);
+```
+在这个示例中，我们只是把集合中的每个元素打印出来。不过，我们把 lambda 表达式写成了一种特殊的方法引用。这种方法引用叫受限的方法引用（bound method reference），因为需要指定对象（这里指定的对象是 System.out，System 类的公开静态字段）。这个方法引用和下面的 lambda 表达式等效：
+```java
+s -> System.out.println(s);
+```
+当然，根据方法的签名，这样写能明确表明 lambda 表达式要转换成一个实现 Consumer\<? super String\> 接口类型的实例。
 
+> 不是说 map() 或 filter() 方法一定不能修改元素。不要使用这两个方法修改元素，这只是一种约定，每个 Java 程序员都要遵守。
 
+在结束本节之前，还有最后一个函数式技术要介绍。这种技术把集合中的元素聚合成一个值，详情参见下一小节。
 
+下面介绍 reduce() 方法。这个方法实现的是化简模式，包含一系列相关的类似运算，有时也称为合拢或聚合运算。
+
+在Java8中，reduce()方法有两个参数：一个是初始值，一般叫作单位值（或零值）；另一个参数是一个函数，逐步执行。这个函数属于 BinaryOperator\<T\> 类型。BinaryOperator\<T\> 也是函数式接口，有两个类型相同的参数，返回值也是同一类型。reduce() 方法的第二个参数是一个 lambda 表达式，接受两个参数。在 Java 的文档中，reduce() 方法的签名是：
+```java
+T reduce(T identity, BinaryOperator<T> aggregator);
+```
+reduce() 方法的第二个参数可以简单地理解成，在处理流的过程中“累积计数”：首先合并单位值和流中的第一个元素，得到第一个结果，然后再合并这个结果和流中的第二个元素，以此类推。
+
+把 reduce() 方法的实现设想成下面这样有助于理解其作用：
+```java
+public T reduce(T identity, BinaryOperator<T> aggregator) {
+    T runningTotal = identity;
+    for (T element : myStream) {
+       runningTotal = aggregator.apply(runningTotal, element);
+    }
+    return result;
+}
+```
+> 实际上，reduce() 方法的实现比这复杂得多，如果数据结构和运算有需要，甚至还可以并行执行。
+
+下面看一个使用 reduce() 方法的简单示例，这个示例计算几个质数之和：
+```java
+double sumPrimes = ((double)Stream.of(2, 3, 5, 7, 11, 13, 17, 19, 23)
+    .reduce(0, (x, y) -> {return x + y;}));
+System.out.println("Sum of some primes: " + sumPrimes);
+```
+你可能注意到了，本节举的所有示例中，都在 List 实例上调用了 stream() 方法。这是集合 API 演进的一部分——一开始选择这种方式是因为部分 API 有这方面的需求，但后来证实，这是极好的抽象。下面详细讨论流 API。
 
 ###### 8.2.2 流 API
 
+库的设计者之所以引入流 API，是因为集合核心接口的大量实现已经广泛使用。这些实现在 Java 8 和 lambda 表达式之前就已存在，因此没有执行任何函数式运算的方法。更糟的是，map() 和 filter() 等方法从未出现在集合 API 的接口中，实现这些接口的类可能已经使用这些名称定义了方法。
 
+为了解决这个问题，设计者引入了一层新的抽象——Stream。Stream 对象可以通过 stream() 方法从集合对象上生成。设计者引入这个全新的 Stream 对象是为了避免方法名冲突，这的确在一定程度上减少了冲突的几率，因为只有包含 stream() 方法的实现才会受到影响。
 
+在处理集合的新方式中，Stream 对象的作用和 Iterator 对象类似。总体思想是让开发者把一系列操作（也叫“管道”，例如映射、过滤器或化简）当成一个整体运用在集合上。具体执行的各个操作一般使用 lambda 表达式表示。
 
+在管道的末尾需要收集结果，或者再次“具化”为真正的集合。这一步使用 Collector 对象完成，或者以“终结方法”（例如 reduce()）结束管道，返回一个具体的值，而不是另一个流。总的来说，处理集合的新方式类似下面这样：
+```
+        stream()   filter()   map()   collect()
+Collection -> Stream -> Stream -> Stream -> Collection
+```
+Stream 类相当于一系列元素，一次访问一个元素（不过有些类型的流也支持并行访问，可以使用多线程方式处理大型集合）。Stream 对象和 Iterator 对象的工作方式一样，依次读取每个元素。
 
+和 Java 中的大多数泛型类一样，Stream 类也使用引用类型参数化。不过，多数情况下，其实需要使用基本类型，尤其是 int 和 double 类型构成的流，但是又没有 Stream\<int\> 类型，所以 java.util.stream 包提供了专用的（非泛型）类，例如 IntStream 和 DoubleStream。这些类是 Stream 类的基本类型特化，其 API 和一般的 Stream 类十分类似，不过在适当的情况下会使用基本类型的值。
 
+例如，在前面 reduce() 方法的示例中，多数时候，在管道中使用的其实就是 Stream 类的基本类型特化。
 
+1. 惰性求值
 
+其实，流比迭代器（甚至是集合）通用，因为流不用管理数据的存储空间。在早期的 Java 版本中，总是假定集合中的所有元素都存在（一般存储在内存中），不过有些处理方式也能避开这个问题，例如坚持在所有地方都使用迭代器，或者让迭代器即时构建元素。可是，这些方式既不十分便利，也不那么常用。
 
+然而，流是管理数据的一种抽象，不关心存储细节。因此，除了有限的集合之外，流还能处理更复杂的数据结构。例如，使用 Stream 接口可以轻易实现无限流，处理一切平方数。实现方式如下所示：
+```java
+public class SquareGenerator implements IntSupplier {
+    private int current = 1;
+    
+    @Override
+    public synchronized int getAsInt() {
+        int thisResult = current * current;
+        current++;
+        return thisResult;
+    }
+}
 
+IntStream squares = IntStream.generate(new SquareGenerator());
+PrimitiveIterator.OfInt stepThrough = squares.iterator();
+for (int i = 0; i < 10; i++) {
+    System.out.println(stepThrough.nextInt());
+}
+System.out.println("First iterator done...");
 
+// 只要想就可以一直这样进行下去……
+for (int i = 0; i < 10; i++) {
+    System.out.println(stepThrough.nextInt());
+}
+```
+通过构建上述无限流，我们能得出一个重要结论：不能使用 collect() 这样的方法。这是因为无法把整个流具化为一个集合（在创建所需的无限个对象之前就会耗尽内存）。因此，我们采取的方式必须在需要时才从流中取出元素。其实，我们需要的是按需读取下一个元素的代码。为了实现这种操作，需要使用一个关键技术——惰性求值（lazy evaluation）。这个技术的本质是，需要时才计算值。
 
+> 惰性求值对 Java 来说是个重大的变化，在 JDK 8 之前，表达式赋值给变量（或传入方法）后会立即计算它的值。这种立即计算值的方式我们已经熟知，术语叫“及早求值”（eager evaluation）。在多数主流编程语言中，“及早求值”都是计算表达式的默认方式。
 
+幸好，实现惰性求值的重担几乎都落在了库的编写者身上，开发者则轻松得多，而且使用流 API 时，大多数情况下 Java 开发者都无需仔细考虑惰性求值。下面以一个示例结束对流的讨论。这个示例使用 reduce() 方法计算几个莎士比亚语录的平均单词长度：
+```java
+String[] billyQuotes = {"For Brutus is an honourable man",
+  "Give me your hands if we be friends and Robin shall restore amends",
+  "Misery acquaints a man with strange bedfellows"};
+List<String> quotes = Arrays.asList(billyQuotes);
+
+// 创建一个临时集合，保存单词
+List<String> words = quotes.stream()
+    .flatMap(line -> Stream.of(line.split(" +")))
+    .collect(Collectors.toList());
+long wordCount = words.size();
+
+// 校正为double类型只是为了避免Java按照整数方式计算除法
+double aveLength = ((double) words.stream()
+    .map(String::length)
+    .reduce(0, (x, y) -> {return x + y;})) / wordCount;
+System.out.println("Average word length: " + aveLength);
+```
+这个示例用到了 flatMap() 方法。在这个示例中，向 flatMap() 方法传入一个字符串 line，得到的是一个由字符串组成的流，流中的数据是拆分一句话得到的所有单词。然后再“整平”这些单词，把处理每句话得到的流都合并到一个流中。
+
+这样做的目的是把每句话都拆分成单个单词，然后再组成一个总流。为了计算单词数量，我们创建了一个对象 words。其实，在管道处理流的过程中会“中断”，再次具化，把单词存入集合，在流操作恢复之前获取单词的数量。
+
+这一步完成之后，下一步是化简运算，先计算所有语录中的单词总长度，然后再除以已经获取的单词数量。记住，流是惰性抽象，如果要执行及早操作（例如，计算流下面的集合大小），得重新具化为集合。
+
+2. 处理流的实用默认方法
+
+借着引入流 API 的机会，Java 8 向集合库引入了一些新方法。现在 Java 已经支持默认方法，因此可以向集合接口中添加新方法，而不会破坏向后兼容性。
+
+新添加的方法中有一些是“基架方法”，用于创建抽象的流，例如 Collection::stream、Collection::parallelStream 和 Collection::spliterator （这个方法可以细分为 List::spliterator 和Set::spliterator）。
+
+另一些则是“缺失方法”，例如 Map::remove 和 Map::replace。List::sort 也属于“缺失方法”，在 List 接口中的定义如下所示：
+```java
+// 其实是把具体操作交给Collections类的辅助方法完成
+public default void sort(Comparator<? super E> c) {
+    Collections.<E>sort(this, c);
+}
+```
+Map::putIfAbsent 也是缺失方法，根据 java.util.concurrent 包中 ConcurrentMap 接口的同名方法改写。
+
+另一个值得关注的缺失方法是 Map::getOrDefault，程序员使用这个方法能省去很多检查 null 值的繁琐操作，因为如果找不到要查询的键，这个方法会返回指定的值。
+
+其余的方法则使用 java.util.function 接口提供额外的函数式技术。
+
+- Collection::removeIf
+
+这个方法的参数是一个 Predicate 对象，它会迭代整个集合，把满足判断条件的元素移除。
+
+- Map::forEach
+
+这个方法只有一个参数，是一个 lambda 表达式；而这个 lambda 表达式有两个参数（一个是键的类型，一个是值的类型），返回 void。这个 lambda 表达式会转换成 BiConsumer 对象，应用在映射中的每个键值对上。
+
+- Map::computeIfAbsent
+
+这个方法有两个参数：键和 lambda 表达式。lambda 表达式的作用是把键映射到值上。如果映射中没有指定的键（第一个参数），那就使用 lambda 表达式计算一个默认值，然后存入映射。
+
+（其他值得学习的方法：Map::computeIfPresent、Map::compute 和 Map::merge。）
 
 ##### 8.3 小结
 
+本章介绍了 Java 集合库，也说明了如何开始使用 Java 实现的基本和经典数据结构。我们学习了通用的 Collection 接口，以及 List、Set 和 Map 接口；学习了处理集合的原始迭代方式，也介绍了 Java 8 从函数式编程语言借鉴来的新方式。最后，我们学习了流 API，发现这种新方式更通用，而且处理复杂的编程概念时比经典方式更具表现力。
 
-
-
-
-
-
-
-
-
-
-
-
-
+我们继续学习。下一章继续讨论数据，会介绍一些常见任务的处理方式，例如处理文本和数字数据，还会介绍 Java 8 引入的新日期和时间库。
