@@ -1,0 +1,12 @@
+﻿勘误：
+https://www.iteye.com/blog/wiselyman-2288333
+源代码：
+http://www.broadview.com.cn/file/resource/061078061207186156162159222041137008231100137136
+（Tom QQ号登陆）
+
+书籍出版时间是2016年
+
+源码默认编码GBK，可以用工具转成UTF-8，然后再用 Ecplise STS 或者 IDEA 加载，比如用 UltraCodingSwitch.exe 转换
+Repo里的源码已转成UTF-8
+
+在Eclipse里执行Maven Update后，就会下载依赖，导致源码包size变大
