@@ -1,0 +1,10 @@
+server:
+  port: 8761 #1当前Eureka Server服务的端口号为8761
+
+eureka:
+  instance:
+    hostname: localhost #2当前Eureka Server的hostname为localhost
+  client:
+    register-with-eureka: false #3当前服务不需要到Eureka Server上注册
+    fetch-registry: false
+    
